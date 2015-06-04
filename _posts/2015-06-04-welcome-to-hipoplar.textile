@@ -1,11 +1,7 @@
 ---
-layout: default
+layout: post
 title: Welcome to Hipoplar
 ---
-
-h1. {{ page.title }}
-
-p(meta). 4 Jun 2015 - Shanghai
 
 Hi All.
 This is my first blog.
