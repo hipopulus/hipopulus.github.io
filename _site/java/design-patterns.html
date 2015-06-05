@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="设计模式相关 - Poplar's Blog - Vincent Yang(soda1015@foxmail.com)">
+    <title>
+      设计模式相关 - Poplar's Blog
+    </title>
+    <!-- Bootstrap Core CSS -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="/css/blog.css" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media
+    queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file://
+    -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js">
+      </script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js">
+      </script>
+    <![endif]-->
+        <!-- jQuery Version 1.11.0 -->
+    <script src="/js/jquery-1.11.0.js"> </script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/js/bootstrap.min.js"></script>
+  </head>
+  
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">
+              Toggle navigation
+            </span>
+            <span class="icon-bar">
+            </span>
+            <span class="icon-bar">
+            </span>
+            <span class="icon-bar">
+            </span>
+          </button>
+          <a class="navbar-brand" href="/index.html">
+            Poplar's Blog
+          </a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+            <li>
+              <a href="/categories.html">
+                分 类
+              </a>
+            </li>
+            <li>
+              <a href="/tags.html">
+                标 签
+              </a>
+            </li>
+            <li>
+              <a href="/archives.html">
+                归 档
+              </a>
+            </li>
+            <li>
+              <a href="/faqs.html">
+                备 忘
+              </a>
+            </li>
+            <li>
+              <a href="/about.html">
+                关 于
+              </a>
+            </li>
+          </ul> 
+        </div>
+        <!-- /.navbar-collapse -->
+      </div>
+      <!-- /.container -->
+    </nav>
+    <!-- Page Content -->
+    <div class="container">
+      <div class="row">
+        <!-- Blog Entries Column -->
+        <div class="col-md-8">
+          <!-- Blog Post -->
+<!-- Title -->
+<h2>
+  设计模式相关
+  <div class="post-date"><a href="https://github.com/soda1015/soda1015.github.com/edit/master/_posts/2014-07-10-design-patterns.markdown" target="_blank">纠错</a>&nbsp;&nbsp;
+	<span class="glyphicon glyphicon-time"></span>
+	10 Jul 2014
+  </div>
+</h2>
+<!-- Author -->
+<hr>
+<h3>一、设计原则</h3>
+
+<p>1、找出应用中可能需要变化之处，把它们独立出来，不要和那些不需要变化的代码混在一起。（找出程序中会变化的方面，然后将其和固定不变的方面分离。）<br>
+即把会变化的部分取出并封装起来，以便以后可以轻易的改动或扩充此部分，而不影响不需要变化的其它部分。<br>
+2、针对接口编程，而不是针对实现编程。<br>
+即针对超类型编程，变量的声明类型应该是超类型，通常是一个抽象类或者是一个接口。意味着声明类时不用理会以后执行的真正对象类型。<br>
+3、多用组合，少用继承。<br>
+增强系统的弹性，不仅可将算法族封装成类，更可以”在运行时动态的改变行为“，只要组合的行为对象符合正确的接口标准即可。<br>
+4、类应该对扩展开放，对修改关闭。开闭原则。<br>
+5、要依赖抽象，不要依赖具体类。依赖倒置原则。<br>
+6、一个类应该只有一个引起变化的原则。（单一职责）<br>
+不让高层组件依赖低层组件，而且不管高层或低层组件，两者都应该依赖于抽象。</p>
+
+<h3>二、设计模式</h3>
+
+<p>模式是在某情境(context)下，针对某问题的某种解决方案。常见模式有：<br>
+观察者模式：定义了对象之间一对多依赖，这样一来，当一个对象改状态时，它的所有依赖都会收到通知并自动更新。<br>
+装饰者模式：动态地将责任附加到对象上，若要扩展功能，装饰者提供了比继承更有弹性的替代方案。<br>
+工厂方法模式：定义了一个创建对象的接口，但子类决定要实例化的类是哪一个。工厂方法让类把实例化推迟到子类。<br>
+单件模式：确保一个类只有一个对象，并提供一个全局的访问点。<br>
+命令模式：将”请求“封装成对象，以便使用不同的请求，队列或者日志来参数化其它对象，命令模式也可支持撤销的操作。<br>
+适配器模式：将一个类的接口，转换成客户期望的另一个接口，适配器让原本接口不兼容的类可以合作无间。<br>
+模块方法模式：在一个方法中定义一个算法的骨架，而将一些步骤延迟到子类中。使得子类可以在不改变算法结构的情况下，重新定义算法中的某些步骤。<br>
+迭代器模式：提供一种方法顺序访问一个聚合对象中的各个元素，而不暴露其内部的表示。<br>
+组合模式：允许你将对象组合成树形结构来表现”整体/部分&quot;层次结构。组合模式让客户以一致的方式处理个别对象以及对象组合。<br>
+状态模式：允许对象在内部状态改变时改变它的行为，对象看起来好像修改了它的类。<br>
+代理模式：为另一个对象提供一个替身或占位符以控制对这个对象的访问。<br>
+复合模式：模式的模式，模式携手合作。</p>
+
+<h3>三、反模式</h3>
+
+<p>告诉你如何用一个不好的解决方案，解决一个问题。<br>
+反模式看起来总像是一个好的解决方案，但当它真正被采用后，就会带来麻烦。<br>
+通过反模式归纳，我们可以帮助代人在实现它们之前，辨出不好的解决方案。<br>
+常见反模式：开发反模式，OO反模式，组织反模式，领域特定反模式。</p>
+
+<br/>
+<div style="margin-top:10px;margin-bottom:10px">
+  
+  <span class="next">
+    上篇：
+    <a href="/android/about-android-view.html">
+      Android View及ViewGroup知识
+    </a>
+  </span>
+   
+  
+  <span class="prev">
+    下篇：
+    <a href="/network/chrome-honx-vpn.html">
+      推荐几个不错的VPN
+    </a>
+  </span>
+  
+</div>
+<hr>
+<!-- Blog Comments -->
+<div class="media">
+    <!-- UY BEGIN -->
+  <div id="uyan_frame">
+  </div>
+  <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=1511840">
+  </script>
+  <!-- UY END --> 
+</div>
+
+        </div>
+        <!-- Blog Sidebar Widgets Column -->
+        <div class="col-md-4">
+          <!-- Blog Search Well -->
+          <div class="well">
+            <h4>
+              站内搜索
+            </h4>
+                        <form action="https://google3.azurewebsites.net/search" method="get">
+              <div class="input-group">
+                <input type="text" name="q" class="form-control">
+				<input type="hidden" name="ie" value="UTF-8" />
+				<input type="hidden" name="sitesearch" value="blog.hipoplar.me" />
+                <span class="input-group-btn">
+                  <button class="btn btn-default" type="submit">
+                    <span class="glyphicon glyphicon-search">
+                    </span>
+                  </button>
+                </span>
+              </div>
+            </form> 
+            <!-- /.input-group -->
+          </div>
+          <!-- Blog Categories Well -->
+          <div class="well">
+            <h4>
+              分 类
+            </h4>
+            <div class="row">
+                            <div class="col-lg-6">
+                <ul class="list-unstyled">
+                  <li>
+                    <a href="/categories.html#reading">
+                      阅读摘要
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/categories.html#linux">
+                      Linux
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/categories.html#embedded">
+                      嵌入式
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/categories.html#android">
+                      Android开发
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <!-- /.col-lg-6 -->
+              <div class="col-lg-6">
+                <ul class="list-unstyled">
+                  <li>
+                    <a href="/categories.html#java">
+                      Java开发
+                    </a>
+                  </li>                  
+		  <li>
+                    <a href="/categories.html#cocos2d">
+                      Cocos2d开发
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/categories.html#web">
+                      Web开发
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/categories.html#network">
+                      网络相关
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <!-- /.col-lg-6 -->
+ 
+            </div>
+            <!-- /.row -->
+          </div>
+          <!-- Blog Links Well -->
+          <div class="well">
+            <h4>
+              相关链接
+            </h4>
+                        <ul class="list-unstyled">
+              <li>
+                <a href="http://blog.chinaunix.net/uid/22985736.html">
+                  CuBlog
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/">
+                  GitHub
+                </a>
+              </li>
+              <li>
+                <a href="https://bitbucket.org/">
+                  Bitbucket.org
+                </a>
+              </li> 
+               <li>
+                <a href="https://news.ycombinator.com/">
+                  Hacker News
+                </a>
+              </li>        
+              <li>
+                <a href="http://www.stackoverflow.com/">
+                  Stack Overflow
+                </a>
+              </li>
+              <li>
+                <a href="http://developer.android.com/">
+                  Android Developer
+                </a>
+              </li>
+              <li>
+                <a href="http://blog.jobbole.com/">
+                  Jobbole
+                </a>
+              </li>
+              <li>
+                <a href="http://99u.com/">
+                  99U
+                </a>
+              </li>
+              <li>
+                <a href="http://www.ruanyifeng.com/blog/">
+                  Ruanyifeng's Blog
+                </a>
+              </li>
+              <li>
+                <a href="http://www.panxuewen.com">
+                  Panxw's Blog
+                </a>
+              </li>				  
+            </ul>
+ 
+          </div>
+          <!-- Side Widget Well -->
+          <div class="well">
+                        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+            </script>
+            <!-- ArticleRa -->
+            <ins class="adsbygoogle" style="display:inline-block;width:300px;height:250px"
+            data-ad-client="ca-pub-3557776493079475" data-ad-slot="3861947889">
+            </ins>
+            <script>
+              (adsbygoogle = window.adsbygoogle || []).push({});
+            </script> 
+          </div>
+        </div>
+      </div>
+      <!-- /.row -->
+      <hr>
+      <!-- Footer -->
+      <footer>
+        <div class="row">
+          <div class="col-lg-12">
+                        <p align="center">
+				Copyright &copy; blog.hipoplar.me, hosted on <a href="https://github.com">GitHub</a>, powered by Jekyll, designed by <a href="https://github.com/panxw">panxw</a>. <a href="https://github.com/soda1015/soda1015.github.com">[source]</a>
+				<br/>
+				 <a href="/atom.xml">[Feed]</a>
+            </p>
+ 
+          </div>
+          <!-- /.col-lg-12 -->
+        </div>
+        <!-- /.row -->
+		<div style="display:none;"><script src="http://s22.cnzz.com/stat.php?id=5868355&web_id=5868355" language="JavaScript"></script></div> 
+      </footer>
+    </div>
+    <!-- /.container -->
+  </body>
+
+</html>

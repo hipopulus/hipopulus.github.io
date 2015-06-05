@@ -1,0 +1,3186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ 
+ <title>Poplar's Blog</title>
+ <link href="http://blog.hipoplar.me/atom.xml" rel="self"/>
+ <link href="http://blog.hipoplar.me"/>
+ <updated>2015-06-05T14:36:00+08:00</updated>
+ <author>
+   <name>Vincent Yang</name>
+   <email>soda1015@foxmail.com</email>
+ </author>
+
+ 
+ <entry>
+   <title>写给大家看的设计书[书摘]</title>
+   <link href="http://blog.hipoplar.me/reading/read-design-principle-book.html"/>
+   <updated>2015-03-01T00:00:00+08:00</updated>
+   <id>/reading/read-design-principle-book</id>
+   <content type="html">&lt;p&gt;写给大家看的设计书，作者：Robin Williams[美]。&lt;br&gt;
+附PDF下载：&lt;a href=&quot;http://pan.baidu.com/s/1mgDWCuG&quot;&gt;http://pan.baidu.com/s/1mgDWCuG&lt;/a&gt;  &lt;/p&gt;
+
+&lt;h4&gt;一、前言部分&lt;/h4&gt;
+
+&lt;p&gt;复杂的设计原则在这里被浓缩为4个词：亲密性、对齐、重复和对比。...如果遵循了这些基本原则，你的设计看上去会更专业、更有条理、更统一，也更有趣。  &lt;/p&gt;
+
+&lt;h4&gt;二、4大基本设计原则&lt;/h4&gt;
+
+&lt;p&gt;每一个优秀的设计中都应用了这些设计原则，而各个原则也是相互关联的。&lt;br&gt;
+原则一：亲密性（Proximity）&lt;br&gt;
+Robin亲密性原则简述：亲密性即相关的组织在一起。&lt;br&gt;
+彼此相关的项应当靠近，归组在一起。如果多个项相互之间存在很近的亲密性，它们就会成为一个视觉单元，而不是多个孤立的元素。这有助于组织信息，减少混乱，为读者提供清晰的结构。  &lt;/p&gt;
+
+&lt;p&gt;原则二：对齐（Alignment）&lt;br&gt;
+Robin对齐原则简述：任何元素都不能在页面上随意安放。每一项都应当与页面上的某个内容存在某种视觉联系。&lt;br&gt;
+任何东西都不能在页面上随意安放。每个元素都应当与页面的另一个元素有某种视觉联系。这样能建立一种清晰、精巧而且清爽的外观。  &lt;/p&gt;
+
+&lt;p&gt;原则三：重复（Repetition）&lt;br&gt;
+Robin重复原则简述：设计的某些方面需要在整个作品中重复。&lt;br&gt;
+让设计中的视觉要素在整个作品中重复出现。可以重复的颜色、形状、材质、空间关系、线宽、字体、大小和图片，等等。这样一来，既能增加条理性，还可以加强统一性。  &lt;/p&gt;
+
+&lt;p&gt;原则四：对比（Contrast）&lt;br&gt;
+Robin对比原则简述：如果两个项不完全相同，就应当使之不同，而且是截然不同。&lt;br&gt;
+基本思想是，要避免页面上元素太过相似。如果元素（字体、颜色、大小、线宽、形状、空间等）不相同，那就干脆让它们截然不同。要让页面引人注目，对比通常是最重要的一个因素，正是它能使读者首先看到这个页面。  &lt;/p&gt;
+
+&lt;h4&gt;三、实践这些原则&lt;/h4&gt;
+
+&lt;p&gt;1.学习4大基本原则，它们比你相像的要简单。&lt;br&gt;
+2.认识到自己没有运用这些原则，形诸文字，陈述问题等。&lt;br&gt;
+3.应用基本原则，结果将使你大吃一惊。  &lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>友盟统计正式包无数据问题</title>
+   <link href="http://blog.hipoplar.me/android/umeng-package-sign.html"/>
+   <updated>2015-01-05T00:00:00+08:00</updated>
+   <id>/android/umeng-package-sign</id>
+   <content type="html">&lt;p&gt;若发现debug包运行时有数据上报，而签名打包后无数据上报，则是由于混淆造成的。&lt;br&gt;
+需要对umeng的jar包的类保持不被混淆，proguard.cfg文件中加入：  &lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;-keep class com.umeng.** { *;}
+-keep class u.aly.** { *;}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;（完~）&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Cocos JS 布局及控件相关</title>
+   <link href="http://blog.hipoplar.me/android/cocos-js-learn.html"/>
+   <updated>2014-12-30T00:00:00+08:00</updated>
+   <id>/android/cocos-js-learn</id>
+   <content type="html">&lt;h4&gt;Node显示设置：&lt;/h4&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;node.setVisible(true);
+node.setVisible(false);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h4&gt;渐变背景：&lt;/h4&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;var backgroundStartColor = cc.color(27, 23, 21); 
+var backgroundEndColor = cc.color(21, 17, 15);
+
+var  layerGradient = new cc.LayerGradient(); 
+layerGradient.setStartColor(backgroundStartColor);  //起始色
+layerGradient.setEndColor(backgroundEndColor); //结束色
+layerGradient.setVector(cc.p(0,-1)); // 渐变方向
+layerGradient.setContentSize(cc.size(winSize.width, winSize.height));    // Layer大小
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h4&gt;框背景（按钮/选中效果）：&lt;/h4&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;var bgFocus = cc.DrawNode.create();
+bgFocus .drawRect(cc.p(0, 0),
+            cc.p(260, 86),
+            cc.color(220, 67, 0, 255),
+            0,
+            cc.color(220, 67, 0, 255));
+bgFocus .setAnchorPoint(cc.p(0, 0));
+bgFocus .setPosition(cc.p(0, 6));
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h4&gt;LabelTTF文字标签：&lt;/h4&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;var fontColor = cc.color(255, 255, 255, 102);
+var fontSize = 32;
+var fontName =&amp;quot;res/font/newfont.ttf&amp;quot;;
+var fontText=&amp;quot;hello world&amp;quot;;
+
+var myLabel =  new cc.LabelTTF();
+myLabel .setFontSize(fontSize );
+myLabel .setString(fontText);
+myLabel.setFontName(fontName);//cc.LabelTTF(text, fontName, fontSize);
+myLabel .setAnchorPoint(1,0);
+myLabel .setColor(fontColor );
+myLabel .setVerticalAlignment(cc.TEXT_ALIGNMENT_CENTER);//对齐
+myLabel.setOpacity(120);//透明度
+myLabel .x=0;
+myLabel .y=1;//myLabel.setPosition(0,1);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h4&gt;TableView操作：&lt;/h4&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;var = new Array(&amp;quot;NO.1&amp;quot;, &amp;quot;NO.2&amp;quot;, &amp;quot;NO.3&amp;quot;, &amp;quot;NO.4&amp;quot;);
+var  listView = cc.TableView.create(this, cc.size(ITEM_WIDTH,ITEM_HEIGHT*LIST_VISIBLE_ITEM_COUNT));
+listView .setDirection(cc.SCROLLVIEW_DIRECTION_VERTICAL);
+listView .setPosition(0, 0);
+listView .setDelegate(this);
+listView .setVerticalFillOrder(cc.TABLEVIEW_FILL_TOPDOWN);
+var offset = this.mList.getContentOffset();
+
+tableCellAtIndex: function (table, idx) {
+    //init cell
+}
+
+numberOfCellsInTableView: function (table) {
+    return count;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h4&gt;ccui.Layout用作布局，也可以用cc.Node：&lt;/h4&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;var list = new ccui.Layout(); 
+list.setContentSize(800，480);
+list.setClippingEnabled(true);
+list.setPosition(0,76);
+list.setAnchorPoint(0,0);
+this.addChild(list);
+
+list.addChild(xxx);
+list.addChild(yyy);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h4&gt;cc.director主要方法：&lt;/h4&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;cc.director.getWinsize();
+cc.director.runScene(scene);//运行新场景，取代原有scene
+
+cc.director.pushScene(scene);//运行新场景，盖住上一个scene
+cc.director.popScene(scene);//弹出stack最上一个scene
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h4&gt;事件：&lt;/h4&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;cc.eventManager.addListener({
+            event: cc.EventListener.KEYBOARD,
+            onKeyPressed: function (key, event) {
+            }.bind(this),
+            onKeyReleased: function (key, event) {
+
+            }.bind(this)
+}, this);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h4&gt;调用java:&lt;/h4&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;jsb.reflection.callStaticMethod(className, methodName, signature, param1,parm2);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h4&gt;JS文件加载：&lt;/h4&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;var jsList = [
+    &amp;quot;src/A.js&amp;quot;,
+    &amp;quot;src/B.js&amp;quot;,
+];
+
+function load()
+ {
+     for( var i=0; i &amp;lt; jsList.length; i++) {
+                require( jsList[i] );
+       }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>Windows下msysgit最新下载地址</title>
+   <link href="http://blog.hipoplar.me/network/get-latest-msysgit.html"/>
+   <updated>2014-12-27T00:00:00+08:00</updated>
+   <id>/network/get-latest-msysgit</id>
+   <content type="html">&lt;h4&gt;说明&lt;/h4&gt;
+
+&lt;p&gt;由于msysgit官方提供的下载链接极其不稳定或速度慢，我将最新版本的msysgit放到了百度网盘，供国内不能翻外网的朋友们下载。&lt;br&gt;
+最新版本：1.9.5-preview20141217.exe&lt;br&gt;
+百度网盘下载地址：&lt;a href=&quot;http://pan.baidu.com/s/1c0EQ3IC&quot;&gt;http://pan.baidu.com/s/1c0EQ3IC&lt;/a&gt;  &lt;/p&gt;
+
+&lt;h4&gt;附&lt;/h4&gt;
+
+&lt;p&gt;msysgit官方网站：&lt;a href=&quot;http://msysgit.github.io&quot;&gt;http://msysgit.github.io&lt;/a&gt;&lt;br&gt;
+另外的界面化的git管理工具TortoiseGit下载基本正常，官方下载地址为：&lt;a href=&quot;http://download.tortoisegit.org/&quot;&gt;http://download.tortoisegit.org/&lt;/a&gt;  &lt;/p&gt;
+
+&lt;p&gt;（完~）&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>HTTP请求/响应构成</title>
+   <link href="http://blog.hipoplar.me/web/http-protocol-review.html"/>
+   <updated>2014-12-20T00:00:00+08:00</updated>
+   <id>/web/http-protocol-review</id>
+   <content type="html">&lt;h4&gt;客户端HTTP请求&lt;/h4&gt;
+
+&lt;p&gt;请求行+若干请求头+请求数据。&lt;br&gt;
+请求行：请求方式+资源名称+HTTP版本号。&lt;br&gt;
+请求头：描述客户端请求主机及客户机的环境。&lt;br&gt;
+请求数据：多个请求头与请求数据之间用空行分割。  &lt;/p&gt;
+
+&lt;p&gt;请求方式：GET/POST等7种。&lt;br&gt;
+GET数据附在url中，最大容量1K。POST数据则放在请求数据中，容量无限制。  &lt;/p&gt;
+
+&lt;h4&gt;服务端HTTP响应&lt;/h4&gt;
+
+&lt;p&gt;状态行+若干响应头+响应数据。&lt;br&gt;
+状态行：HTTP版本号+状态码+状态说明。&lt;br&gt;
+响应头：描述服务器基本信息及数据处理方式。&lt;br&gt;
+响应数据：若干响应头与响应数据之间用空行分割。  &lt;/p&gt;
+
+&lt;p&gt;（完~）&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Manven构建基本步骤</title>
+   <link href="http://blog.hipoplar.me/java/maven-simple-steps.html"/>
+   <updated>2014-12-13T00:00:00+08:00</updated>
+   <id>/java/maven-simple-steps</id>
+   <content type="html">&lt;h4&gt;主要步骤&lt;/h4&gt;
+
+&lt;p&gt;1, download and install maven。&lt;br&gt;
+2, mvn archetype:create -DgroupId=com.mycompany.app -DartifactId=my-app 创建新工程。&lt;br&gt;
+3, mvn package 将代码打包到输出到target目录。&lt;br&gt;
+4, mvn test 将测试代码到包输出到target目录。&lt;br&gt;
+5, mvn clean 清理target目录。&lt;br&gt;
+6, mvn install 将打包好的jar包安装到本地库中，一般没默认是在用户目录下的.m2\目录。&lt;br&gt;
+7, mvn deploy 发布到nexus远程仓库。  &lt;/p&gt;
+
+&lt;h4&gt;其它&lt;/h4&gt;
+
+&lt;p&gt;1, 搜索需要的包：http://mvnrepository.com/&lt;br&gt;
+2, maven中心库访问总出现超时问题解决。&lt;br&gt;
+开源中国提供了镜像（同步于http://mirrors.ibiblio.org/maven2/），使用方法见：http://maven.oschina.net/help.html&lt;br&gt;
+3, Maven报错“未结束的字符串字面值”，参考：http://www.cnblogs.com/yeyong/p/3906371.html&lt;br&gt;
+4, eclipse 提示tools.jar找不到，则检查下jre环境。  &lt;/p&gt;
+
+&lt;h4&gt;附pom.xml主要结构：&lt;/h4&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&amp;lt;project xmlns=&amp;quot;http://maven.apache.org/POM/4.0.0&amp;quot; xmlns:xsi=&amp;quot;http://www.w3.org/2001/XMLSchema-instance&amp;quot;
+  xsi:schemaLocation=&amp;quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&amp;quot;&amp;gt;
+  &amp;lt;modelVersion&amp;gt;4.0.0&amp;lt;/modelVersion&amp;gt;
+
+  &amp;lt;groupId&amp;gt;com.youth168.maventest&amp;lt;/groupId&amp;gt;
+  &amp;lt;artifactId&amp;gt;my-maven-app&amp;lt;/artifactId&amp;gt;
+  &amp;lt;version&amp;gt;1.0-SNAPSHOT&amp;lt;/version&amp;gt;
+  &amp;lt;packaging&amp;gt;jar&amp;lt;/packaging&amp;gt;
+
+  &amp;lt;name&amp;gt;my-maven-app&amp;lt;/name&amp;gt;
+  &amp;lt;url&amp;gt;http://maven.apache.org&amp;lt;/url&amp;gt;
+
+  &amp;lt;properties&amp;gt;
+    &amp;lt;project.build.sourceEncoding&amp;gt;UTF-8&amp;lt;/project.build.sourceEncoding&amp;gt;
+  &amp;lt;/properties&amp;gt;
+
+  &amp;lt;dependencies&amp;gt;
+    &amp;lt;dependency&amp;gt;
+      &amp;lt;groupId&amp;gt;junit&amp;lt;/groupId&amp;gt;
+      &amp;lt;artifactId&amp;gt;junit&amp;lt;/artifactId&amp;gt;
+      &amp;lt;version&amp;gt;{latest-version}&amp;lt;/version&amp;gt;
+      &amp;lt;scope&amp;gt;test&amp;lt;/scope&amp;gt;
+    &amp;lt;/dependency&amp;gt;
+  &amp;lt;/dependencies&amp;gt;
+&amp;lt;/project&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;（完~）&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Git的Merge和Rebase</title>
+   <link href="http://blog.hipoplar.me/git/on-git-rebase-merge.html"/>
+   <updated>2014-11-12T00:00:00+08:00</updated>
+   <id>/git/on-git-rebase-merge</id>
+   <content type="html">&lt;h4&gt;一、特定分支下Rebase&lt;/h4&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;git branch//确认在master分支下  
+*master  
+git pull  
+git rebase  
+git add -u//遇到冲突，要解决，再执行...  
+git rebase --continue  
+...
+over when arrive &amp;quot;master&amp;quot;//到master为止  
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;参考：http://www.cnblogs.com/sinojelly/archive/2011/08/07/2130172.html  &lt;/p&gt;
+
+&lt;h4&gt;二、把B库merge到A库来&lt;/h4&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;git clone git@git.abc.com:user/space/A.git //准备A库代码  
+cd A  
+git branch //确保在master分支下  
+*master  
+
+git remote add B git@git.abc.com:user/space/B.git //设置B库  
+git fetch B  
+
+git diff B/master //查看diff  
+
+git fetch origin //更新A  
+git merge origin/master (master = git pull)  
+
+git merge B/master  //merge B to A  
+git mergetool //有冲突解决掉  
+git commit  //测试OK再commit  
+git push origin master //Push合并更新到A库远端  
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h4&gt;三、其它可能用到的命令&lt;/h4&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;git clean -i: clean untracked files  
+git remote //show branches  
+git remote -v //show branches details  
+git remote show B //show B info  
+git reset --hard //rest to latest commit status
+git stash //save eidit status, back to latest commit status
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;（完~）&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>cocos2dx javascript与java互相调用途径</title>
+   <link href="http://blog.hipoplar.me/cocos2d/cocos2dx-java-with-javascript.html"/>
+   <updated>2014-10-22T00:00:00+08:00</updated>
+   <id>/cocos2d/cocos2dx-java-with-javascript</id>
+   <content type="html">&lt;p&gt;libcocos2dx工程中添加Cocos2dxJavascriptJavaBridge.java&lt;br&gt;
+该文件在frameworks\js-bindings\bindings\manual\platform\android\java\src\org\cocos2dx\lib中。  &lt;/p&gt;
+
+&lt;p&gt;java代码：//cn.winfirm.tools.JavascriptHelper.java&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;public class JavascriptHelper {
+    //method to call javascript
+    public static final void callJavascriptMethod() {//【java调用javascript方法】
+        final String jsCallStr = String.format(&amp;quot;JavaHelper.javascriptMethod(&amp;#39;%s&amp;#39;)&amp;quot;, &amp;quot;hello world, from javascript&amp;quot;);
+        Cocos2dxHelper.runOnGLThread(new Runnable() {
+            @Override
+            public void run() {
+                Cocos2dxJavascriptJavaBridge.evalString(jsCallStr);
+            }
+        });
+    }
+    //call by javascript
+    public static final String loadJavaMethod(final int no, final String description) {
+        return &amp;quot;no=&amp;quot;+no+&amp;quot;,description=&amp;quot;+description;
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;javascript代码：//JavaHelper.js&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;var JavaHelper = JavaHelper||{};
+JavaHelper.callClassName = &amp;quot;cn/winfirm/tools/JavascriptHelper&amp;quot;;
+
+JavaHelper.javascriptMethod=function(param) {
+    cc.log(param); // &amp;quot;hello world, javascript&amp;quot;
+}
+
+JavaHelper.callToJava=function() {//【javascript调用java方法】
+    var methodName = &amp;quot;loadJavaMethod&amp;quot;;
+    var signature = &amp;quot;(ILjava/lang/String;)Ljava/lang/String;&amp;quot;;
+    var param1=30;
+    var param2=&amp;quot;hello world, from javascript&amp;quot;;
+
+    var result = jsb.reflection.callStaticMethod(JavaHelper.callClassName, methodName, signature, param1, param2);
+    cc.log(result);//&amp;quot;no=30,description=hello world, from javascript&amp;quot;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;javascript调用java方法时的签名类型：&lt;br&gt;
+[JAVA]  [signature]&lt;br&gt;
+int     I&lt;br&gt;
+float   F&lt;br&gt;
+boolean Z&lt;br&gt;
+String  Ljava/lang/String;&lt;br&gt;
+void    V&lt;br&gt;
+与JNI规范相似，但类型少得多。  &lt;/p&gt;
+
+&lt;p&gt;（完~）&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Cocos2d 多屏适配文章</title>
+   <link href="http://blog.hipoplar.me/cocos2d/cocos-multi-resolution-support.html"/>
+   <updated>2014-10-12T00:00:00+08:00</updated>
+   <id>/cocos2d/cocos-multi-resolution-support</id>
+   <content type="html">&lt;p&gt;1.&amp;quot;Multi-resolution support&amp;quot;: &lt;a href=&quot;http://www.cocos2d-x.org/wiki/Multi_resolution_support&quot;&gt;http://www.cocos2d-x.org/wiki/Multi_resolution_support&lt;/a&gt;&lt;br&gt;
+2.&amp;quot;Cocos2d-x 多分辨率适配完全解析&amp;quot;:&lt;a href=&quot;http://cn.cocos2d-x.org/tutorial/show?id=1366&quot;&gt;http://cn.cocos2d-x.org/tutorial/show?id=1366&lt;/a&gt;  &lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Cocos IDE开发步骤</title>
+   <link href="http://blog.hipoplar.me/cocos2d/cocos-ide-steps.html"/>
+   <updated>2014-09-20T00:00:00+08:00</updated>
+   <id>/cocos2d/cocos-ide-steps</id>
+   <content type="html">&lt;h4&gt;一、启动Preferences设置&lt;/h4&gt;
+
+&lt;p&gt;1、General中设置Cocos2d-JS路径.&lt;br&gt;
+2、设置Python，SDK,NDK,ANT,JDK路径。  &lt;/p&gt;
+
+&lt;h4&gt;二、开发及调试&lt;/h4&gt;
+
+&lt;p&gt;1、添加图片等到res目录下，并在src/resources.js中注册。&lt;br&gt;
+2、添加js文件到src目录下，并在project.json中注册到jsList数组中。&lt;br&gt;
+3、构建调试Android应用&lt;br&gt;
+1)Cocos Tools&amp;gt;&amp;gt;Build Custom Runtime&amp;gt;&amp;gt;...build sucess.&lt;br&gt;
+2)Run Configurations&amp;gt;&amp;gt;Android ADB Mode&amp;gt;&amp;gt;Runtime path: Browse&amp;gt;&amp;gt;Project-debug.apk&amp;gt;&amp;gt;Apply.&lt;br&gt;
+3)Run as Cocos JSBinding..  &lt;/p&gt;
+
+&lt;h4&gt;三、命令行模式&lt;/h4&gt;
+
+&lt;p&gt;1、新建：cocos new MyGame -l js&lt;br&gt;
+2、运行：cocos run -p web|android|ios  &lt;/p&gt;
+
+&lt;p&gt;Cocos2d-JS官网：&lt;a href=&quot;http://cocos2d-x.org/wiki/Getting_Started_Cocos2d-js&quot;&gt;http://cocos2d-x.org/wiki/Getting_Started_Cocos2d-js&lt;/a&gt;  &lt;/p&gt;
+
+&lt;p&gt;（完~）&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Eclipse签名打包遇“Conversion to Dalvik format...”处理</title>
+   <link href="http://blog.hipoplar.me/android/eclipse-conversion-error.html"/>
+   <updated>2014-09-18T00:00:00+08:00</updated>
+   <id>/android/eclipse-conversion-error</id>
+   <content type="html">&lt;p&gt;Eclipse单个Android App打包正常，但Lib+App方式时，签名打包总报如下错误：&lt;br&gt;
+&amp;quot;Export Wizard: Conversion to Dalvik format failed with error 1&amp;quot;&lt;/p&gt;
+
+&lt;p&gt;解决办法：Project关闭“Build Automatically”选项，再Clean Lib+App，最后用Key来签名打包。&lt;br&gt;
+参考：&lt;a href=&quot;http://stackoverflow.com/questions/20355333/conversion-to-dalvik-format-failed-with-error-1&quot;&gt;http://stackoverflow.com/questions/20355333/conversion-to-dalvik-format-failed-with-error-1&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;（完~）&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>git分支开发、合并、删除等主要命令</title>
+   <link href="http://blog.hipoplar.me/android/git-branch-steps.html"/>
+   <updated>2014-09-13T00:00:00+08:00</updated>
+   <id>/android/git-branch-steps</id>
+   <content type="html">&lt;h4&gt;1、克隆远程版本库。&lt;/h4&gt;
+
+&lt;p&gt;git clone git@github.com:youth168/test.git&lt;br&gt;
+输入密码:git，等待完成。&lt;br&gt;
+cd ./test&lt;/p&gt;
+
+&lt;h4&gt;2、建立本地分支进行开发&lt;/h4&gt;
+
+&lt;p&gt;git checkout -b dev-branch master‘ 子分支时为git checkout -b dev-branch origin/develop&lt;br&gt;
+经过对本地dev-branch开发后...&lt;br&gt;
+git add .&lt;br&gt;
+git commit -am &amp;quot;feature adding and bugs fixing&amp;quot;&lt;/p&gt;
+
+&lt;h4&gt;3、合并本地分支(dev-branch)到master分支&lt;/h4&gt;
+
+&lt;p&gt;git checkout master&lt;br&gt;
+git merge dev-branch&lt;br&gt;
+git push origin master‘推送到远程&lt;br&gt;
+或者在dev-branch分支下执行：&lt;br&gt;
+git push origin dev-branch:master &amp;#39;git push orign HEAD:new_branch  &lt;/p&gt;
+
+&lt;p&gt;再次对dev-branch开发：&lt;br&gt;
+git checkout dev-branch&lt;br&gt;
+再重复第上述过程...&lt;/p&gt;
+
+&lt;h4&gt;4、分支删除&lt;/h4&gt;
+
+&lt;p&gt;git branch -d dev-branch ’不再基于dev-branch开发了，删除之&lt;br&gt;
+git push origin --delete dev-branch ’删除远程分支&lt;/p&gt;
+
+&lt;h4&gt;5、设置Tag(快照)&lt;/h4&gt;
+
+&lt;p&gt;git tag v1.0 &amp;#39;新建本地tag&lt;br&gt;
+git tag -d v1.0 &amp;#39;删除本地tag&lt;br&gt;
+git push --tag &amp;#39;push本地tag到远程&lt;br&gt;
+git push origin --delete tag v1.0 &amp;#39;删除远程tag  &lt;/p&gt;
+
+&lt;p&gt;（完~）&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Cocos2d-JS steps under web and Android Platform.</title>
+   <link href="http://blog.hipoplar.me/cocos2d/cocos2d-js-tutorial.html"/>
+   <updated>2014-09-01T00:00:00+08:00</updated>
+   <id>/cocos2d/cocos2d-js-tutorial</id>
+   <content type="html">&lt;p&gt;folder structure of sdk:&lt;br&gt;
+    http://www.cocos2d-x.org/wiki/Folder&lt;em&gt;Structure&lt;/em&gt;of_Cocos2d-JS&lt;br&gt;
+why js?&lt;br&gt;
+    http://cocos2d-x.org/docs/manual/framework/html5/v2/cocosh5-advantages/en&lt;/p&gt;
+
+&lt;h4&gt;Environment Requirements&lt;/h4&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;A Supported OS (Ubuntu 12.10+, OS X 10.7+, Windows 7+)
+Cocos2d-x v3.0 (https://github.com/cocos2d/cocos2d-x/)
+JDK/SDK 1.6+
+NDK r9d+
+Apache Ant
+Python 2.7.5
+WebStorm8.0.4(Key:http://peter2009.iteye.com/blog/1975994) &amp;amp; JetBrains-IDE-support for Chrome.
+IDE &amp;amp; Android SDK: ADT Bundle For Windows (64-bit)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h4&gt;Environment setting:&lt;/h4&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;cd cocos2d/cocos2d-js-v3.0-rc3/
+python ./setup.py
+COCOS2D_CONSOLE_ROOT &amp;amp; NDK_ROOT &amp;amp; ANDROID_SDK_ROOT &amp;amp; ANT_ROOT。
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h4&gt;Build and Test&lt;/h4&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;@new project
+cocos new js-helloworld -l js
+
+@run test
+cd js-helloworld
+@cocos run -p web
+or
+@cocos run -p android
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;COCOS CODE IDE 创建工程。运行为Adnroid工程。然后用Eclipse打开工程，导入js-binding下的cocos库，可以调试Android。&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Android JSONObject解析异常问题</title>
+   <link href="http://blog.hipoplar.me/android/android-json-trouble.html"/>
+   <updated>2014-08-28T00:00:00+08:00</updated>
+   <id>/android/android-json-trouble</id>
+   <content type="html">&lt;p&gt;Android的版本分化真麻烦，前些天从SD卡读JSONObject配置，发现一些手机正常，另一些异常（JSONObject转换问题）。后来无奈改成String数组解决了兼容问题。&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>推荐几个不错的VPN</title>
+   <link href="http://blog.hipoplar.me/network/chrome-honx-vpn.html"/>
+   <updated>2014-07-25T00:00:00+08:00</updated>
+   <id>/network/chrome-honx-vpn</id>
+   <content type="html">&lt;p&gt;云梯，每月10元起，不限时，多服务器选择，速度快，强力推荐！&lt;br&gt;
+&lt;a href=&quot;http://protizi.com/?r=3d02a81974887d3a&quot;&gt;http://protizi.com/?r=3d02a81974887d3a&lt;/a&gt;  &lt;/p&gt;
+
+&lt;p&gt;如果仅需浏览器上外网，则推荐一个Chrome浏览器翻墙插件。&lt;br&gt;
+链接：&lt;a href=&quot;http://honx.in/i/U84FRn8mTgLfZ37v&quot;&gt;http://honx.in/i/U84FRn8mTgLfZ37v&lt;/a&gt;  &lt;/p&gt;
+
+&lt;p&gt;（完~）&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>设计模式相关</title>
+   <link href="http://blog.hipoplar.me/java/design-patterns.html"/>
+   <updated>2014-07-10T00:00:00+08:00</updated>
+   <id>/java/design-patterns</id>
+   <content type="html">&lt;h3&gt;一、设计原则&lt;/h3&gt;
+
+&lt;p&gt;1、找出应用中可能需要变化之处，把它们独立出来，不要和那些不需要变化的代码混在一起。（找出程序中会变化的方面，然后将其和固定不变的方面分离。）&lt;br&gt;
+即把会变化的部分取出并封装起来，以便以后可以轻易的改动或扩充此部分，而不影响不需要变化的其它部分。&lt;br&gt;
+2、针对接口编程，而不是针对实现编程。&lt;br&gt;
+即针对超类型编程，变量的声明类型应该是超类型，通常是一个抽象类或者是一个接口。意味着声明类时不用理会以后执行的真正对象类型。&lt;br&gt;
+3、多用组合，少用继承。&lt;br&gt;
+增强系统的弹性，不仅可将算法族封装成类，更可以”在运行时动态的改变行为“，只要组合的行为对象符合正确的接口标准即可。&lt;br&gt;
+4、类应该对扩展开放，对修改关闭。开闭原则。&lt;br&gt;
+5、要依赖抽象，不要依赖具体类。依赖倒置原则。&lt;br&gt;
+6、一个类应该只有一个引起变化的原则。（单一职责）&lt;br&gt;
+不让高层组件依赖低层组件，而且不管高层或低层组件，两者都应该依赖于抽象。&lt;/p&gt;
+
+&lt;h3&gt;二、设计模式&lt;/h3&gt;
+
+&lt;p&gt;模式是在某情境(context)下，针对某问题的某种解决方案。常见模式有：&lt;br&gt;
+观察者模式：定义了对象之间一对多依赖，这样一来，当一个对象改状态时，它的所有依赖都会收到通知并自动更新。&lt;br&gt;
+装饰者模式：动态地将责任附加到对象上，若要扩展功能，装饰者提供了比继承更有弹性的替代方案。&lt;br&gt;
+工厂方法模式：定义了一个创建对象的接口，但子类决定要实例化的类是哪一个。工厂方法让类把实例化推迟到子类。&lt;br&gt;
+单件模式：确保一个类只有一个对象，并提供一个全局的访问点。&lt;br&gt;
+命令模式：将”请求“封装成对象，以便使用不同的请求，队列或者日志来参数化其它对象，命令模式也可支持撤销的操作。&lt;br&gt;
+适配器模式：将一个类的接口，转换成客户期望的另一个接口，适配器让原本接口不兼容的类可以合作无间。&lt;br&gt;
+模块方法模式：在一个方法中定义一个算法的骨架，而将一些步骤延迟到子类中。使得子类可以在不改变算法结构的情况下，重新定义算法中的某些步骤。&lt;br&gt;
+迭代器模式：提供一种方法顺序访问一个聚合对象中的各个元素，而不暴露其内部的表示。&lt;br&gt;
+组合模式：允许你将对象组合成树形结构来表现”整体/部分&amp;quot;层次结构。组合模式让客户以一致的方式处理个别对象以及对象组合。&lt;br&gt;
+状态模式：允许对象在内部状态改变时改变它的行为，对象看起来好像修改了它的类。&lt;br&gt;
+代理模式：为另一个对象提供一个替身或占位符以控制对这个对象的访问。&lt;br&gt;
+复合模式：模式的模式，模式携手合作。&lt;/p&gt;
+
+&lt;h3&gt;三、反模式&lt;/h3&gt;
+
+&lt;p&gt;告诉你如何用一个不好的解决方案，解决一个问题。&lt;br&gt;
+反模式看起来总像是一个好的解决方案，但当它真正被采用后，就会带来麻烦。&lt;br&gt;
+通过反模式归纳，我们可以帮助代人在实现它们之前，辨出不好的解决方案。&lt;br&gt;
+常见反模式：开发反模式，OO反模式，组织反模式，领域特定反模式。&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Android View及ViewGroup知识</title>
+   <link href="http://blog.hipoplar.me/android/about-android-view.html"/>
+   <updated>2014-06-21T00:00:00+08:00</updated>
+   <id>/android/about-android-view</id>
+   <content type="html">&lt;h4&gt;一、基本知识&lt;/h4&gt;
+
+&lt;p&gt;Adroid的UI界面都是由View和ViewGroup及其派生类组合而成的。其中，View是所有UI组件的基类，ViewGroup是容纳这些组件的容器。ViewGroup本身从View派生出来，作为各Layout的基类。&lt;/p&gt;
+
+&lt;p&gt;View代表了用户界面组件的一块可绘制的空间块。每一个View在屏幕上占据一个长方形区域。在这个区域内，这个View对象负责图形绘制和事件处理。&lt;/p&gt;
+
+&lt;p&gt;ViewGroup可以包含作为叶子节点的View，也可以包含作为更低层次的子ViewGroup，而子ViewGroup又可以包含下一层的叶子节点的View和ViewGroup。&lt;/p&gt;
+
+&lt;h4&gt;二、自定义ViewGroup&lt;/h4&gt;
+
+&lt;p&gt;1.继承ViewGroup。&lt;br&gt;
+2.重写onLayout(根据orientation）及onMeasure。&lt;/p&gt;
+
+&lt;p&gt;参考：&lt;br&gt;
+1.&lt;a href=&quot;http://www.2cto.com/kf/201109/104633.html&quot;&gt;http://www.2cto.com/kf/201109/104633.html&lt;/a&gt;&lt;br&gt;
+2.&lt;a href=&quot;http://bbs.csdn.net/topics/370144745&quot;&gt;http://bbs.csdn.net/topics/370144745&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>基于Volley的网络请求工具</title>
+   <link href="http://blog.hipoplar.me/android/android-volley-tool.html"/>
+   <updated>2014-06-15T00:00:00+08:00</updated>
+   <id>/android/android-volley-tool</id>
+   <content type="html">&lt;h4&gt;一、Volley基本处理流程&lt;/h4&gt;
+
+&lt;p&gt;1、应用初始化Volley。&lt;br&gt;
+2、Volley创建一个RequestQueue、NetworkDispatcher组及Network。&lt;br&gt;
+3、RequestQueue即一个Request队列，RequestQueue会创建一个ExecutorDelivery。&lt;br&gt;
+4、NetworkDispatcher实质是Thread，从RequestQueue中取Request，通过Network加以执行。&lt;br&gt;
+5、Network负责网络请求处理，具体过程交给HttpStack处理。&lt;br&gt;
+6、HttpStack分HttpURLConnection(SDK_INT&amp;gt;=9)与HttpClient与两种方式。&lt;br&gt;
+7、ExecutorDelivery负责处理请求结果，并与主线程进行交互。&lt;br&gt;
+8、Volley在上述2-7的基础上增加了Cache等附加处理环节。&lt;/p&gt;
+
+&lt;h4&gt;二、基于Volley的网络请求工具&lt;/h4&gt;
+
+&lt;p&gt;在AndroidVolley基础上扩展了com.android.http包，增加了ByteArrayRequest及RequestManager，方便JSON、XML、Map()、及RequestMap()的网络请求。&lt;br&gt;
+工程地址：&lt;a href=&quot;https://github.com/panxw/android-volley-manager&quot;&gt;https://github.com/panxw/android-volley-manager&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4&gt;三、早期使用的android-async-http改进型&lt;/h4&gt;
+
+&lt;p&gt;工程地址：&lt;a href=&quot;https://github.com/panxw/android-async-http&quot;&gt;https://github.com/panxw/android-async-http&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Android数据保存与恢复</title>
+   <link href="http://blog.hipoplar.me/android/android-save-restore.html"/>
+   <updated>2014-06-12T00:00:00+08:00</updated>
+   <id>/android/android-save-restore</id>
+   <content type="html">&lt;p&gt;在一个项目中，我使用onSaveInstanceState和onRestoreInstanceState中对数据做了保存与恢复，但应用被91助手等清理后重新进入，还是偶有Activity报空指针错误的情况。查看LOG发现onCreate使用数据代码行，在onRestoreInstanceState数据恢复之前就已执行了。后来换成在onCreate中进行数据恢复，就没再出现这种情况了。  &lt;/p&gt;
+
+&lt;p&gt;示例代码：&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;private String data=&amp;quot;some user data&amp;quot;;
+    
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        if(savedInstanceState!=null) {//如果有数据被需恢复，onRestoreInstanceState会被触发，并将savedInstanceState传递到onCreate
+            Log.d(TAG,&amp;quot;onRestoreInstanceState is not null...&amp;quot;);
+            data=savedInstanceState.getString(&amp;quot;data&amp;quot;);
+        }
+        
+        //tv.setText(data);
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outdate.putString(&amp;quot;data&amp;quot;, data);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {//savedInstanceState会传递到onCreate，在onCreate中恢复
+        super.onRestoreInstanceState(savedInstanceState);
+        //data=savedInstanceState.getString(&amp;quot;data&amp;quot;);//不在这里用data=savedInstanceState.getString(&amp;quot;data&amp;quot;);直接来恢复。
+    }&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;参考文章：&lt;a href=&quot;http://blog.csdn.net/lixiang0522/article/details/7565401&quot;&gt;http://blog.csdn.net/lixiang0522/article/details/7565401&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>双重检查加锁单例</title>
+   <link href="http://blog.hipoplar.me/java/double-lock-singleton.html"/>
+   <updated>2014-04-15T00:00:00+08:00</updated>
+   <id>/java/double-lock-singleton</id>
+   <content type="html">&lt;p&gt;双重检查加锁单例，解决多线程访问和效率问题。&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;public class Singleton {
+    private volatile static Singleton instance=null;
+    private Singleton(){
+    }
+    
+    public static Singleton getInstance(){
+        if(null == instance) {
+            synchronized(Singleton.class) {
+                if(null==instance) {
+                    instance = new Singleton();
+                }
+            }
+        }
+        return instance;
+    }
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;以上java 5及以上版本有效。&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Android ROM包制作及刷机过程简介</title>
+   <link href="http://blog.hipoplar.me/android/android-rom-about.html"/>
+   <updated>2014-03-28T00:00:00+08:00</updated>
+   <id>/android/android-rom-about</id>
+   <content type="html">&lt;h4&gt;一、Android ROM种类&lt;/h4&gt;
+
+&lt;p&gt;1.Bootloader ROM，连接PC刷机，面向技术人员。&lt;br&gt;
+2.Recovery ROM，Recovery模式刷机，面向普通用户。&lt;/p&gt;
+
+&lt;h4&gt;二、Bootloader ROM的组成（img为linux镜像文件）&lt;/h4&gt;
+
+&lt;p&gt;1.系统镜像：system.img，相当于linux下的system下的所有文件及目录，确定内核空间大小。&lt;br&gt;
+2.用户镜像：userdata.img，包含用户的数据，确定用户空间大小。&lt;br&gt;
+3.Linux内核镜像：boot.img，Linux内核镜像。&lt;br&gt;
+4.Recovery镜像: recovery.img&lt;br&gt;
+5.Bootloader镜像:bootloader.img&lt;br&gt;
+前三个镜像是必须的，后面两个可选。可单独一个一个刷，也可整体刷写。&lt;/p&gt;
+
+&lt;p&gt;Bootloader ROM的制作，参考&lt;a href=&quot;http://www.cyanogenmod.org/&quot;&gt;http://www.cyanogenmod.org/&lt;/a&gt;。&lt;br&gt;
+下载编译后，生成system.img,userdata.img,boot.img,recovery.img，用fastboot进行刷机操作。&lt;br&gt;
+不建议刷bootloader.img，可能刷成砖头。&lt;/p&gt;
+
+&lt;p&gt;system.img解压system.img.raw&lt;br&gt;
+mount system.img.rao ./system，可修改img中的内容。&lt;br&gt;
+重新打包成原始system.img。&lt;/p&gt;
+
+&lt;h4&gt;三、Recovery ROM的组成（实质为一个ZIP文件，关键制作Edify脚本）&lt;/h4&gt;
+
+&lt;p&gt;META-INFO目录：包含存储签名文件及更新脚本文件。&lt;br&gt;
+system目录：要复制到system分区的文件。&lt;br&gt;
+boot.img：镜像文件。&lt;br&gt;
+比较多适合制作升级文件。&lt;/p&gt;
+
+&lt;p&gt;制作Recovery ROM，参考&lt;a href=&quot;http://www.clockworkmod.com/&quot;&gt;http://www.clockworkmod.com/&lt;/a&gt;&lt;br&gt;
+进入Recovery模式(电源+音量键)进行刷机。&lt;/p&gt;
+
+&lt;h4&gt;参考&lt;/h4&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://edu.51cto.com/lesson/id-13375.html&quot;&gt;http://edu.51cto.com/lesson/id-13375.html&lt;/a&gt;&lt;br&gt;
+&lt;a href=&quot;http://www.miui.com/thread-1271033-1-1.html&quot;&gt;http://www.miui.com/thread-1271033-1-1.html&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Debian/Linux ruby setup</title>
+   <link href="http://blog.hipoplar.me/linux/debian-ruby-setup.html"/>
+   <updated>2014-03-11T00:00:00+08:00</updated>
+   <id>/linux/debian-ruby-setup</id>
+   <content type="html">&lt;p&gt;有别于Windows下的rubyinstall+devkit安装与配置。Debian/Linux下方便多了。&lt;/p&gt;
+
+&lt;h4&gt;一、安装Git&lt;/h4&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo apt-get install git&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h4&gt;二、安装C/C++开发环境&lt;/h4&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo apt-get install build-essential&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h4&gt;三、安装ruby开发环境&lt;/h4&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo apt-get install ruby irb rdoc ruby-dev&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h4&gt;四、安装ruby gem&lt;/h4&gt;
+
+&lt;p&gt;安装好ruby的基本开发环境后，就可以安装ruby gem了，如jekyll：&lt;br/&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo gem install rdiscount jekyll redcarpet&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Windows安装Debian Linux步骤</title>
+   <link href="http://blog.hipoplar.me/linux/install-debian-windows.html"/>
+   <updated>2014-03-10T00:00:00+08:00</updated>
+   <id>/linux/install-debian-windows</id>
+   <content type="html">&lt;p&gt;本文中使用Win7，Xp应该类似；Debian使用7.4。&lt;/p&gt;
+
+&lt;h4&gt;一、下载文件&lt;/h4&gt;
+
+&lt;p&gt;下载debian-7.4.0-i386-CD-1.iso,(http://cdimage.debian.org/debian-cd/7.4.0/i386/iso-cd/debian-7.4.0-i386-CD-1.iso)&lt;br&gt;
+下载vmlinuxz,initrid.gz,boot.img.gz(http://ftp.debian.org/debian/dists/Debian7.4/main/installer-i386/20130613+deb7u1+b2/images/hd-media/)&lt;/p&gt;
+
+&lt;h4&gt;二、准备FAT32分区及Debian文件系统空间&lt;/h4&gt;
+
+&lt;p&gt;备份F备数据并删除该盘，再重建一FAT32新F盘，用于存放debian-7.4.0-i386-CD-1.iso安装文件，并留多数空闲空间用作Debian文件系统空间。&lt;br&gt;
+考备下载好的debian-7.4.0-i386-CD-1.iso文件到F盘，Daemon tool加载iso并运行setup.exe，选择常规模式(注意，最后一步先不忙立即重启)。
+考备下载的vmlinuxz,initrid.gz,boot.img.gz，到C:\win32-loader目录，替换原有文件之后再重启。&lt;/p&gt;
+
+&lt;h4&gt;三、系统安装&lt;/h4&gt;
+
+&lt;p&gt;重启进入引导入时，选择Continue to install process，即开始进入Debian图形化安装流程了。&lt;br&gt;
+如果可连网，建议选择安装Gome等必须组件，否则安装完成只有基本系统了。&lt;/p&gt;
+
+&lt;h4&gt;四、部分问题&lt;/h4&gt;
+
+&lt;p&gt;debian-7.4.0-i386-CD-1.iso必须存放在FAT32文件系统根目录下(DVD格式iso过大，FAT32文件系统不支持)。&lt;br&gt;
+不能使用debian-7.4.0-i386-CD-1.iso自身解压出来的vmlinuxz,initrid.gz,boot.img.gz，必须替换。&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Win7花生壳公网映射80端口的问题</title>
+   <link href="http://blog.hipoplar.me/network/oray-win7-try.html"/>
+   <updated>2014-03-05T00:00:00+08:00</updated>
+   <id>/network/oray-win7-try</id>
+   <content type="html">&lt;p&gt;之前在一台Win XP上开启Tomcat(80端口)，选择花生壳“开启外网HTTP80端口”，映射完成后，通过域名是可以正常访问的。&lt;/p&gt;
+
+&lt;p&gt;但换了台Win7，同样的方法却失效了，提示“很抱歉，您访问的花生壳动态域名不在线，请稍后再尝试访问！”。可是，当不选择“开启外网HTTP80端口”，通过每次映射自动生成的端口号，则域名可以访问了。&lt;/p&gt;
+
+&lt;p&gt;搜索找到了解决办法：&lt;a href=&quot;http://blog.csdn.net/dahaidao/article/details/6442537&quot;&gt;http://blog.csdn.net/dahaidao/article/details/6442537&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;这样一来，“开启外网HTTP80端口”又有效了。&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Android必要模块－－升级与公告</title>
+   <link href="http://blog.hipoplar.me/android/project-startup.html"/>
+   <updated>2014-03-04T00:00:00+08:00</updated>
+   <id>/android/project-startup</id>
+   <content type="html">&lt;p&gt;基于Webservice api的Android有必要初期就为其设计好升级和公告功能：&lt;/p&gt;
+
+&lt;p&gt;1,APP一旦被用户安装上，如果没有升级功能，那就难于受控了，升级功能的重要性就不用多说了。&lt;/p&gt;
+
+&lt;p&gt;2,公告的功能也是很重要的，在对Webservice进行维护升级时，难免影响当时正在使用的用户。如果有公告模块，便可提前告知用户相关事宜了。&lt;/p&gt;
+
+&lt;p&gt;3,创建打包签名的key，并妥善保管好。&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Android Cocos2dx 编译过程</title>
+   <link href="http://blog.hipoplar.me/cocos2d/android-cocos2d-tutorial.html"/>
+   <updated>2014-02-20T00:00:00+08:00</updated>
+   <id>/cocos2d/android-cocos2d-tutorial</id>
+   <content type="html">&lt;p&gt;可能用到JDK，Python，Eclipse建议先行安装与配置好，在此不再多述。最好将adt-bundle-windows，android-ndk-r9c，cocos2dx2.2解压到同一目录下，如D:\cocos2dx。以下主要讨论Windows下NDK环境编译cocos2d-x工程的步骤。&lt;/p&gt;
+
+&lt;h4&gt;一、工程创建&lt;/h4&gt;
+
+&lt;p&gt;cmd进入cocos2d-x2.2目录的tools\project-creator，执行: python create_project.py -project helloworld -package com.allthelucky.game -language cpp&lt;br/&gt;
+末尾出现Have Fun!时，表示工程创建成功，在D:\cocos2dx\cocos2d-x-2.2.2\projects\helloworld可看到各平台对应项目，包括Android平台的pro.android，然后就是程序编写或编译了。&lt;/p&gt;
+
+&lt;h4&gt;二、Android工程编译&lt;/h4&gt;
+
+&lt;p&gt;1)单独NDK编译方法：&lt;br/&gt;
+1)添加NDK路径D:\cocos2dx\android-ndk-r9c Path。&lt;br/&gt;
+2)添加环境变量NDK&lt;em&gt;MODULE&lt;/em&gt;PATH，其值为D:\cocos2dx\cocos2d-x-2.2.2;D:\cocos2dx\cocos2d-x-2.2.2\cocos2dx\platform\third_party\android\prebuilt。&lt;br/&gt;
+3)cmd进入pro.android目录下，执行ndk-build就可开始编译了。&lt;/p&gt;
+
+&lt;p&gt;2)Eclipse(CDT)编译方法：&lt;br/&gt;
+1)导入Android工程序所需的Library库工程。D:\cocos2dx\cocos2d-x-2.2.2\cocos2dx\platform\android\java&lt;br/&gt;
+2)打开pro.android工程Properties，选中C/C++ Build选项，将Build Settings选项卡下“Build command”的值由原来的bash ${ProjDirPath}/build&lt;em&gt;native.sh改为：D:\cocos2dx\android-ndk-r9c\ndk-build.cmd，子栏目Environment下加入NDK&lt;/em&gt;MODULE&lt;em&gt;PATH，值为E:D:\cocos2dx\cocos2d-x-2.2.2;D:\cocos2dx\cocos2d-x-2.2.2\cocos2dx\platform\third&lt;/em&gt;party\android\prebuilt&lt;br/&gt;
+3)最后Clean一下工程，再运行Android程序即开始编译了。&lt;br/&gt;
+4)查看cocos2dx代码：Preference-&amp;gt;Workspace-&amp;gt;Linked Resources添加COCOS2DX变量及值D:\cocos2dx\cocos2d-x-2.2.2&lt;/p&gt;
+
+&lt;h4&gt;三、Win32工程编译&lt;/h4&gt;
+
+&lt;p&gt;1)环境WIN7+VS2012，方便代码查看或输入，建议安装Visual Assist X插件&lt;br/&gt;
+2)进入目录,运行build-win32.bat编译cocos2d-x库。&lt;br/&gt;
+3)vs2012打开cocos2d-win32.vc2012.sln,然后Build Solution编译工程。&lt;/p&gt;
+
+&lt;h4&gt;四、演示项目&lt;/h4&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/panxw/android-develop-toolkit/tree/master/AndroidCocos2dx&quot;&gt;https://github.com/panxw/android-develop-toolkit/tree/master/AndroidCocos2dx&lt;/a&gt;&lt;/p&gt;
+
+&lt;h5&gt;五、其它问题&lt;/h5&gt;
+
+&lt;p&gt;fatal error: AppDelegate.h: No such file or directory，原因可能是pro.android已不在D:\cocos2dx\cocos2d-x-2.2.2\projects\helloworld目录下了。&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Android GridView去边距</title>
+   <link href="http://blog.hipoplar.me/android/listview-selector.html"/>
+   <updated>2013-10-20T00:00:00+08:00</updated>
+   <id>/android/listview-selector</id>
+   <content type="html">&lt;p&gt;为GridView添加android:listSelector=&amp;quot;@null&amp;quot;可去掉其与item的间距。&lt;/p&gt;
+
+&lt;p&gt;当动态为item设置背景时，用android:listSelector=&amp;quot;@null&amp;quot;时，条目的选中效果不是自己所设置的，各种尝试后，发现设置成@android:color/transparent又正常了。&lt;/p&gt;
+
+&lt;p&gt;难道&amp;quot;@android:color/transparent&amp;quot;和&amp;quot;@null&amp;quot;不都是表示透明吗？&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Android退出前的stopService</title>
+   <link href="http://blog.hipoplar.me/android/service-destroy.html"/>
+   <updated>2013-08-10T00:00:00+08:00</updated>
+   <id>/android/service-destroy</id>
+   <content type="html">&lt;p&gt;Android退出System.exit(0)前stopService可能使Service未来得及进入onDestroy进程就已退出了。解决办法：延时100ms左右再调stopService. &lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Appfog Java Web操作指南</title>
+   <link href="http://blog.hipoplar.me/web/appfog-javaweb-step.html"/>
+   <updated>2013-07-12T00:00:00+08:00</updated>
+   <id>/web/appfog-javaweb-step</id>
+   <content type="html">&lt;p&gt;按以下步骤操作：&lt;/p&gt;
+
+&lt;p&gt;1,注册appfog.com账号，创建应用xxx&lt;br/&gt;
+2,安装Rubyinstaller，选择1.93版本的&lt;br/&gt;
+3,升级gem，执行gem update --system&lt;br/&gt;
+4,安装appfog.com部署工具af，执行gem install af&lt;br/&gt;
+5,进入要上传的目录(其下可以放war包，也可以是Webroot下文件），执行af login，af update xxx&lt;/p&gt;
+
+&lt;p&gt;当修改后再次更新时，最好af logout一下，重新af login.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Android NDK 编译</title>
+   <link href="http://blog.hipoplar.me/android/ndk-env-setup.html"/>
+   <updated>2013-06-20T00:00:00+08:00</updated>
+   <id>/android/ndk-env-setup</id>
+   <content type="html">&lt;p&gt;安装cygwin，.bashprofile末加入：&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;ANDROID_NDK=/cygdrive/d/android/android-ndk-r6b
+export ANDROID_NDK&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;一、生成.h文件
+以Android工程为例，进到目录，执行：&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;javah -classpath bin/classes com.sample.test.HelloWorld&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;二、编译
+进到目录，执行：&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;$ANDROID_NDK/ndk-build clean
+$ANDROID_NDK/ndk-build&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>DES,ASE等常见算法网站</title>
+   <link href="http://blog.hipoplar.me/network/common-algorithms-site.html"/>
+   <updated>2013-06-19T00:00:00+08:00</updated>
+   <id>/network/common-algorithms-site</id>
+   <content type="html">&lt;p&gt;ALL:&lt;/p&gt;
+
+&lt;p&gt;http://embeddedsw.net/Cipher&lt;em&gt;Reference&lt;/em&gt;Home.html&lt;br/&gt;
+http://en.wikipedia.org/wiki/AES&lt;em&gt;implementations#C.2FASM&lt;/em&gt;library&lt;/p&gt;
+
+&lt;p&gt;a byte-oriented aes-256 implementation&lt;br/&gt;
+http://www.literatecode.com/aes256&lt;/p&gt;
+
+&lt;p&gt;AES Crypt&lt;br/&gt;
+http://www.aescrypt.com/download/&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>PHP学习入门级练习</title>
+   <link href="http://blog.hipoplar.me/web/php-learn-test.html"/>
+   <updated>2013-06-11T00:00:00+08:00</updated>
+   <id>/web/php-learn-test</id>
+   <content type="html">&lt;h4&gt;一、PHP基础操作&lt;/h4&gt;
+
+&lt;p&gt;1,基本语法：
+&lt;pre&gt;
+&amp;lt;?php
+    echo &amp;#39;---------------start--------------&amp;#39;;
+    echo &lt;strong&gt;FILE&lt;/strong&gt;;//打印预定义常量
+    echo &amp;quot;Hello world&amp;quot;;//一般打印
+    define(&amp;#39;SCHOOL&amp;#39;,&amp;quot;YANTZE UNIVERSITY&amp;quot;);//定义常量
+    echo SCHOOL;//打印常量
+    $name=&amp;quot;savant&amp;quot;;//name
+    $age=28;
+    echo &amp;#39;name=&amp;#39;.$name.&amp;#39;,age=&amp;#39;.$age;//打印变量，字符串连接
+    $array=array(&amp;#39;name&amp;#39;=&amp;gt;&amp;#39;allthelucky&amp;#39;,&amp;#39;age&amp;#39;=&amp;gt;28);//定义数组
+    echo json&lt;em&gt;encode($array);//转成json输出
+    $array=array(array(&amp;quot;id&amp;quot;=&amp;gt;&amp;#39;1&amp;#39;,&amp;quot;name&amp;quot;=&amp;gt;&amp;#39;hello&amp;#39;),array(&amp;quot;id&amp;quot;=&amp;gt;&amp;#39;2&amp;#39;,&amp;quot;name&amp;quot;=&amp;gt;&amp;#39;world&amp;#39;));
+    echo json&lt;/em&gt;encode($array);//转成jsonarray输出
+    $array=array(&amp;#39;this&amp;#39;,&amp;#39;is&amp;#39;,&amp;#39;php&amp;#39;,&amp;#39;test&amp;#39;);//定义数组
+    echo($array[0]);//打印第一个元素
+    print&lt;em&gt;r($array);//全打印
+    $have=true;//定义boolean
+    echo($have);
+    function show($result) {//定义函数
+        echo &amp;#39;result is:&amp;#39;.$result;
+    }
+    $result=&amp;#39;number 1&amp;#39;;
+    show($result);//调用函数
+    function mult($a, $b) {//定义带返回值函数
+        return $a*$b;
+    }
+    $a=10;
+    $b=20;
+    echo &amp;#39;result=&amp;#39;.mult($a,$b);//调用函数
+    $c=20;
+    if ($c == 20) {//if else 语句
+        echo &amp;#39;yes&amp;#39;;
+    } else {
+        echo &amp;#39;no&amp;#39;;
+    }
+    $num=1;
+    while($num &amp;lt; 10) {//while循环
+        echo &amp;#39;num=&amp;#39;.$num;
+        $num+=1;
+    }
+    $array=array(&amp;#39;1&amp;#39;=&amp;gt;&amp;#39;hellsf&amp;#39;,&amp;#39;2&amp;#39;=&amp;gt;&amp;#39;sadfadfsd&amp;#39;,&amp;#39;3&amp;#39;=&amp;gt;&amp;#39;asdfasdfasdfsdf&amp;#39;);
+    foreach($array as $key=&amp;gt;$value) {//foreach 语句，输出key,value
+        echo $key.&amp;#39;=&amp;#39;.$value;
+    }
+    foreach($array as $value) {//foreach语句，只输出值 
+        echo $value;
+    }
+    print&lt;/em&gt;r($array);
+    $str = &amp;#39; asdf safsd &amp;#39;;
+    echo trim($str);//trim函数
+    echo strlen($str);//strlen函数
+    echo md5($str);//md5加密
+    echo sha1($str);//sha1加密
+&lt;/pre&gt;&lt;/p&gt;
+
+&lt;p&gt;2,使用类：
+&lt;pre&gt;
+&amp;lt;?php
+    class User {
+        public $name=&amp;quot;savant&amp;quot;;
+        public $age =&amp;quot;age&amp;quot;;
+        public function __construct($name, $age) {//构造方法
+        $this-&amp;gt;name=$name;
+        $this-&amp;gt;age=$age;
+        }
+        public function show() {//成员函数
+        echo &amp;#39;name=&amp;#39;.$this-&amp;gt;name.&amp;#39;,age=&amp;#39;.$this-&amp;gt;age;
+        }
+    }
+    $user = new User(&amp;#39;hello world&amp;#39;, 26);
+    $user-&amp;gt;show();
+    echo &amp;#39;---------------end--------------&amp;#39;;
+?&amp;gt;
+&lt;/pre&gt;&lt;/p&gt;
+
+&lt;p&gt;3,表单操作
+&lt;pre&gt;
+&amp;lt;?php
+    echo &amp;#39;---------------start--------------&amp;#39;;
+    echo &amp;#39;name&amp;#39;.$&lt;em&gt;GET[&amp;#39;name&amp;#39;];//get参数
+    echo &amp;#39;age&amp;#39;.$&lt;/em&gt;GET[&amp;#39;age&amp;#39;];
+    echo &amp;#39;name=&amp;#39;.$&lt;em&gt;POST[&amp;#39;name&amp;#39;];//post参数
+    echo &amp;#39;password=&amp;#39;.$&lt;/em&gt;POST[&amp;#39;password&amp;#39;];
+    echo &amp;#39;desc=&amp;#39;.$&lt;em&gt;POST[&amp;#39;desc&amp;#39;];
+    $path=&amp;#39;./upfiles&amp;#39;.$&lt;/em&gt;FILES[&amp;#39;pic&amp;#39;][&amp;#39;name&amp;#39;];
+    move&lt;em&gt;uploaded&lt;/em&gt;file($&lt;em&gt;FILES[&amp;#39;pic&amp;#39;][&amp;#39;temp&amp;#39;],$path);
+    echo $&lt;/em&gt;POST[&amp;#39;pic&amp;#39;];
+    echo &amp;#39;---------------end--------------&amp;#39;;
+?&amp;gt;
+&lt;/pre&gt;&lt;/p&gt;
+
+&lt;p&gt;FORM代码
+&lt;pre&gt;
+&lt;form name=&quot;data&quot; method=&quot;post&quot; action=&quot;test.php&quot; enctype=&quot;multipart/form-data&quot; &gt;
+    name:&lt;input name=&quot;name&quot; type=&quot;text&quot; value=&quot;&quot;&gt;&lt;/input&gt;
+    &lt;br/&gt;
+    password:&lt;input name=&quot;password&quot; type=&quot;password&quot; value=&quot;&quot;&gt;&lt;/input&gt;
+    &lt;br/&gt;
+    desc:&lt;textarea name=&quot;desc&quot;&gt;&lt;/textarea&gt;
+    &lt;br/&gt;
+    pic:&lt;input name=&quot;pic&quot; type=&quot;file&quot; value=&quot;&quot;&gt;&lt;/input&gt;
+    &lt;br/&gt;
+    &lt;input name=&quot;submit&quot; type=&quot;submit&quot;&gt;&lt;/input&gt;
+&lt;/form&gt;
+&lt;/pre&gt;&lt;/p&gt;
+
+&lt;h4&gt;二、数据库MySql简单操作练习&lt;/h4&gt;
+
+&lt;p&gt;1,MySql服务启动和停止
+&lt;pre&gt;
+net start mysql
+net stop mysql
+&lt;/pre&gt;&lt;/p&gt;
+
+&lt;p&gt;2,数据库操作
+&lt;pre&gt;
+create database USER&lt;em&gt;DB;//创建数据库
+show databases;//查看数据库
+use USER&lt;/em&gt;DB;//选择数据库
+drop database DBNAME;//删除数据库
+&lt;/pre&gt;&lt;/p&gt;
+
+&lt;p&gt;3,表格操作
+&lt;pre&gt;
+create table if not exists USER(id int auto_increment primary key, user varchar(20) not null, password varchar(40) not null, createtime datetime);//创建表格
+rename table USER to USERS;//改表格名
+drop table if exists USER;//删除表格
+show tables;//表出表格 
+describe USER;//显示表结构
+insert into admin(user,password) values(&amp;quot;pan&amp;quot;,&amp;quot;123456&amp;quot;);//添加记录到表格 
+select * from USER;//查询表格记录
+update USER set passowrd=&amp;quot;111111&amp;quot;;//更新表格记录
+delete from USER where user=&amp;quot;abc&amp;quot;;//删除记录
+&lt;/pre&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>TabActivity子Activity以代码进行切换</title>
+   <link href="http://blog.hipoplar.me/android/tabhost-switch.html"/>
+   <updated>2013-06-04T00:00:00+08:00</updated>
+   <id>/android/tabhost-switch</id>
+   <content type="html">&lt;p&gt;TabActivity子Activity直接以startActivity方式切换子Activity时会有些问题，不过可以这样解决：&lt;/p&gt;
+
+&lt;p&gt;1,在TabActivity中加入切换方法，如AppHostActivity.java中：&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;public void setCurrentTab(int index) {
+        try {
+            this.tabHost.setCurrentTab(index);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;2,在AppHostActivity子Activity中这样切换到其它Activity:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;((AppHostActivity)getParent()).setCurrentTab(1);&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>人际交往的六种模式</title>
+   <link href="http://blog.hipoplar.me/reading/six-relationship-model.html"/>
+   <updated>2013-05-15T00:00:00+08:00</updated>
+   <id>/reading/six-relationship-model</id>
+   <content type="html">&lt;h4&gt;六种模式分别是：&lt;/h4&gt;
+
+&lt;p&gt;双赢：利人利己；&lt;br&gt;
+输/输：两败俱伤；&lt;br&gt;
+赢/输：损人利己；&lt;br&gt;
+赢：独善其身；&lt;br&gt;
+输/赢：舍己为人；&lt;br&gt;
+无交易：好聚好散。&lt;/p&gt;
+
+&lt;p&gt;双赢不是什么技巧，而是人际交往的哲学。&lt;br&gt;
+哪一种最好？答案是视情况而定。&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Android常见问题汇集</title>
+   <link href="http://blog.hipoplar.me/android/android-interview-faqs.html"/>
+   <updated>2013-05-06T00:00:00+08:00</updated>
+   <id>/android/android-interview-faqs</id>
+   <content type="html">&lt;h4&gt;1、4大组件:Activity,Service,Content Provider,BroadcastReceiver.&lt;/h4&gt;
+
+&lt;h4&gt;2、AbsoluteLayout,FrameLayout,RelativeLayout,LinearLayout,TableLayout.&lt;/h4&gt;
+
+&lt;h4&gt;3、startservice和bindService生命周期差别：&lt;/h4&gt;
+
+&lt;p&gt;onCreate()..onStart()..onDestroy();&lt;br&gt;
+OnCreate()..onBind()..onUnbind()..onDestroy();&lt;br&gt;
+可startService()或bind()多次，但只onCreate()一次。&lt;/p&gt;
+
+&lt;h4&gt;4、Handler, Looper, MessageQueue和UI Thread关系。&lt;/h4&gt;
+
+&lt;p&gt;Message：消息，其中包含了消息ID，消息处理对象以及处理的数据等，由MessageQueue 统一列队，终由Handler 处理。&lt;br&gt;
+Handler：处理者，负责Message 的发送及处理。使用Handler 时，需要实现handleMessage(Message msg)方法来对特定的Message 进行处理，例如更新UI 等。&lt;br&gt;
+MessageQueue：消息队列，用来存放Handler 发送过来的消息，并按照FIFO 规则执行。当然，存放Message并非实际意义的保存，而是将Message以链表的方式串联起来的，等待Looper 的抽取。&lt;br&gt;
+Looper：消息泵，不断地从MessageQueue 中抽取Message 执行。因此，一个MessageQueue需要一Looper。Thread：线程，负责调度整个消息循环，即消息循环的执行场所。&lt;/p&gt;
+
+&lt;h4&gt;5、Android多线程方法。&lt;/h4&gt;
+
+&lt;p&gt;1)Activity.runOnUiThread(Runnable)&lt;br&gt;
+2)View.post(Runnable) ;View.postDelay(Runnable , long)&lt;br&gt;
+3)Handler&lt;br&gt;
+4)AsyncTask&lt;/p&gt;
+
+&lt;h4&gt;6、sleep(),wait()含义。&lt;/h4&gt;
+
+&lt;p&gt;sleep是静态方法，是进入等待池中等待。&lt;br&gt;
+wait()是进入等待池等待，让出系统资源。等待其他线程调用notifyall方法唤醒等待池中的所有线程。  &lt;/p&gt;
+
+&lt;h4&gt;7、单例模式中,懒汉式和饿汉式的区别。&lt;/h4&gt;
+
+&lt;p&gt;饿汉式是线程安全的,在类创建的同时就已经创建好一个静态的对象供系统使用,以后不在改变。&lt;br&gt;
+懒汉式如果在创建实例对象时不加上synchronized则会导致对对象的访问不是线程安全的。&lt;/p&gt;
+
+&lt;h4&gt;8、JNI、AIDL区别。&lt;/h4&gt;
+
+&lt;p&gt;jni  是用于 java 应用层去调用 c++ 或者c 编写的库。比如Cocos2dx游戏开发，游戏主体在C++中实现，通过Java层调用。&lt;br&gt;
+aidl 是用于进程间的通信，跨进程服务。有点像应用群体内的一个能提供特定服务的供应商。&lt;/p&gt;
+
+&lt;h4&gt;9、Android APK的数字签名的作用&lt;/h4&gt;
+
+&lt;p&gt;这个数字签名由应用程序的作者完成，并不需要权威的数字证书签名机构认证，它只是用来让应用程序包自我认证的。 &lt;/p&gt;
+
+&lt;h4&gt;10.ListView解决方案。&lt;/h4&gt;
+
+&lt;p&gt;setTag,图片缓存&lt;/p&gt;
+
+&lt;h4&gt;11.同步异步区别。&lt;/h4&gt;
+
+&lt;p&gt;同步解决数据共享问题，控制某一资源的访问。对象锁。&lt;br&gt;
+异步解决一个对象的某一方法同时被多个点竞争访问的问题。对象锁，信号量。&lt;/p&gt;
+
+&lt;h4&gt;12.多屏幕适配问题&lt;/h4&gt;
+
+&lt;p&gt;a.使用宽度及高度适配的界面布局，最大限度兼容各类尺寸屏幕。&lt;br&gt;
+b.对于一些特殊界面，如仅能一屏显示，而不同尺寸屏幕显示效果不一样时，可针对特定屏建立布局文件来解决。&lt;br&gt;
+c.相应地，不同布局会用到不同分辨率图片。&lt;br&gt;
+例子有，MEZU手机，华为手机，作过针对适配。&lt;/p&gt;
+
+&lt;h4&gt;13.Android View 树的绘制&lt;/h4&gt;
+
+&lt;p&gt;Adroid的UI界面都是由View和ViewGroup及其派生类组合而成的。View 树的绘制从顶向下逐层进行绘制。&lt;/p&gt;
+
+&lt;h4&gt;14.低版本如何实现高版本功能及风格统一。&lt;/h4&gt;
+
+&lt;p&gt;引入android-support-v4.jar。自定义一些界面风格，从而在不用厂商生产的手机上达到一致的界面效果。&lt;/p&gt;
+
+&lt;h4&gt;15.遇到过的难于解决的问题&lt;/h4&gt;
+
+&lt;p&gt;视情况回答。&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>提升自我的方法</title>
+   <link href="http://blog.hipoplar.me/reading/self-improve-methods.html"/>
+   <updated>2013-04-06T00:00:00+08:00</updated>
+   <id>/reading/self-improve-methods</id>
+   <content type="html">&lt;p&gt;如下方面：&lt;br&gt;
+1、每天学习。&lt;br&gt;
+2、学习新语言。&lt;br&gt;
+3、打造你的灵感空间。&lt;br&gt;
+4、战胜你的恐惧。&lt;br&gt;
+5、升级你的技能。&lt;br&gt;
+6、给未来的自己写一封信。&lt;br&gt;
+7、承认自己的缺点。&lt;br&gt;
+8、立即行动。&lt;br&gt;
+9、向佩服的人学习。&lt;br&gt;
+10、减少在QQ上的时间。&lt;br&gt;
+11、培养一个新习惯。&lt;br&gt;
+12、让过去的过去。&lt;br&gt;
+13、帮助他人。&lt;br&gt;
+14、好好休息。&lt;br&gt;
+15、多多反省。&lt;br&gt;
+...&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>返回系统HOME桌面</title>
+   <link href="http://blog.hipoplar.me/android/back-home-code.html"/>
+   <updated>2013-04-06T00:00:00+08:00</updated>
+   <id>/android/back-home-code</id>
+   <content type="html">&lt;p&gt;在程序里不关闭应用，返回到系统HOME桌面的代码：&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;Intent intent = new Intent();
+intent.setAction(Intent.ACTION_MAIN);
+intent.addCategory(Intent.CATEGORY_HOME);
+startActivity(intent);&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>让带EditText界面不聚集（无输入键盘弹出）</title>
+   <link href="http://blog.hipoplar.me/android/edittext-unfocus.html"/>
+   <updated>2013-03-26T00:00:00+08:00</updated>
+   <id>/android/edittext-unfocus</id>
+   <content type="html">&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;utf-8&amp;quot;?&amp;gt;
+&amp;lt;LinearLayout xmlns:android=&amp;quot;http://schemas.android.com/apk/res/android&amp;quot;
+    android:layout_width=&amp;quot;fill_parent&amp;quot;
+    android:layout_height=&amp;quot;fill_parent&amp;quot;
+    android:orientation=&amp;quot;vertical&amp;quot; &amp;gt;
+    &amp;lt;LinearLayout
+        android:layout_width=&amp;quot;0px&amp;quot;
+        android:layout_height=&amp;quot;0px&amp;quot;
+        android:focusable=&amp;quot;true&amp;quot;
+        android:focusableInTouchMode=&amp;quot;true&amp;quot; /&amp;gt;
+    &amp;lt;EditText
+        android:layout_width=&amp;quot;fill_parent&amp;quot;
+        android:layout_height=&amp;quot;wrap_content&amp;quot;
+        android:text=&amp;quot;@string/hello&amp;quot; /&amp;gt;
+&amp;lt;/LinearLayout&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>读《暗时间》一书</title>
+   <link href="http://blog.hipoplar.me/reading/about-shadow-time.html"/>
+   <updated>2013-03-21T00:00:00+08:00</updated>
+   <id>/reading/about-shadow-time</id>
+   <content type="html">&lt;p&gt;前不久读了《暗时间》一书，书中列举了暗时间的8个方面：&lt;/p&gt;
+
+&lt;p&gt;1,使用滞慢或陈旧的技术；&lt;br/&gt;
+2,分心和发呆；&lt;br/&gt;
+3,倦怠的疲惫；&lt;br/&gt;
+4,看电邮，手机QQ，MSN成瘾；&lt;br/&gt;
+5,交通（堵车）；&lt;br/&gt;
+6,伪困难的决定；&lt;br/&gt;
+7,在线阅读；&lt;br/&gt;
+8,过度聊天。&lt;/p&gt;
+
+&lt;p&gt;现代人或多或少都受到过上述问题的困扰，致使有时感觉啥也没做，一段时间就很快过去了。那么怎么把暗时间利用起来呢？书中交代了3个主要方法：
+1,迅速进入状态（即减少切换时间）；&lt;br/&gt;
+2,长期保持专注状态；&lt;br/&gt;
+3,具备超强的抗干扰能力（没有就需要培养了）。&lt;/p&gt;
+
+&lt;p&gt;前面2点是高效学习的两个重要习惯。&lt;br/&gt;
+书中比较震惊一句：善于利用暗时间的人，可以无形中比别人多出很多实际时间，从而实际意义上能比别人多活很多年。&lt;/p&gt;
+
+&lt;p&gt;真是太可怕了！&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>背景为shape selector的drawable的问题</title>
+   <link href="http://blog.hipoplar.me/android/shape-drawable.html"/>
+   <updated>2013-03-14T00:00:00+08:00</updated>
+   <id>/android/shape-drawable</id>
+   <content type="html">&lt;p&gt;背景为selector(item state&lt;em&gt;pressed=&amp;quot;false&amp;quot; shape)时，里面的条目只能为selector(item state&lt;/em&gt;pressed=&amp;quot;true&amp;quot; shape)，否则选中无效果。&lt;/p&gt;
+
+&lt;p&gt;边框背景：&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot;?&amp;gt;
+&amp;lt;selector xmlns:android=&amp;quot;http://schemas.android.com/apk/res/android&amp;quot;&amp;gt;
+    &amp;lt;item&amp;gt;&amp;lt;shape&amp;gt;
+            &amp;lt;stroke android:width=&amp;quot;0.8dp&amp;quot; android:color=&amp;quot;#d4d3d3&amp;quot; /&amp;gt;
+            &amp;lt;solid android:color=&amp;quot;#f3f4f4&amp;quot;&amp;gt;&amp;lt;/solid&amp;gt;
+            &amp;lt;corners android:radius=&amp;quot;0.5dp&amp;quot;/&amp;gt;
+        &amp;lt;/shape&amp;gt;&amp;lt;/item&amp;gt;
+
+&amp;lt;/selector&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;条目背景：&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot;?&amp;gt;
+&amp;lt;selector xmlns:android=&amp;quot;http://schemas.android.com/apk/res/android&amp;quot;&amp;gt;
+    &amp;lt;item android:state_pressed=&amp;quot;true&amp;quot;&amp;gt;&amp;lt;shape&amp;gt;
+            &amp;lt;solid android:color=&amp;quot;#e6e6e6&amp;quot; /&amp;gt;
+        &amp;lt;/shape&amp;gt;&amp;lt;/item&amp;gt;
+&amp;lt;/selector&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;源文：&lt;a href=&quot;http://blog.chinaunix.net/uid-22985736-id-3521498.html&quot;&gt;http://blog.chinaunix.net/uid-22985736-id-3521498.html&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>让Android ProgressDialog在按返回键可dismiss</title>
+   <link href="http://blog.hipoplar.me/android/progress-dialog.html"/>
+   <updated>2013-03-08T00:00:00+08:00</updated>
+   <id>/android/progress-dialog</id>
+   <content type="html">&lt;p&gt;让ProgressDialog可按返回键时dismiss，但空白区不dismiss。&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;progressDialog.setCanelable(true);
+progressDialog.setCanceledOnTouchOutside(false)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>让Android网络应用启动时升级检查 </title>
+   <link href="http://blog.hipoplar.me/android/update-tips.html"/>
+   <updated>2013-03-01T00:00:00+08:00</updated>
+   <id>/android/update-tips</id>
+   <content type="html">&lt;p&gt;Android网络应用开发中有遇到，业务接口后期调用时数据要加密传输，由于先前没在启动时升级检查，导致原来版本无法升级（只在登录后可升级），好在处于内部测试阶段。让Android网络应用启动时升级检查就可以避免上述情况发生，要点：&lt;/p&gt;
+
+&lt;p&gt;1、让Android应用升级接口独立于其它业务接口；&lt;br/&gt;
+2、在应用启动时进行升级检查，让用户随时可升级到最新版本。&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>消除Animation残余线条</title>
+   <link href="http://blog.hipoplar.me/android/animation-noline.html"/>
+   <updated>2013-02-26T00:00:00+08:00</updated>
+   <id>/android/animation-noline</id>
+   <content type="html">&lt;p&gt;1,继承TranslateAnimation或RotateAnimation，在applyTransformation中刷新动画parentView的界面。如：&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;private final class MyTranslateAnimation extends TranslateAnimation {
+        private View backgroundView;
+
+        public MyTranslateAnimation(View backgroundView, int fromXType, float fromXValue, int toXType, float toXValue,
+                int fromYType, float fromYValue, int toYType, float toYValue) {
+            super(fromXType, fromXValue, toXType, toXValue, fromYType, fromYValue, toYType, toYValue);
+            this.backgroundView = backgroundView;
+        }
+
+        @Override
+        protected void applyTransformation(float interpolatedTime, Transformation t) {
+            super.applyTransformation(interpolatedTime, t);
+            backgroundView.postInvalidate();
+        }
+    }&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;2,调用：&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;TranslateAnimation cardAnimation = new MyTranslateAnimation(backgroundView, Animation.RELATIVE_TO_PARENT, 0.01f,
+                Animation.RELATIVE_TO_PARENT, 0.35f, Animation.RELATIVE_TO_PARENT, 0.1f, Animation.RELATIVE_TO_PARENT,
+                0.1f);
+cardAnimation.setDuration(2000);
+cardAnimation.setRepeatCount(Animation.INFINITE);
+cardAnimation.setRepeatMode(Animation.REVERSE);
+imageView.setAnimation(cardAnimation);&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Android AnimationDrawable实现GIF效果动画</title>
+   <link href="http://blog.hipoplar.me/android/frame-ainim.html"/>
+   <updated>2013-02-05T00:00:00+08:00</updated>
+   <id>/android/frame-ainim</id>
+   <content type="html">&lt;p&gt;利用AnimationDrawable实现类似gif效果的动画：&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;final AnimationDrawable drawable = new AnimationDrawable();
+drawable.addFrame(activity.getResources().getDrawable(R.drawable.kaiguan), 750);//添加图片帧到AnimationDrawable
+drawable.addFrame(activity.getResources().getDrawable(R.drawable.kaiguan2), 1250);
+drawable.setOneShot(false);//设置为循环播放
+ImageView imageView = (ImageView)findViewById(R.id.imageView);
+imageView.setImageDrawable(drawable);//AnimationDrawable对象给imageView
+drawable.start();//动画播放
+drawable.stop();//动画停止&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>一个鸡蛋的故事</title>
+   <link href="http://blog.hipoplar.me/reading/an-egg-story.html"/>
+   <updated>2013-02-05T00:00:00+08:00</updated>
+   <id>/reading/an-egg-story</id>
+   <content type="html">&lt;p&gt;摘自某文摘一段话：&lt;/p&gt;
+
+&lt;p&gt;鸡蛋从外打破是食物，从内打破是生命。人生亦是，从外打破是压力，从内打破是成长。如果你等待别人从外打破，那么你注定成为别人的食物，如果能让自己从内打破，那么你会发现自己的成长相当于一种重生。&lt;/p&gt;
+
+&lt;p&gt;读完这段话，有何感想？&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Android startActivityForResult返回时需要注意的。 </title>
+   <link href="http://blog.hipoplar.me/android/result-code.html"/>
+   <updated>2013-02-03T00:00:00+08:00</updated>
+   <id>/android/result-code</id>
+   <content type="html">&lt;p&gt;在onActivityResult中，即便是从后一个页面按back键返回的也是有resultCode的，且其值为0,其data为null.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>ListView与条目显示相关问题解决</title>
+   <link href="http://blog.hipoplar.me/android/listview-faqs.html"/>
+   <updated>2012-12-31T00:00:00+08:00</updated>
+   <id>/android/listview-faqs</id>
+   <content type="html">&lt;p&gt;1.对一般布局如(LinearLayout)设置selector后,点击没有选中的效果，可设置其android:clickable=&amp;quot;true&amp;quot; 即可。&lt;/p&gt;
+
+&lt;p&gt;2.对item&lt;em&gt;layout.xml设置selector后点击效果无效反而为系统效果时。可能是selector中颜色值使用了透明度，这是不行的，不能直接用带透明度的颜色。也可以把item&lt;/em&gt;layout.xml中的selector换到ListView设置listSelector中去。&lt;/p&gt;
+
+&lt;p&gt;3.item&lt;em&gt;layout设置了高度却不起作用，那就让高度wrap&lt;/em&gt;content，添加minHeight=&amp;quot;50dp&amp;quot;这样的设置吧。&lt;/p&gt;
+
+&lt;p&gt;4.item_layout中若有Button或CheckBox之类的控件，设置selector是不起作用的，需对Button或CheckBox设置android:focusable=&amp;quot;false&amp;quot;才行。&lt;/p&gt;
+
+&lt;p&gt;5.关于更改已有ListView中的某条目显示时，需要通过更改ListView Adapter所使用的原始list数据，再调用Adapter的notifyDatesetChanged来刷新界面才行，当然Adapter的getView操作要能重新适配数据才行。&lt;/p&gt;
+
+&lt;p&gt;6.ListView设置了divider及dividerHeight，但当数据不够一页时最下一条无下划线，可设置ListView为     android:layout&lt;em&gt;height=&amp;quot;fill&lt;/em&gt;parent&amp;quot;即可。&lt;/p&gt;
+
+&lt;p&gt;7.GridView如果不设置listSelector则在某些手机上，其四周会出现边框。&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Android Resource下图片合成(LayerDrawable)</title>
+   <link href="http://blog.hipoplar.me/android/layer-drawable.html"/>
+   <updated>2012-12-21T00:00:00+08:00</updated>
+   <id>/android/layer-drawable</id>
+   <content type="html">&lt;h3&gt;给一个背景,背景中的一部分可变的,以下方法可以从Resouce中合成(动态改变userimg图片):&lt;/h3&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;public LayerDrawable test(Context context, dynamicImg) {
+    LayerDrawable layerDrawable =(LayerDrawable) context.getResources().getDrawable(R.drawable.layerlist);
+    Drawable drawable = context.getResources().getDrawable(R.drawable.ic_launcher);
+    layerDrawable.setDrawableByLayerId(R.id.userimage, dynamicImg);
+    return layerDrawable;
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3&gt;drawable下的layerlist.xml文件:&lt;/h3&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot;?&amp;gt;
+&amp;lt;layer-list xmlns:android=&amp;quot;http://schemas.android.com/apk/res/android&amp;quot;&amp;gt;
+    &amp;lt;item android:drawable=&amp;quot;@drawable/ic_launcher&amp;quot;/&amp;gt;
+    &amp;lt;item android:drawable=&amp;quot;@drawable/ic_launcher&amp;quot;
+    android:id=&amp;quot;@+id/userimage&amp;quot;
+    android:left=&amp;quot;10dp&amp;quot; android:right=&amp;quot;10dp&amp;quot;
+    android:bottom=&amp;quot;10dp&amp;quot;
+    /&amp;gt;
+&amp;lt;/layer-list&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Jekyll常用列表，标签代码</title>
+   <link href="http://blog.hipoplar.me/network/jekyll-common-code.html"/>
+   <updated>2012-12-15T00:00:00+08:00</updated>
+   <id>/network/jekyll-common-code</id>
+   <content type="html">&lt;p&gt;&amp;lt;% highlight html %&amp;gt;
+&lt;h1&gt;分类(Categorys)&lt;/h1&gt;&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;            &amp;lt;a href=&amp;quot;/categories.html#reading&amp;quot;&amp;gt;
+
+                reading
+
+            &amp;lt;/a&amp;gt;
+            &amp;lt;sup&amp;gt;[9]&amp;lt;/sup&amp;gt;
+        , 
+
+            &amp;lt;a href=&amp;quot;/categories.html#linux&amp;quot;&amp;gt;
+
+                linux
+
+            &amp;lt;/a&amp;gt;
+            &amp;lt;sup&amp;gt;[7]&amp;lt;/sup&amp;gt;
+        , 
+
+            &amp;lt;a href=&amp;quot;/categories.html#embedded&amp;quot;&amp;gt;
+
+                embedded
+
+            &amp;lt;/a&amp;gt;
+            &amp;lt;sup&amp;gt;[1]&amp;lt;/sup&amp;gt;
+        , 
+
+            &amp;lt;a href=&amp;quot;/categories.html#android&amp;quot;&amp;gt;
+
+                android
+
+            &amp;lt;/a&amp;gt;
+            &amp;lt;sup&amp;gt;[37]&amp;lt;/sup&amp;gt;
+        , 
+
+            &amp;lt;a href=&amp;quot;/categories.html#web&amp;quot;&amp;gt;
+
+                web
+
+            &amp;lt;/a&amp;gt;
+            &amp;lt;sup&amp;gt;[4]&amp;lt;/sup&amp;gt;
+        , 
+
+            &amp;lt;a href=&amp;quot;/categories.html#network&amp;quot;&amp;gt;
+
+            &amp;lt;b&amp;gt;network&amp;lt;/b&amp;gt;
+
+            &amp;lt;/a&amp;gt;
+            &amp;lt;sup&amp;gt;[8]&amp;lt;/sup&amp;gt;
+        , 
+
+            &amp;lt;a href=&amp;quot;/categories.html#cocos2d&amp;quot;&amp;gt;
+
+                cocos2d
+
+            &amp;lt;/a&amp;gt;
+            &amp;lt;sup&amp;gt;[5]&amp;lt;/sup&amp;gt;
+        , 
+
+            &amp;lt;a href=&amp;quot;/categories.html#java&amp;quot;&amp;gt;
+
+                java
+
+            &amp;lt;/a&amp;gt;
+            &amp;lt;sup&amp;gt;[3]&amp;lt;/sup&amp;gt;
+        , 
+
+            &amp;lt;a href=&amp;quot;/categories.html#git&amp;quot;&amp;gt;
+
+                git
+
+            &amp;lt;/a&amp;gt;
+            &amp;lt;sup&amp;gt;[1]&amp;lt;/sup&amp;gt;
+        , 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;分类显示列表
+&lt;div id=&quot;home&quot;&gt;&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&amp;lt;a name=&amp;quot;reading&amp;quot;&amp;gt;&amp;lt;h3&amp;gt;reading(9)&amp;lt;/h3&amp;gt;&amp;lt;/a&amp;gt;
+
+     &amp;lt;p&amp;gt;2015-03-01 &amp;lt;a href=&amp;quot;/reading/read-design-principle-book.html&amp;quot;&amp;gt;写给大家看的设计书[书摘]&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+
+     &amp;lt;p&amp;gt;2013-05-15 &amp;lt;a href=&amp;quot;/reading/six-relationship-model.html&amp;quot;&amp;gt;人际交往的六种模式&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+
+     &amp;lt;p&amp;gt;2013-04-06 &amp;lt;a href=&amp;quot;/reading/self-improve-methods.html&amp;quot;&amp;gt;提升自我的方法&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+
+     &amp;lt;p&amp;gt;2013-03-21 &amp;lt;a href=&amp;quot;/reading/about-shadow-time.html&amp;quot;&amp;gt;读《暗时间》一书&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+
+     &amp;lt;p&amp;gt;2013-02-05 &amp;lt;a href=&amp;quot;/reading/an-egg-story.html&amp;quot;&amp;gt;一个鸡蛋的故事&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+
+     &amp;lt;p&amp;gt;2012-03-12 &amp;lt;a href=&amp;quot;/reading/work-dna.html&amp;quot;&amp;gt;工作DNA警句&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+
+     &amp;lt;p&amp;gt;2011-08-01 &amp;lt;a href=&amp;quot;/reading/body-foster-song.html&amp;quot;&amp;gt;养气歌&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+
+     &amp;lt;p&amp;gt;2011-01-08 &amp;lt;a href=&amp;quot;/reading/learn-process.html&amp;quot;&amp;gt;学习方法及过程&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+
+     &amp;lt;p&amp;gt;2010-01-01 &amp;lt;a href=&amp;quot;/reading/which-more-important.html&amp;quot;&amp;gt;人生什么更重要？&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+
+
+
+
+&amp;lt;a name=&amp;quot;linux&amp;quot;&amp;gt;&amp;lt;h3&amp;gt;linux(7)&amp;lt;/h3&amp;gt;&amp;lt;/a&amp;gt;
+
+     &amp;lt;p&amp;gt;2014-03-11 &amp;lt;a href=&amp;quot;/linux/debian-ruby-setup.html&amp;quot;&amp;gt;Debian/Linux ruby setup&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+
+     &amp;lt;p&amp;gt;2014-03-10 &amp;lt;a href=&amp;quot;/linux/install-debian-windows.html&amp;quot;&amp;gt;Windows安装Debian Linux步骤&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+
+     &amp;lt;p&amp;gt;2010-05-20 &amp;lt;a href=&amp;quot;/linux/linux-kernel26-faqs.html&amp;quot;&amp;gt;2.6内核驱动编译程序所遇问题解 &amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+
+     &amp;lt;p&amp;gt;2010-04-15 &amp;lt;a href=&amp;quot;/linux/cramfs-build-step.html&amp;quot;&amp;gt;Cramfs文件系统的制作&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+
+     &amp;lt;p&amp;gt;2010-04-08 &amp;lt;a href=&amp;quot;/linux/boa-arm-porting.html&amp;quot;&amp;gt;嵌入式Web服务器boa在ARM平台的移植&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+
+     &amp;lt;p&amp;gt;2010-03-25 &amp;lt;a href=&amp;quot;/linux/nfs-mount-fag.html&amp;quot;&amp;gt;NFS挂载记事&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+
+     &amp;lt;p&amp;gt;2010-03-20 &amp;lt;a href=&amp;quot;/linux/px270-arm-porting.html&amp;quot;&amp;gt;Widows下PXA270开发板的Linux系统的移植过程&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+
+
+
+
+&amp;lt;a name=&amp;quot;embedded&amp;quot;&amp;gt;&amp;lt;h3&amp;gt;embedded(1)&amp;lt;/h3&amp;gt;&amp;lt;/a&amp;gt;
+
+     &amp;lt;p&amp;gt;2010-06-25 &amp;lt;a href=&amp;quot;/embedded/ucos-ii-setup.html&amp;quot;&amp;gt;Windows XP下uCOS-II开发环境建立&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+
+
+
+
+&amp;lt;a name=&amp;quot;android&amp;quot;&amp;gt;&amp;lt;h3&amp;gt;android(37)&amp;lt;/h3&amp;gt;&amp;lt;/a&amp;gt;
+
+     &amp;lt;p&amp;gt;2015-01-05 &amp;lt;a href=&amp;quot;/android/umeng-package-sign.html&amp;quot;&amp;gt;友盟统计正式包无数据问题&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+
+     &amp;lt;p&amp;gt;2014-12-30 &amp;lt;a href=&amp;quot;/android/cocos-js-learn.html&amp;quot;&amp;gt;Cocos JS 布局及控件相关&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+
+     &amp;lt;p&amp;gt;2014-09-18 &amp;lt;a href=&amp;quot;/android/eclipse-conversion-error.html&amp;quot;&amp;gt;Eclipse签名打包遇“Conversion to Dalvik format...”处理&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+
+     &amp;lt;p&amp;gt;2014-09-13 &amp;lt;a href=&amp;quot;/android/git-branch-steps.html&amp;quot;&amp;gt;git分支开发、合并、删除等主要命令&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+
+     &amp;lt;p&amp;gt;2014-08-28 &amp;lt;a href=&amp;quot;/android/android-json-trouble.html&amp;quot;&amp;gt;Android JSONObject解析异常问题&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+
+     &amp;lt;p&amp;gt;2014-06-21 &amp;lt;a href=&amp;quot;/android/about-android-view.html&amp;quot;&amp;gt;Android View及ViewGroup知识&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+
+     &amp;lt;p&amp;gt;2014-06-15 &amp;lt;a href=&amp;quot;/android/android-volley-tool.html&amp;quot;&amp;gt;基于Volley的网络请求工具&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+
+     &amp;lt;p&amp;gt;2014-06-12 &amp;lt;a href=&amp;quot;/android/android-save-restore.html&amp;quot;&amp;gt;Android数据保存与恢复&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+
+     &amp;lt;p&amp;gt;2014-03-28 &amp;lt;a href=&amp;quot;/android/android-rom-about.html&amp;quot;&amp;gt;Android ROM包制作及刷机过程简介&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+
+     &amp;lt;p&amp;gt;2014-03-04 &amp;lt;a href=&amp;quot;/android/project-startup.html&amp;quot;&amp;gt;Android必要模块－－升级与公告&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+
+     &amp;lt;p&amp;gt;2013-10-20 &amp;lt;a href=&amp;quot;/android/listview-selector.html&amp;quot;&amp;gt;Android GridView去边距&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+
+     &amp;lt;p&amp;gt;2013-08-10 &amp;lt;a href=&amp;quot;/android/service-destroy.html&amp;quot;&amp;gt;Android退出前的stopService&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+
+     &amp;lt;p&amp;gt;2013-06-20 &amp;lt;a href=&amp;quot;/android/ndk-env-setup.html&amp;quot;&amp;gt;Android NDK 编译&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+
+     &amp;lt;p&amp;gt;2013-06-04 &amp;lt;a href=&amp;quot;/android/tabhost-switch.html&amp;quot;&amp;gt;TabActivity子Activity以代码进行切换&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+
+     &amp;lt;p&amp;gt;2013-05-06 &amp;lt;a href=&amp;quot;/android/android-interview-faqs.html&amp;quot;&amp;gt;Android常见问题汇集&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+
+     &amp;lt;p&amp;gt;2013-04-06 &amp;lt;a href=&amp;quot;/android/back-home-code.html&amp;quot;&amp;gt;返回系统HOME桌面&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+
+     &amp;lt;p&amp;gt;2013-03-26 &amp;lt;a href=&amp;quot;/android/edittext-unfocus.html&amp;quot;&amp;gt;让带EditText界面不聚集（无输入键盘弹出）&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+
+     &amp;lt;p&amp;gt;2013-03-14 &amp;lt;a href=&amp;quot;/android/shape-drawable.html&amp;quot;&amp;gt;背景为shape selector的drawable的问题&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+
+     &amp;lt;p&amp;gt;2013-03-08 &amp;lt;a href=&amp;quot;/android/progress-dialog.html&amp;quot;&amp;gt;让Android ProgressDialog在按返回键可dismiss&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+
+     &amp;lt;p&amp;gt;2013-03-01 &amp;lt;a href=&amp;quot;/android/update-tips.html&amp;quot;&amp;gt;让Android网络应用启动时升级检查 &amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+
+     &amp;lt;p&amp;gt;2013-02-26 &amp;lt;a href=&amp;quot;/android/animation-noline.html&amp;quot;&amp;gt;消除Animation残余线条&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+
+     &amp;lt;p&amp;gt;2013-02-05 &amp;lt;a href=&amp;quot;/android/frame-ainim.html&amp;quot;&amp;gt;Android AnimationDrawable实现GIF效果动画&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+
+     &amp;lt;p&amp;gt;2013-02-03 &amp;lt;a href=&amp;quot;/android/result-code.html&amp;quot;&amp;gt;Android startActivityForResult返回时需要注意的。 &amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+
+     &amp;lt;p&amp;gt;2012-12-31 &amp;lt;a href=&amp;quot;/android/listview-faqs.html&amp;quot;&amp;gt;ListView与条目显示相关问题解决&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+
+     &amp;lt;p&amp;gt;2012-12-21 &amp;lt;a href=&amp;quot;/android/layer-drawable.html&amp;quot;&amp;gt;Android Resource下图片合成(LayerDrawable)&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+
+     &amp;lt;p&amp;gt;2012-12-10 &amp;lt;a href=&amp;quot;/android/simple-oauth-model.html&amp;quot;&amp;gt;基于Android+WebView的OAuth2.0认证过程分析及简单模型实现&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+
+     &amp;lt;p&amp;gt;2012-11-26 &amp;lt;a href=&amp;quot;/android/egit-rebase-step.html&amp;quot;&amp;gt;eclipse下Egit rebase 步骤&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+
+     &amp;lt;p&amp;gt;2012-06-12 &amp;lt;a href=&amp;quot;/android/parcelable-usage.html&amp;quot;&amp;gt;Android 之Parcelable使用例子&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+
+     &amp;lt;p&amp;gt;2012-06-05 &amp;lt;a href=&amp;quot;/android/perst-try.html&amp;quot;&amp;gt;Perst在Android中的简单应用&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+
+     &amp;lt;p&amp;gt;2012-05-21 &amp;lt;a href=&amp;quot;/android/app-dev-sugestions.html&amp;quot;&amp;gt;给移动应用开发者的建议&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+
+     &amp;lt;p&amp;gt;2012-02-01 &amp;lt;a href=&amp;quot;/android/wait-notify.html&amp;quot;&amp;gt;wait和notify/notifyAll&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+
+     &amp;lt;p&amp;gt;2011-12-20 &amp;lt;a href=&amp;quot;/android/custom-spinner.html&amp;quot;&amp;gt;Android Spinner自定义适配器&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+
+     &amp;lt;p&amp;gt;2011-11-10 &amp;lt;a href=&amp;quot;/android/dialog-hold.html&amp;quot;&amp;gt;Android 点按钮不让AlertDialog退出方法&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+
+     &amp;lt;p&amp;gt;2011-10-22 &amp;lt;a href=&amp;quot;/android/textedit-set-password.html&amp;quot;&amp;gt;Android EditText控件的密码输入框可见性设置：&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+
+     &amp;lt;p&amp;gt;2011-10-22 &amp;lt;a href=&amp;quot;/android/dialog-style-activity.html&amp;quot;&amp;gt;Android Dialog风格Activity&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+
+     &amp;lt;p&amp;gt;2011-10-22 &amp;lt;a href=&amp;quot;/android/android-install-uninstall.html&amp;quot;&amp;gt;Android调用系统安装/卸载apk过程&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+
+     &amp;lt;p&amp;gt;2010-10-01 &amp;lt;a href=&amp;quot;/android/android-env-setup.html&amp;quot;&amp;gt;Android开发环境搭建 &amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+
+
+
+
+&amp;lt;a name=&amp;quot;web&amp;quot;&amp;gt;&amp;lt;h3&amp;gt;web(4)&amp;lt;/h3&amp;gt;&amp;lt;/a&amp;gt;
+
+     &amp;lt;p&amp;gt;2014-12-20 &amp;lt;a href=&amp;quot;/web/http-protocol-review.html&amp;quot;&amp;gt;HTTP请求/响应构成&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+
+     &amp;lt;p&amp;gt;2013-07-12 &amp;lt;a href=&amp;quot;/web/appfog-javaweb-step.html&amp;quot;&amp;gt;Appfog Java Web操作指南&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+
+     &amp;lt;p&amp;gt;2013-06-11 &amp;lt;a href=&amp;quot;/web/php-learn-test.html&amp;quot;&amp;gt;PHP学习入门级练习&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+
+     &amp;lt;p&amp;gt;2010-10-05 &amp;lt;a href=&amp;quot;/web/css-div-standerd.html&amp;quot;&amp;gt;web标准设计规范(XHTML+CSS)&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+
+
+
+
+&amp;lt;a name=&amp;quot;network&amp;quot;&amp;gt;&amp;lt;h3&amp;gt;network(8)&amp;lt;/h3&amp;gt;&amp;lt;/a&amp;gt;
+
+     &amp;lt;p&amp;gt;2014-12-27 &amp;lt;a href=&amp;quot;/network/get-latest-msysgit.html&amp;quot;&amp;gt;Windows下msysgit最新下载地址&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+
+     &amp;lt;p&amp;gt;2014-07-25 &amp;lt;a href=&amp;quot;/network/chrome-honx-vpn.html&amp;quot;&amp;gt;推荐几个不错的VPN&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+
+     &amp;lt;p&amp;gt;2014-03-05 &amp;lt;a href=&amp;quot;/network/oray-win7-try.html&amp;quot;&amp;gt;Win7花生壳公网映射80端口的问题&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+
+     &amp;lt;p&amp;gt;2013-06-19 &amp;lt;a href=&amp;quot;/network/common-algorithms-site.html&amp;quot;&amp;gt;DES,ASE等常见算法网站&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+
+     &amp;lt;p&amp;gt;2012-12-15 &amp;lt;a href=&amp;quot;/network/jekyll-common-code.html&amp;quot;&amp;gt;Jekyll常用列表，标签代码&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+
+     &amp;lt;p&amp;gt;2012-12-09 &amp;lt;a href=&amp;quot;/network/jekyll-blog-guide.html&amp;quot;&amp;gt;Windows下Jekyll指南&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+
+     &amp;lt;p&amp;gt;2012-05-01 &amp;lt;a href=&amp;quot;/network/three-level-arch.html&amp;quot;&amp;gt;三层架构&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+
+     &amp;lt;p&amp;gt;2011-03-01 &amp;lt;a href=&amp;quot;/network/it-engineer-way.html&amp;quot;&amp;gt;IT Enginner or Code Typist&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+
+
+
+
+&amp;lt;a name=&amp;quot;cocos2d&amp;quot;&amp;gt;&amp;lt;h3&amp;gt;cocos2d(5)&amp;lt;/h3&amp;gt;&amp;lt;/a&amp;gt;
+
+     &amp;lt;p&amp;gt;2014-10-22 &amp;lt;a href=&amp;quot;/cocos2d/cocos2dx-java-with-javascript.html&amp;quot;&amp;gt;cocos2dx javascript与java互相调用途径&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+
+     &amp;lt;p&amp;gt;2014-10-12 &amp;lt;a href=&amp;quot;/cocos2d/cocos-multi-resolution-support.html&amp;quot;&amp;gt;Cocos2d 多屏适配文章&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+
+     &amp;lt;p&amp;gt;2014-09-20 &amp;lt;a href=&amp;quot;/cocos2d/cocos-ide-steps.html&amp;quot;&amp;gt;Cocos IDE开发步骤&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+
+     &amp;lt;p&amp;gt;2014-09-01 &amp;lt;a href=&amp;quot;/cocos2d/cocos2d-js-tutorial.html&amp;quot;&amp;gt;Cocos2d-JS steps under web and Android Platform.&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+
+     &amp;lt;p&amp;gt;2014-02-20 &amp;lt;a href=&amp;quot;/cocos2d/android-cocos2d-tutorial.html&amp;quot;&amp;gt;Android Cocos2dx 编译过程&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+
+
+
+
+&amp;lt;a name=&amp;quot;java&amp;quot;&amp;gt;&amp;lt;h3&amp;gt;java(3)&amp;lt;/h3&amp;gt;&amp;lt;/a&amp;gt;
+
+     &amp;lt;p&amp;gt;2014-12-13 &amp;lt;a href=&amp;quot;/java/maven-simple-steps.html&amp;quot;&amp;gt;Manven构建基本步骤&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+
+     &amp;lt;p&amp;gt;2014-07-10 &amp;lt;a href=&amp;quot;/java/design-patterns.html&amp;quot;&amp;gt;设计模式相关&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+
+     &amp;lt;p&amp;gt;2014-04-15 &amp;lt;a href=&amp;quot;/java/double-lock-singleton.html&amp;quot;&amp;gt;双重检查加锁单例&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+
+
+
+
+&amp;lt;a name=&amp;quot;git&amp;quot;&amp;gt;&amp;lt;h3&amp;gt;git(1)&amp;lt;/h3&amp;gt;&amp;lt;/a&amp;gt;
+
+     &amp;lt;p&amp;gt;2014-11-12 &amp;lt;a href=&amp;quot;/git/on-git-rebase-merge.html&amp;quot;&amp;gt;Git的Merge和Rebase&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;/div&gt;
+&amp;lt;% endhighlight %&amp;gt;&lt;/p&gt;
+
+&lt;p&gt;&amp;lt;% highlight html %&amp;gt;
+&lt;h1&gt;标签(Tags)&lt;/h1&gt;       &lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;            &amp;lt;a href=&amp;quot;/tags.html#阅读&amp;quot;&amp;gt;
+
+                阅读
+
+            &amp;lt;/a&amp;gt;
+            &amp;lt;sup&amp;gt;[8]&amp;lt;/sup&amp;gt;
+        ,
+
+            &amp;lt;a href=&amp;quot;/tags.html#人生&amp;quot;&amp;gt;
+
+                人生
+
+            &amp;lt;/a&amp;gt;
+            &amp;lt;sup&amp;gt;[1]&amp;lt;/sup&amp;gt;
+        ,
+
+            &amp;lt;a href=&amp;quot;/tags.html#PXA270&amp;quot;&amp;gt;
+
+                PXA270
+
+            &amp;lt;/a&amp;gt;
+            &amp;lt;sup&amp;gt;[1]&amp;lt;/sup&amp;gt;
+        ,
+
+            &amp;lt;a href=&amp;quot;/tags.html#移植&amp;quot;&amp;gt;
+
+                移植
+
+            &amp;lt;/a&amp;gt;
+            &amp;lt;sup&amp;gt;[2]&amp;lt;/sup&amp;gt;
+        ,
+
+            &amp;lt;a href=&amp;quot;/tags.html#NFS&amp;quot;&amp;gt;
+
+                NFS
+
+            &amp;lt;/a&amp;gt;
+            &amp;lt;sup&amp;gt;[1]&amp;lt;/sup&amp;gt;
+        ,
+
+            &amp;lt;a href=&amp;quot;/tags.html#boa&amp;quot;&amp;gt;
+
+                boa
+
+            &amp;lt;/a&amp;gt;
+            &amp;lt;sup&amp;gt;[1]&amp;lt;/sup&amp;gt;
+        ,
+
+            &amp;lt;a href=&amp;quot;/tags.html#Cramfs&amp;quot;&amp;gt;
+
+                Cramfs
+
+            &amp;lt;/a&amp;gt;
+            &amp;lt;sup&amp;gt;[1]&amp;lt;/sup&amp;gt;
+        ,
+
+            &amp;lt;a href=&amp;quot;/tags.html#linux&amp;quot;&amp;gt;
+
+                linux
+
+            &amp;lt;/a&amp;gt;
+            &amp;lt;sup&amp;gt;[4]&amp;lt;/sup&amp;gt;
+        ,
+
+            &amp;lt;a href=&amp;quot;/tags.html#内核驱动&amp;quot;&amp;gt;
+
+                内核驱动
+
+            &amp;lt;/a&amp;gt;
+            &amp;lt;sup&amp;gt;[1]&amp;lt;/sup&amp;gt;
+        ,
+
+            &amp;lt;a href=&amp;quot;/tags.html#uCOS-II&amp;quot;&amp;gt;
+
+                uCOS-II
+
+            &amp;lt;/a&amp;gt;
+            &amp;lt;sup&amp;gt;[1]&amp;lt;/sup&amp;gt;
+        ,
+
+            &amp;lt;a href=&amp;quot;/tags.html#Android&amp;quot;&amp;gt;
+
+                Android
+
+            &amp;lt;/a&amp;gt;
+            &amp;lt;sup&amp;gt;[26]&amp;lt;/sup&amp;gt;
+        ,
+
+            &amp;lt;a href=&amp;quot;/tags.html#Web&amp;quot;&amp;gt;
+
+                Web
+
+            &amp;lt;/a&amp;gt;
+            &amp;lt;sup&amp;gt;[1]&amp;lt;/sup&amp;gt;
+        ,
+
+            &amp;lt;a href=&amp;quot;/tags.html#CSS&amp;quot;&amp;gt;
+
+                CSS
+
+            &amp;lt;/a&amp;gt;
+            &amp;lt;sup&amp;gt;[1]&amp;lt;/sup&amp;gt;
+        ,
+
+            &amp;lt;a href=&amp;quot;/tags.html#学习&amp;quot;&amp;gt;
+
+                学习
+
+            &amp;lt;/a&amp;gt;
+            &amp;lt;sup&amp;gt;[1]&amp;lt;/sup&amp;gt;
+        ,
+
+            &amp;lt;a href=&amp;quot;/tags.html#Enginner&amp;quot;&amp;gt;
+
+                Enginner
+
+            &amp;lt;/a&amp;gt;
+            &amp;lt;sup&amp;gt;[1]&amp;lt;/sup&amp;gt;
+        ,
+
+            &amp;lt;a href=&amp;quot;/tags.html#养气歌&amp;quot;&amp;gt;
+
+                养气歌
+
+            &amp;lt;/a&amp;gt;
+            &amp;lt;sup&amp;gt;[1]&amp;lt;/sup&amp;gt;
+        ,
+
+            &amp;lt;a href=&amp;quot;/tags.html#apk&amp;quot;&amp;gt;
+
+                apk
+
+            &amp;lt;/a&amp;gt;
+            &amp;lt;sup&amp;gt;[1]&amp;lt;/sup&amp;gt;
+        ,
+
+            &amp;lt;a href=&amp;quot;/tags.html#Dialog&amp;quot;&amp;gt;
+
+                Dialog
+
+            &amp;lt;/a&amp;gt;
+            &amp;lt;sup&amp;gt;[1]&amp;lt;/sup&amp;gt;
+        ,
+
+            &amp;lt;a href=&amp;quot;/tags.html#EditText&amp;quot;&amp;gt;
+
+                EditText
+
+            &amp;lt;/a&amp;gt;
+            &amp;lt;sup&amp;gt;[2]&amp;lt;/sup&amp;gt;
+        ,
+
+            &amp;lt;a href=&amp;quot;/tags.html#AlertDialog&amp;quot;&amp;gt;
+
+                AlertDialog
+
+            &amp;lt;/a&amp;gt;
+            &amp;lt;sup&amp;gt;[1]&amp;lt;/sup&amp;gt;
+        ,
+
+            &amp;lt;a href=&amp;quot;/tags.html#Java&amp;quot;&amp;gt;
+
+                Java
+
+            &amp;lt;/a&amp;gt;
+            &amp;lt;sup&amp;gt;[1]&amp;lt;/sup&amp;gt;
+        ,
+
+            &amp;lt;a href=&amp;quot;/tags.html#线程&amp;quot;&amp;gt;
+
+                线程
+
+            &amp;lt;/a&amp;gt;
+            &amp;lt;sup&amp;gt;[1]&amp;lt;/sup&amp;gt;
+        ,
+
+            &amp;lt;a href=&amp;quot;/tags.html#工作DNA&amp;quot;&amp;gt;
+
+                工作DNA
+
+            &amp;lt;/a&amp;gt;
+            &amp;lt;sup&amp;gt;[1]&amp;lt;/sup&amp;gt;
+        ,
+
+            &amp;lt;a href=&amp;quot;/tags.html#三层架构&amp;quot;&amp;gt;
+
+                三层架构
+
+            &amp;lt;/a&amp;gt;
+            &amp;lt;sup&amp;gt;[1]&amp;lt;/sup&amp;gt;
+        ,
+
+            &amp;lt;a href=&amp;quot;/tags.html#Perst&amp;quot;&amp;gt;
+
+                Perst
+
+            &amp;lt;/a&amp;gt;
+            &amp;lt;sup&amp;gt;[1]&amp;lt;/sup&amp;gt;
+        ,
+
+            &amp;lt;a href=&amp;quot;/tags.html#eclipse&amp;quot;&amp;gt;
+
+                eclipse
+
+            &amp;lt;/a&amp;gt;
+            &amp;lt;sup&amp;gt;[1]&amp;lt;/sup&amp;gt;
+        ,
+
+            &amp;lt;a href=&amp;quot;/tags.html#Egit&amp;quot;&amp;gt;
+
+                Egit
+
+            &amp;lt;/a&amp;gt;
+            &amp;lt;sup&amp;gt;[1]&amp;lt;/sup&amp;gt;
+        ,
+
+            &amp;lt;a href=&amp;quot;/tags.html#Jekyll&amp;quot;&amp;gt;
+
+                &amp;lt;b&amp;gt;Jekyll&amp;lt;/b&amp;gt;
+
+            &amp;lt;/a&amp;gt;
+            &amp;lt;sup&amp;gt;[2]&amp;lt;/sup&amp;gt;
+        ,
+
+            &amp;lt;a href=&amp;quot;/tags.html#Windows&amp;quot;&amp;gt;
+
+                Windows
+
+            &amp;lt;/a&amp;gt;
+            &amp;lt;sup&amp;gt;[2]&amp;lt;/sup&amp;gt;
+        ,
+
+            &amp;lt;a href=&amp;quot;/tags.html#OAuth2.0&amp;quot;&amp;gt;
+
+                OAuth2.0
+
+            &amp;lt;/a&amp;gt;
+            &amp;lt;sup&amp;gt;[1]&amp;lt;/sup&amp;gt;
+        ,
+
+            &amp;lt;a href=&amp;quot;/tags.html#列表&amp;quot;&amp;gt;
+
+                &amp;lt;b&amp;gt;列表&amp;lt;/b&amp;gt;
+
+            &amp;lt;/a&amp;gt;
+            &amp;lt;sup&amp;gt;[1]&amp;lt;/sup&amp;gt;
+        ,
+
+            &amp;lt;a href=&amp;quot;/tags.html#标签&amp;quot;&amp;gt;
+
+                &amp;lt;b&amp;gt;标签&amp;lt;/b&amp;gt;
+
+            &amp;lt;/a&amp;gt;
+            &amp;lt;sup&amp;gt;[1]&amp;lt;/sup&amp;gt;
+        ,
+
+            &amp;lt;a href=&amp;quot;/tags.html#代码&amp;quot;&amp;gt;
+
+                &amp;lt;b&amp;gt;代码&amp;lt;/b&amp;gt;
+
+            &amp;lt;/a&amp;gt;
+            &amp;lt;sup&amp;gt;[1]&amp;lt;/sup&amp;gt;
+        ,
+
+            &amp;lt;a href=&amp;quot;/tags.html#LayerDrawable&amp;quot;&amp;gt;
+
+                LayerDrawable
+
+            &amp;lt;/a&amp;gt;
+            &amp;lt;sup&amp;gt;[1]&amp;lt;/sup&amp;gt;
+        ,
+
+            &amp;lt;a href=&amp;quot;/tags.html#ListView&amp;quot;&amp;gt;
+
+                ListView
+
+            &amp;lt;/a&amp;gt;
+            &amp;lt;sup&amp;gt;[1]&amp;lt;/sup&amp;gt;
+        ,
+
+            &amp;lt;a href=&amp;quot;/tags.html#哲理&amp;quot;&amp;gt;
+
+                哲理
+
+            &amp;lt;/a&amp;gt;
+            &amp;lt;sup&amp;gt;[1]&amp;lt;/sup&amp;gt;
+        ,
+
+            &amp;lt;a href=&amp;quot;/tags.html#AnimationDrawable&amp;quot;&amp;gt;
+
+                AnimationDrawable
+
+            &amp;lt;/a&amp;gt;
+            &amp;lt;sup&amp;gt;[1]&amp;lt;/sup&amp;gt;
+        ,
+
+            &amp;lt;a href=&amp;quot;/tags.html#Animation&amp;quot;&amp;gt;
+
+                Animation
+
+            &amp;lt;/a&amp;gt;
+            &amp;lt;sup&amp;gt;[1]&amp;lt;/sup&amp;gt;
+        ,
+
+            &amp;lt;a href=&amp;quot;/tags.html#TranslateAnimation&amp;quot;&amp;gt;
+
+                TranslateAnimation
+
+            &amp;lt;/a&amp;gt;
+            &amp;lt;sup&amp;gt;[1]&amp;lt;/sup&amp;gt;
+        ,
+
+            &amp;lt;a href=&amp;quot;/tags.html#启动&amp;quot;&amp;gt;
+
+                启动
+
+            &amp;lt;/a&amp;gt;
+            &amp;lt;sup&amp;gt;[1]&amp;lt;/sup&amp;gt;
+        ,
+
+            &amp;lt;a href=&amp;quot;/tags.html#升级检查&amp;quot;&amp;gt;
+
+                升级检查
+
+            &amp;lt;/a&amp;gt;
+            &amp;lt;sup&amp;gt;[1]&amp;lt;/sup&amp;gt;
+        ,
+
+            &amp;lt;a href=&amp;quot;/tags.html#ProgressDialog&amp;quot;&amp;gt;
+
+                ProgressDialog
+
+            &amp;lt;/a&amp;gt;
+            &amp;lt;sup&amp;gt;[1]&amp;lt;/sup&amp;gt;
+        ,
+
+            &amp;lt;a href=&amp;quot;/tags.html#selector&amp;quot;&amp;gt;
+
+                selector
+
+            &amp;lt;/a&amp;gt;
+            &amp;lt;sup&amp;gt;[1]&amp;lt;/sup&amp;gt;
+        ,
+
+            &amp;lt;a href=&amp;quot;/tags.html#暗时间&amp;quot;&amp;gt;
+
+                暗时间
+
+            &amp;lt;/a&amp;gt;
+            &amp;lt;sup&amp;gt;[1]&amp;lt;/sup&amp;gt;
+        ,
+
+            &amp;lt;a href=&amp;quot;/tags.html#不聚集&amp;quot;&amp;gt;
+
+                不聚集
+
+            &amp;lt;/a&amp;gt;
+            &amp;lt;sup&amp;gt;[1]&amp;lt;/sup&amp;gt;
+        ,
+
+            &amp;lt;a href=&amp;quot;/tags.html#HOME&amp;quot;&amp;gt;
+
+                HOME
+
+            &amp;lt;/a&amp;gt;
+            &amp;lt;sup&amp;gt;[1]&amp;lt;/sup&amp;gt;
+        ,
+
+            &amp;lt;a href=&amp;quot;/tags.html#问题汇集&amp;quot;&amp;gt;
+
+                问题汇集
+
+            &amp;lt;/a&amp;gt;
+            &amp;lt;sup&amp;gt;[1]&amp;lt;/sup&amp;gt;
+        ,
+
+            &amp;lt;a href=&amp;quot;/tags.html#TabActivity&amp;quot;&amp;gt;
+
+                TabActivity
+
+            &amp;lt;/a&amp;gt;
+            &amp;lt;sup&amp;gt;[1]&amp;lt;/sup&amp;gt;
+        ,
+
+            &amp;lt;a href=&amp;quot;/tags.html#PHP&amp;quot;&amp;gt;
+
+                PHP
+
+            &amp;lt;/a&amp;gt;
+            &amp;lt;sup&amp;gt;[1]&amp;lt;/sup&amp;gt;
+        ,
+
+            &amp;lt;a href=&amp;quot;/tags.html#服务器&amp;quot;&amp;gt;
+
+                服务器
+
+            &amp;lt;/a&amp;gt;
+            &amp;lt;sup&amp;gt;[1]&amp;lt;/sup&amp;gt;
+        ,
+
+            &amp;lt;a href=&amp;quot;/tags.html#Mysql&amp;quot;&amp;gt;
+
+                Mysql
+
+            &amp;lt;/a&amp;gt;
+            &amp;lt;sup&amp;gt;[1]&amp;lt;/sup&amp;gt;
+        ,
+
+            &amp;lt;a href=&amp;quot;/tags.html#算法&amp;quot;&amp;gt;
+
+                算法
+
+            &amp;lt;/a&amp;gt;
+            &amp;lt;sup&amp;gt;[1]&amp;lt;/sup&amp;gt;
+        ,
+
+            &amp;lt;a href=&amp;quot;/tags.html#NDK&amp;quot;&amp;gt;
+
+                NDK
+
+            &amp;lt;/a&amp;gt;
+            &amp;lt;sup&amp;gt;[1]&amp;lt;/sup&amp;gt;
+        ,
+
+            &amp;lt;a href=&amp;quot;/tags.html#Appfog&amp;quot;&amp;gt;
+
+                Appfog
+
+            &amp;lt;/a&amp;gt;
+            &amp;lt;sup&amp;gt;[1]&amp;lt;/sup&amp;gt;
+        ,
+
+            &amp;lt;a href=&amp;quot;/tags.html#Java Web&amp;quot;&amp;gt;
+
+                Java Web
+
+            &amp;lt;/a&amp;gt;
+            &amp;lt;sup&amp;gt;[1]&amp;lt;/sup&amp;gt;
+        ,
+
+            &amp;lt;a href=&amp;quot;/tags.html#Service&amp;quot;&amp;gt;
+
+                Service
+
+            &amp;lt;/a&amp;gt;
+            &amp;lt;sup&amp;gt;[1]&amp;lt;/sup&amp;gt;
+        ,
+
+            &amp;lt;a href=&amp;quot;/tags.html#GridView&amp;quot;&amp;gt;
+
+                GridView
+
+            &amp;lt;/a&amp;gt;
+            &amp;lt;sup&amp;gt;[1]&amp;lt;/sup&amp;gt;
+        ,
+
+            &amp;lt;a href=&amp;quot;/tags.html#android&amp;quot;&amp;gt;
+
+                android
+
+            &amp;lt;/a&amp;gt;
+            &amp;lt;sup&amp;gt;[2]&amp;lt;/sup&amp;gt;
+        ,
+
+            &amp;lt;a href=&amp;quot;/tags.html#cocos2dx&amp;quot;&amp;gt;
+
+                cocos2dx
+
+            &amp;lt;/a&amp;gt;
+            &amp;lt;sup&amp;gt;[1]&amp;lt;/sup&amp;gt;
+        ,
+
+            &amp;lt;a href=&amp;quot;/tags.html#升级&amp;quot;&amp;gt;
+
+                升级
+
+            &amp;lt;/a&amp;gt;
+            &amp;lt;sup&amp;gt;[1]&amp;lt;/sup&amp;gt;
+        ,
+
+            &amp;lt;a href=&amp;quot;/tags.html#公告&amp;quot;&amp;gt;
+
+                公告
+
+            &amp;lt;/a&amp;gt;
+            &amp;lt;sup&amp;gt;[1]&amp;lt;/sup&amp;gt;
+        ,
+
+            &amp;lt;a href=&amp;quot;/tags.html#Win7&amp;quot;&amp;gt;
+
+                Win7
+
+            &amp;lt;/a&amp;gt;
+            &amp;lt;sup&amp;gt;[1]&amp;lt;/sup&amp;gt;
+        ,
+
+            &amp;lt;a href=&amp;quot;/tags.html#花生壳&amp;quot;&amp;gt;
+
+                花生壳
+
+            &amp;lt;/a&amp;gt;
+            &amp;lt;sup&amp;gt;[1]&amp;lt;/sup&amp;gt;
+        ,
+
+            &amp;lt;a href=&amp;quot;/tags.html#Debian&amp;quot;&amp;gt;
+
+                Debian
+
+            &amp;lt;/a&amp;gt;
+            &amp;lt;sup&amp;gt;[2]&amp;lt;/sup&amp;gt;
+        ,
+
+            &amp;lt;a href=&amp;quot;/tags.html#ruby&amp;quot;&amp;gt;
+
+                ruby
+
+            &amp;lt;/a&amp;gt;
+            &amp;lt;sup&amp;gt;[1]&amp;lt;/sup&amp;gt;
+        ,
+
+            &amp;lt;a href=&amp;quot;/tags.html#ROM&amp;quot;&amp;gt;
+
+                ROM
+
+            &amp;lt;/a&amp;gt;
+            &amp;lt;sup&amp;gt;[1]&amp;lt;/sup&amp;gt;
+        ,
+
+            &amp;lt;a href=&amp;quot;/tags.html#单例&amp;quot;&amp;gt;
+
+                单例
+
+            &amp;lt;/a&amp;gt;
+            &amp;lt;sup&amp;gt;[1]&amp;lt;/sup&amp;gt;
+        ,
+
+            &amp;lt;a href=&amp;quot;/tags.html#数据恢复&amp;quot;&amp;gt;
+
+                数据恢复
+
+            &amp;lt;/a&amp;gt;
+            &amp;lt;sup&amp;gt;[1]&amp;lt;/sup&amp;gt;
+        ,
+
+            &amp;lt;a href=&amp;quot;/tags.html#Volley&amp;quot;&amp;gt;
+
+                Volley
+
+            &amp;lt;/a&amp;gt;
+            &amp;lt;sup&amp;gt;[1]&amp;lt;/sup&amp;gt;
+        ,
+
+            &amp;lt;a href=&amp;quot;/tags.html#View&amp;quot;&amp;gt;
+
+                View
+
+            &amp;lt;/a&amp;gt;
+            &amp;lt;sup&amp;gt;[1]&amp;lt;/sup&amp;gt;
+        ,
+
+            &amp;lt;a href=&amp;quot;/tags.html#ViewGroup&amp;quot;&amp;gt;
+
+                ViewGroup
+
+            &amp;lt;/a&amp;gt;
+            &amp;lt;sup&amp;gt;[1]&amp;lt;/sup&amp;gt;
+        ,
+
+            &amp;lt;a href=&amp;quot;/tags.html#设计模式&amp;quot;&amp;gt;
+
+                设计模式
+
+            &amp;lt;/a&amp;gt;
+            &amp;lt;sup&amp;gt;[1]&amp;lt;/sup&amp;gt;
+        ,
+
+            &amp;lt;a href=&amp;quot;/tags.html#VPN&amp;quot;&amp;gt;
+
+                VPN
+
+            &amp;lt;/a&amp;gt;
+            &amp;lt;sup&amp;gt;[1]&amp;lt;/sup&amp;gt;
+        ,
+
+            &amp;lt;a href=&amp;quot;/tags.html#翻墙插件&amp;quot;&amp;gt;
+
+                翻墙插件
+
+            &amp;lt;/a&amp;gt;
+            &amp;lt;sup&amp;gt;[1]&amp;lt;/sup&amp;gt;
+        ,
+
+            &amp;lt;a href=&amp;quot;/tags.html#Cocos2d&amp;quot;&amp;gt;
+
+                Cocos2d
+
+            &amp;lt;/a&amp;gt;
+            &amp;lt;sup&amp;gt;[1]&amp;lt;/sup&amp;gt;
+        ,
+
+            &amp;lt;a href=&amp;quot;/tags.html#git&amp;quot;&amp;gt;
+
+                git
+
+            &amp;lt;/a&amp;gt;
+            &amp;lt;sup&amp;gt;[2]&amp;lt;/sup&amp;gt;
+        ,
+
+            &amp;lt;a href=&amp;quot;/tags.html#Eclipse&amp;quot;&amp;gt;
+
+                Eclipse
+
+            &amp;lt;/a&amp;gt;
+            &amp;lt;sup&amp;gt;[1]&amp;lt;/sup&amp;gt;
+        ,
+
+            &amp;lt;a href=&amp;quot;/tags.html#Cocos2d IDE&amp;quot;&amp;gt;
+
+                Cocos2d IDE
+
+            &amp;lt;/a&amp;gt;
+            &amp;lt;sup&amp;gt;[1]&amp;lt;/sup&amp;gt;
+        ,
+
+            &amp;lt;a href=&amp;quot;/tags.html#cocos2d&amp;quot;&amp;gt;
+
+                cocos2d
+
+            &amp;lt;/a&amp;gt;
+            &amp;lt;sup&amp;gt;[2]&amp;lt;/sup&amp;gt;
+        ,
+
+            &amp;lt;a href=&amp;quot;/tags.html#manven&amp;quot;&amp;gt;
+
+                manven
+
+            &amp;lt;/a&amp;gt;
+            &amp;lt;sup&amp;gt;[1]&amp;lt;/sup&amp;gt;
+        ,
+
+            &amp;lt;a href=&amp;quot;/tags.html#HTTP&amp;quot;&amp;gt;
+
+                HTTP
+
+            &amp;lt;/a&amp;gt;
+            &amp;lt;sup&amp;gt;[1]&amp;lt;/sup&amp;gt;
+        ,
+
+            &amp;lt;a href=&amp;quot;/tags.html#network&amp;quot;&amp;gt;
+
+                network
+
+            &amp;lt;/a&amp;gt;
+            &amp;lt;sup&amp;gt;[1]&amp;lt;/sup&amp;gt;
+        ,
+
+            &amp;lt;a href=&amp;quot;/tags.html#cocos2d-js&amp;quot;&amp;gt;
+
+                cocos2d-js
+
+            &amp;lt;/a&amp;gt;
+            &amp;lt;sup&amp;gt;[1]&amp;lt;/sup&amp;gt;
+        ,
+
+            &amp;lt;a href=&amp;quot;/tags.html#友盟统计&amp;quot;&amp;gt;
+
+                友盟统计
+
+            &amp;lt;/a&amp;gt;
+            &amp;lt;sup&amp;gt;[1]&amp;lt;/sup&amp;gt;
+        ,
+
+            &amp;lt;a href=&amp;quot;/tags.html#设计原则&amp;quot;&amp;gt;
+
+                设计原则
+
+            &amp;lt;/a&amp;gt;
+            &amp;lt;sup&amp;gt;[1]&amp;lt;/sup&amp;gt;
+        ,
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&amp;lt;% endhighlight %&amp;gt;&lt;/p&gt;
+
+&lt;p&gt;&amp;lt;% highlight html %&amp;gt;
+&lt;h1&gt;Recent Posts&lt;/h1&gt;
+  &lt;ul class=&quot;posts&quot;&gt;&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&amp;lt;li&amp;gt;&amp;lt;span&amp;gt;01 Mar 2015&amp;lt;/span&amp;gt;&amp;amp;raquo;&amp;lt;a href=&amp;quot;/reading/read-design-principle-book.html&amp;quot;&amp;gt;写给大家看的设计书[书摘]&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+
+&amp;lt;li&amp;gt;&amp;lt;span&amp;gt;05 Jan 2015&amp;lt;/span&amp;gt;&amp;amp;raquo;&amp;lt;a href=&amp;quot;/android/umeng-package-sign.html&amp;quot;&amp;gt;友盟统计正式包无数据问题&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+
+&amp;lt;li&amp;gt;&amp;lt;span&amp;gt;30 Dec 2014&amp;lt;/span&amp;gt;&amp;amp;raquo;&amp;lt;a href=&amp;quot;/android/cocos-js-learn.html&amp;quot;&amp;gt;Cocos JS 布局及控件相关&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+
+&amp;lt;li&amp;gt;&amp;lt;span&amp;gt;27 Dec 2014&amp;lt;/span&amp;gt;&amp;amp;raquo;&amp;lt;a href=&amp;quot;/network/get-latest-msysgit.html&amp;quot;&amp;gt;Windows下msysgit最新下载地址&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+
+&amp;lt;li&amp;gt;&amp;lt;span&amp;gt;20 Dec 2014&amp;lt;/span&amp;gt;&amp;amp;raquo;&amp;lt;a href=&amp;quot;/web/http-protocol-review.html&amp;quot;&amp;gt;HTTP请求/响应构成&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+
+&amp;lt;li&amp;gt;&amp;lt;span&amp;gt;13 Dec 2014&amp;lt;/span&amp;gt;&amp;amp;raquo;&amp;lt;a href=&amp;quot;/java/maven-simple-steps.html&amp;quot;&amp;gt;Manven构建基本步骤&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+
+&amp;lt;li&amp;gt;&amp;lt;span&amp;gt;12 Nov 2014&amp;lt;/span&amp;gt;&amp;amp;raquo;&amp;lt;a href=&amp;quot;/git/on-git-rebase-merge.html&amp;quot;&amp;gt;Git的Merge和Rebase&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+
+&amp;lt;li&amp;gt;&amp;lt;span&amp;gt;22 Oct 2014&amp;lt;/span&amp;gt;&amp;amp;raquo;&amp;lt;a href=&amp;quot;/cocos2d/cocos2dx-java-with-javascript.html&amp;quot;&amp;gt;cocos2dx javascript与java互相调用途径&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+
+&amp;lt;li&amp;gt;&amp;lt;span&amp;gt;12 Oct 2014&amp;lt;/span&amp;gt;&amp;amp;raquo;&amp;lt;a href=&amp;quot;/cocos2d/cocos-multi-resolution-support.html&amp;quot;&amp;gt;Cocos2d 多屏适配文章&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+
+&amp;lt;li&amp;gt;&amp;lt;span&amp;gt;20 Sep 2014&amp;lt;/span&amp;gt;&amp;amp;raquo;&amp;lt;a href=&amp;quot;/cocos2d/cocos-ide-steps.html&amp;quot;&amp;gt;Cocos IDE开发步骤&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;/ul&gt;
+&amp;lt;% endhighlight %&amp;gt;&lt;/p&gt;
+
+&lt;p&gt;&amp;lt;% highlight html %&amp;gt;
+分页显示
+&amp;lt;!-- This loops through the paginated posts --&amp;gt;&lt;/p&gt;
+
+&lt;div style=&quot;height:16px&quot;&gt;&lt;/div&gt;
+
+&lt;!-- Pagination links --&gt;
+
+&lt;div class=&quot;pagination&quot;&gt;
+  
+    &lt;span class=&quot;previous&quot;&gt;Previous&lt;/span&gt;
+  
+  &lt;span class=&quot;page_number &quot;&gt;Page:  of &lt;/span&gt;
+  
+    &lt;span class=&quot;next &quot;&gt;Next&lt;/span&gt;
+  
+&lt;/div&gt;
+
+&lt;p&gt;&amp;lt;% endhighlight %&amp;gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>基于Android+WebView的OAuth2.0认证过程分析及简单模型实现</title>
+   <link href="http://blog.hipoplar.me/android/simple-oauth-model.html"/>
+   <updated>2012-12-10T00:00:00+08:00</updated>
+   <id>/android/simple-oauth-model</id>
+   <content type="html">&lt;p&gt;A simple oauthv2 model for android by webview
+一、以Android+WebView为例，简要说明一下OAuth2.0认证授权过程：&lt;/p&gt;
+
+&lt;p&gt;1，以在开放平台注册应用的appId,appSecret,callbackUrl，组装认证url，以WebView为桥梁，向开放平台认证中心发起认证请求。&lt;/p&gt;
+
+&lt;p&gt;2，认证中心判断应用来源，合法则跳转到用户授权界面(网页)，用户输入帐号及密码并同意授权则向认证中心发起授权。&lt;/p&gt;
+
+&lt;p&gt;3，认证中心对授权请求进行处理，以callbackUrl加参数的方式Rediret，这时拦截Rediret url后附带的参数即可知认证结果。&lt;/p&gt;
+
+&lt;p&gt;4，认证成功将获得open&lt;em&gt;id，access&lt;/em&gt;token，refresh&lt;em&gt;token，expire&lt;/em&gt;time等参数，用这些参数就可以向开放平台的业务层接口发起请求了。&lt;/p&gt;
+
+&lt;p&gt;注：开放平台各异，OAuth2.0中appSecret也可能没用到，也不一定都返回了open_id这东西。&lt;/p&gt;
+
+&lt;p&gt;二、测试&lt;/p&gt;
+
+&lt;p&gt;运行apk后即可模拟认证授权，输入admin,888888就可以授权成功了。&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Windows下Jekyll指南</title>
+   <link href="http://blog.hipoplar.me/network/jekyll-blog-guide.html"/>
+   <updated>2012-12-09T00:00:00+08:00</updated>
+   <id>/network/jekyll-blog-guide</id>
+   <content type="html">&lt;p&gt;提示：尽量用1.9.x版本的RubyInstaller，已含运行Jekyll所需的yajl依赖包。RubyInstallerv2.0以上版本需自行安装yajl-ruby，容易出错。&lt;/p&gt;
+
+&lt;p&gt;一、安装Ruby执行环境&lt;/p&gt;
+
+&lt;p&gt;rubyinstaller-1.9.3-p392.exe,安装，很简单。&lt;/p&gt;
+
+&lt;p&gt;DevKit-tdm-32-4.5.2-20111229-1559-sfx.exe，解压到C:\DevKit，然后cmd进入该目录执行：&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;ruby dk.rb init
+ruby dk.rb review
+ruby dk.rb install
+ruby --version&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;输出ruby 1.9.3p392 (2013-02-22) [i386-mingw32]则表明Ruby安装成功。&lt;/p&gt;
+
+&lt;p&gt;二、安装Rdiscount及Jekyll&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;gem install rdiscount
+gem install jekyll
+jekyll --version&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;输出类似Jekyll 0.12.1信息则Jekyll安装成功。&lt;/p&gt;
+
+&lt;p&gt;三、执行Jekyll&lt;/p&gt;
+
+&lt;p&gt;进入Jekyll所在目录&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;jekyll --server&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;浏览器输入http://localhost:4000/看到设置的主页则Jekyll运行成功。
+备注：&lt;/p&gt;
+
+&lt;p&gt;Jekyll网站文件最好以UTF-8无BOM格式存储 。&lt;/p&gt;
+
+&lt;p&gt;Jekyll运行报invalid byte sequencd in GBK时，可修改jekyll安装目录下convertible.rb第28行为self.content = File.read(File.join(base, name),:encoding=&amp;gt;&amp;quot;utf-8&amp;quot;)即可。(C:\Ruby193\lib\ruby\gems\1.9.1\gems\jekyll-0.12.1\lib\jekyll\convertible.rb)。&lt;/p&gt;
+
+&lt;p&gt;Jekyll运行报Liquid error: incompatible character encodings: UTF-8 and GBK时，可添两个环境变量：LC&lt;em&gt;ALL=en&lt;/em&gt;US.UTF-8，LANG=en_US.UTF-8。(在安装ruby成功后添加）&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>eclipse下Egit rebase 步骤</title>
+   <link href="http://blog.hipoplar.me/android/egit-rebase-step.html"/>
+   <updated>2012-11-26T00:00:00+08:00</updated>
+   <id>/android/egit-rebase-step</id>
+   <content type="html">&lt;p&gt;1.提交修改文件
+Team-&amp;gt;commit&lt;/p&gt;
+
+&lt;p&gt;2.更新仓库文件
+Team-&amp;gt;Fetch-from-Upstream&lt;/p&gt;
+
+&lt;p&gt;3.Rebase, 修改冲突文件
+Team-&amp;gt;Rebase,(fix diff)&lt;/p&gt;
+
+&lt;p&gt;4.修改文件添加至索引
+Team-&amp;gt;Add to index&lt;/p&gt;
+
+&lt;p&gt;5.继续Rebase
+Team-&amp;gt;Rebase-&amp;gt;continue rebase&lt;/p&gt;
+
+&lt;p&gt;6.Push到服务器
+Team-&amp;gt;Push-to-Upstream&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Android 之Parcelable使用例子</title>
+   <link href="http://blog.hipoplar.me/android/parcelable-usage.html"/>
+   <updated>2012-06-12T00:00:00+08:00</updated>
+   <id>/android/parcelable-usage</id>
+   <content type="html">&lt;p&gt;Android推荐实现Parcelable接口而非Seriable接口来实现对象的序列化。但当Parcelable中含有列表List时，则要求列表中的信息类是Seriable的。Parcelable接口实现类除了必须实现writeToParcel(Parcel dest, int flags)方法外(describeContents()默认即可)，还需创建一个类型为Parcelable.Creator&amp;lt; T &amp;gt; 名为CREATOR的public静态变量(createFromParcel(Parcel source) 方法也是必须的)。&lt;/p&gt;
+
+&lt;p&gt;Github：&lt;a href=&quot;https://github.com/allthelucky/android-develop-kits/tree/master/ParcelableTest&quot;&gt;https://github.com/allthelucky/android-develop-kits/tree/master/ParcelableTest&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Perst在Android中的简单应用</title>
+   <link href="http://blog.hipoplar.me/android/perst-try.html"/>
+   <updated>2012-06-05T00:00:00+08:00</updated>
+   <id>/android/perst-try</id>
+   <content type="html">&lt;p&gt;Perst的介绍文字颇多，但应用例子却不好找。关于Perst的介绍文字大家去Google或百度找吧。测试发现，在大数量（1w及以上）情况下，Perst性能的确远超Sqlite。下面讲解一下Perst的简单操作过程，并附上一测试例子。&lt;/p&gt;
+
+&lt;h3&gt;一、Perst的应用基本步骤：&lt;/h3&gt;
+
+&lt;p&gt;1、建立信息类；&lt;br/&gt;
+2、建立索引Root类；&lt;br/&gt;
+3、进行数据库操作。&lt;/p&gt;
+
+&lt;h3&gt;二、例子Android操作例子&lt;/h3&gt;
+
+&lt;p&gt;Github：&lt;a href=&quot;https://github.com/panxw/android-develop-toolkit/tree/master/AndroidPerstTutorial&quot;&gt;https://github.com/panxw/android-develop-toolkit/tree/master/AndroidPerstTutorial&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3&gt;三、参考文献&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.mcobject.com/perst&quot;&gt;http://www.mcobject.com/perst&lt;/a&gt;&lt;br/&gt;
+&lt;a href=&quot;http://www.cnblogs.com/zzyyll2/archive/2007/09/07/885149.html&quot;&gt;http://www.cnblogs.com/zzyyll2/archive/2007/09/07/885149.html&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>给移动应用开发者的建议</title>
+   <link href="http://blog.hipoplar.me/android/app-dev-sugestions.html"/>
+   <updated>2012-05-21T00:00:00+08:00</updated>
+   <id>/android/app-dev-sugestions</id>
+   <content type="html">&lt;p&gt;摘自某ANDROID开发书籍，具体记不清楚了。个人比较认同：&lt;/p&gt;
+
+&lt;p&gt;1,随时记录自己手头的好点子。&lt;br/&gt;
+2,并非一个功能完善的应用才能赚钱。&lt;br/&gt;
+3,在发布各版本的ahap版本过程中完善功能。&lt;br/&gt;
+4,有困难查资料。(Google)&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>三层架构</title>
+   <link href="http://blog.hipoplar.me/network/three-level-arch.html"/>
+   <updated>2012-05-01T00:00:00+08:00</updated>
+   <id>/network/three-level-arch</id>
+   <content type="html">&lt;p&gt;软件体系架构中，一般分层结构：表示层，业务逻辑层，数据访问层。目的在于提高程序设计及维护效率。&lt;/p&gt;
+
+&lt;p&gt;请求过程：表示层接收到用户的数据和请求后，传递给业务逻辑层。业务逻辑层接收到用户数据和请求后，先对数据和请求验证和审核，验证过后再将数据和请求传递给数据访问层，验证失败则直接将结果返回表示层。数据访问层接收到数据和请求后，开始读取或保存数据。&lt;/p&gt;
+
+&lt;p&gt;反之是响应过程：数据访问层读取到用户所需数据，然后传递给业务逻辑层。业务逻辑层得到数据后，先对结果进行验证，验证有效则将结果传递给表示层。表示层接收到结果后，将结果显示在界面。&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>工作DNA警句</title>
+   <link href="http://blog.hipoplar.me/reading/work-dna.html"/>
+   <updated>2012-03-12T00:00:00+08:00</updated>
+   <id>/reading/work-dna</id>
+   <content type="html">&lt;p&gt;在一本名为《工作DNA》的书中写的几方面。我觉得蛮有道理，于是写摘下：&lt;/p&gt;
+
+&lt;p&gt;1,不能只有生存权，更要有发展权。&lt;br/&gt;
+2,五大打挑战：父母，生育，升职，工作压力，生活质量。&lt;br/&gt;
+3,工作不能只有专业化，还要有职业化。&lt;br/&gt;
+4,财富要像滚雪球，人生也是。&lt;br/&gt;
+5,职业线路：专注与坚持。&lt;br/&gt;
+6,人生大智慧：聪明+善良。&lt;br/&gt;
+7,人生不能只有吸引力，更要有影响力。&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>wait和notify/notifyAll</title>
+   <link href="http://blog.hipoplar.me/android/wait-notify.html"/>
+   <updated>2012-02-01T00:00:00+08:00</updated>
+   <id>/android/wait-notify</id>
+   <content type="html">&lt;p&gt;wait等待某个条件发生，而改变这个条件超出了当前方法的控制能力，常由另一个任务来改变。而notify和notifyAll则表示感兴趣的事件发生了，于是唤醒wait之后动作执行。&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Android Spinner自定义适配器</title>
+   <link href="http://blog.hipoplar.me/android/custom-spinner.html"/>
+   <updated>2011-12-20T00:00:00+08:00</updated>
+   <id>/android/custom-spinner</id>
+   <content type="html">&lt;p&gt;想让Android的Spinner+Adapter也能像ListView+Adapter那样自由适配任意(信息)列表数据，直接继承ArrayAdapter或BaseAdapter的方法来重写Adapter是不行的，必须实现Android提供的SpinnerAdapter接口来定制Spinner的Adapter才能达到所需效果。&lt;/p&gt;
+
+&lt;p&gt;Github：&lt;a href=&quot;https://github.com/allthelucky/android-develop-kits/tree/master/CustomSpinner&quot;&gt;https://github.com/allthelucky/android-develop-kits/tree/master/CustomSpinner&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Android 点按钮不让AlertDialog退出方法</title>
+   <link href="http://blog.hipoplar.me/android/dialog-hold.html"/>
+   <updated>2011-11-10T00:00:00+08:00</updated>
+   <id>/android/dialog-hold</id>
+   <content type="html">&lt;p&gt;在AlertDialog中加入布局后，发现数据验证无论通过与否，点了AlertDialog提供的按钮后总是退出。如何使数据在校验未成功的时候hold住AlertDialog呢？网友提供了一种可行方法：&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;final Builder dialog = new AlertDialog.Builder(mContext);
+...
+LayoutInflater inflater = LayoutInflater.from(mContext);
+View layout = inflater.inflate(R.layout.tsm_person_info, null);
+final EditText nameText = (EditText) layout.findViewById(R.id.editText1);
+final EditText cardIdText = (EditText) layout.findViewById(R.id.editText2);
+final EditText phoneText = (EditText) layout.findViewById(R.id.editText3);
+... 
+dialog.setView(layout);
+dialog.setNeutralButton(&amp;quot;确定&amp;quot;, new DialogInterface.OnClickListener() {
+  @Override
+ public void onClick(DialogInterface dialog, int which) { 
+  String name = nameText.getText().toString().trim();
+  String idCard = cardIdText.getText().toString().trim();
+  String phone = phoneText.getText().toString().trim();
+  if (name.equals(&amp;quot;&amp;quot;) || idCard.equals(&amp;quot;&amp;quot;) || phone.equals(&amp;quot;&amp;quot;)) {
+  holdDialog(dialog, false); //校验不通过界面保持
+  return;
+ }
+ holdDialog(dialog, true); //allow exit
+ }
+});
+dialog.setNegativeButton(&amp;quot;取消&amp;quot;, new DialogInterface.OnClickListener() {
+ @Override
+ public void onClick(DialogInterface dialog, int which) {
+  Toast.makeText(mContext, &amp;quot;未进行个人化处理！&amp;quot;, Toast.LENGTH_SHORT).show();
+  holdDialog(dialog, true);//allow exit
+ }
+});
+/**
+ *界面保持开关
+* @param dialog
+*/
+private void holdDialog(DialogInterface dialog, boolean flag) {
+ try {
+  Field field = dialog.getClass().getSuperclass().getDeclaredField(&amp;quot;mShowing&amp;quot;);
+  field.setAccessible(true);
+  field.set(dialog, flag);
+ } catch (Exception e) {
+  e.printStackTrace();
+ }
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;参考文章：http://gjican.iteye.com/blog/1130538&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Android EditText控件的密码输入框可见性设置：</title>
+   <link href="http://blog.hipoplar.me/android/textedit-set-password.html"/>
+   <updated>2011-10-22T00:00:00+08:00</updated>
+   <id>/android/textedit-set-password</id>
+   <content type="html">&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;public void showAsPassword(show) {
+    if (show) {
+     passEdit.setInputType(0x90);
+    } else {
+     passEdit.setInputType(0x81);
+    }
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Android Dialog风格Activity</title>
+   <link href="http://blog.hipoplar.me/android/dialog-style-activity.html"/>
+   <updated>2011-10-22T00:00:00+08:00</updated>
+   <id>/android/dialog-style-activity</id>
+   <content type="html">&lt;p&gt;在Manifist文件中，对Activity添加一项theme的属性，值为@android:style/Theme.Dialog就能将Activity以对话框形式显示。例如：&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&amp;lt;activity android:name=&amp;quot;.DialogActivity&amp;quot; android:label=&amp;quot;@string/new_name&amp;quot;android:theme=&amp;quot;@android:style/Theme.Dialog&amp;quot;/&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Android调用系统安装/卸载apk过程</title>
+   <link href="http://blog.hipoplar.me/android/android-install-uninstall.html"/>
+   <updated>2011-10-22T00:00:00+08:00</updated>
+   <id>/android/android-install-uninstall</id>
+   <content type="html">&lt;p&gt;1、安装apk&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;String dirPath = &amp;quot;/data/data/&amp;quot; + getPackageName() + &amp;quot;/files/test.apk&amp;quot;; //文件需有可读权限
+Intent intent = new Intent();
+intent.setAction(android.content.Intent.ACTION_VIEW);
+intent.setDataAndType(Uri.parse(&amp;quot;file://&amp;quot; + filePath), &amp;quot;application/vnd.android.package-archive&amp;quot;);
+intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+startActivity(intent);&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;2、卸载apk&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;private void startUninstall(final String pkg) {
+  if (!InstallUtils.isApkInstalled(mContext, pkg)) {
+   Toast.makeText(mContext, &amp;quot;程序未安装，无需卸载！&amp;quot;, Toast.LENGTH_SHORT).show();
+   return;
+  } else {
+   Uri packageURI = Uri.parse(&amp;quot;package:&amp;quot; + pkg);
+   Intent uninstallIntent = new Intent(Intent.ACTION_DELETE, packageURI);
+   startActivity(uninstallIntent);
+  }
+ }&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;3、run运行&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;Intent to = new Intent();
+  to.putExtra(&amp;quot;TOP&amp;quot;, &amp;quot;你好，来自上层信息&amp;quot;);
+  to.setClassName(pkgName, clsName);
+  to.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+  startActivity(to);&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;4、工具&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;InstallUtils.java　public static boolean isApkInstalled(Context context, final String pkgName) {
+　try {
+   context.getPackageManager().getPackageInfo(pkgName, 0);
+   return true;
+  } catch (NameNotFoundException e) {
+   //e.printStackTrace();
+  }
+  return false;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;5、将安装的程序AndroidManifest.xml设置入口类为：&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&amp;lt;intent-filter &amp;gt;
+       &amp;lt;action android:name=&amp;quot;android.intent.action.VIEW&amp;quot; /&amp;gt;
+       &amp;lt;category android:name=&amp;quot;android.intent.category.DEFAULT&amp;quot; /&amp;gt;
+&amp;lt;/intent-filter&amp;gt;就不会在桌面出现该应用的启动图标了。&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;6、启动任意另一个apk中的任一Activity。 与第5点一样，需在启动的Activity配置Intentfilter：&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&amp;lt;intent-filter &amp;gt;
+       &amp;lt;action android:name=&amp;quot;android.intent.action.VIEW&amp;quot; /&amp;gt;
+       &amp;lt;category android:name=&amp;quot;android.intent.category.DEFAULT&amp;quot; /&amp;gt;
+&amp;lt;/intent-filter&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>养气歌</title>
+   <link href="http://blog.hipoplar.me/reading/body-foster-song.html"/>
+   <updated>2011-08-01T00:00:00+08:00</updated>
+   <id>/reading/body-foster-song</id>
+   <content type="html">&lt;p&gt;少思虑以养心气，寡色欲以养肾气。&lt;br/&gt;
+常运动以养骨气，戒嗔怒以养肝气。&lt;br/&gt;
+薄滋味以养胃气，省语言以养神气。&lt;br/&gt;
+多读书以养胆气，顺时令以养元气。&lt;br/&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>IT Enginner or Code Typist</title>
+   <link href="http://blog.hipoplar.me/network/it-engineer-way.html"/>
+   <updated>2011-03-01T00:00:00+08:00</updated>
+   <id>/network/it-engineer-way</id>
+   <content type="html">&lt;p&gt;曾看过这么一句话：“做一个工程师(Enginner or Programdesigner)，而不仅是一个程序工人(Code Typist)”。&lt;/p&gt;
+
+&lt;p&gt;面向对象OO之路：&lt;/p&gt;
+
+&lt;p&gt;1,精通一元语言，如UML。&lt;br/&gt;
+2,学习，然后使用设计模式。&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>学习方法及过程</title>
+   <link href="http://blog.hipoplar.me/reading/learn-process.html"/>
+   <updated>2011-01-08T00:00:00+08:00</updated>
+   <id>/reading/learn-process</id>
+   <content type="html">&lt;p&gt;书摘，学习方法及过程：&lt;/p&gt;
+
+&lt;p&gt;1,循序渐进，打好基础，由易到难，量力而行。&lt;br/&gt;
+2,熟读精思，心到、眼到、口到。&lt;br/&gt;
+3,自求自得，主动消化吸收。&lt;br/&gt;
+4,博约结合，广博与精研结合，广泛阅读，精读。&lt;br/&gt;
+5,知行统一，从实践中学，学以致用。&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>web标准设计规范(XHTML+CSS)</title>
+   <link href="http://blog.hipoplar.me/web/css-div-standerd.html"/>
+   <updated>2010-10-05T00:00:00+08:00</updated>
+   <id>/web/css-div-standerd</id>
+   <content type="html">&lt;p&gt;以下内容摘自《CSS禅意花园》，www.csszengarden.com。&lt;/p&gt;
+
+&lt;p&gt;1,为使浏览器正确解析及通过CSS检验，所有文档都必须声明它们所使用的编码语言。&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&amp;lt;meta http-equiv=&amp;quot;Content-Type&amp;quot; content=&amp;quot;text/html;charset=utf-8&amp;quot;/&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;2,用小写书写所有标签，XML对大小写敏感。&lt;/p&gt;
+
+&lt;p&gt;3,为图片添加有意义的alt属性。&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&amp;lt;img src=&amp;quot;logo.png&amp;quot; alt=&amp;quot;websit web logo&amp;quot;/&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;4,关闭所有标签，单标签也应该关闭。&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&amp;lt;hr/&amp;gt; &amp;lt;br/&amp;gt; &amp;lt;img src=&amp;quot;pic.jpg&amp;quot; alt=&amp;quot;pic&amp;quot;/&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;5,为所有的属性值加引号，HTML中无需，而XHTML中必须加上。&lt;/p&gt;
+
+&lt;p&gt;6,用id属性代替name属性，XHTML中不能使用name属性，应该用id代替。&lt;/p&gt;
+
+&lt;p&gt;7,CSS盒模型.&lt;br/&gt;
+一个元素的实际宽度：左边界+左加框+左填充+内容宽度+右填充+右边框+右边界。&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Android开发环境搭建 </title>
+   <link href="http://blog.hipoplar.me/android/android-env-setup.html"/>
+   <updated>2010-10-01T00:00:00+08:00</updated>
+   <id>/android/android-env-setup</id>
+   <content type="html">&lt;p&gt;几个月前就想试一试Android开发环境，当时觉得麻烦就没有动手。现在闲时把所用文件下载之后安装了一下，原来事实并没有想像中的那样烦琐。&lt;/p&gt;
+
+&lt;h3&gt;1.安装JDK，JRE是不够的。&lt;/h3&gt;
+
+&lt;p&gt;下载jdk-6u21-windows-i586.exe&lt;br/&gt;
+安装到C:\Program Files\Java\jdk1.6.0&lt;em&gt;21&lt;br/&gt;
+添加环境变量JAVA&lt;/em&gt;HOME，值为C:\Program Files\Java\jdk1.6.0&lt;em&gt;21&lt;br/&gt;
+环境变量PATH中填添%JAVA&lt;/em&gt;HOME%\bin;%JAVA&lt;em&gt;HOME%\jre\bin;&lt;br/&gt;
+添加环境变量CLASSPATH，值设为.;%JAVA&lt;/em&gt;HOME%\lib;%JAVA_HOME%\lib\tools.jar&lt;br/&gt;&lt;/p&gt;
+
+&lt;h3&gt;2.下载Android SDK，解压。&lt;/h3&gt;
+
+&lt;p&gt;解压后Android sdk目录为D:\Androidand\sdk&lt;/p&gt;
+
+&lt;h3&gt;3.下载eclipse，解压。&lt;/h3&gt;
+
+&lt;p&gt;解压后eclipse目录为D:\Androidand\eclipse&lt;/p&gt;
+
+&lt;h3&gt;4.进入eclipse目录&lt;/h3&gt;
+
+&lt;p&gt;运行eclipse.exe，在Help&amp;gt;Install New Software下添加ADT插件，所用网址http://dl-ssl.google.com/android/eclipse，安装Android Development Tools。&lt;/p&gt;
+
+&lt;h4&gt;5.eclipse添加Android SDK路径。&lt;/h4&gt;
+
+&lt;p&gt;Windows&amp;gt;Preference&amp;gt;Android&amp;gt;Android SDK设置为D:\Androidand\sdk&lt;br/&gt;
+大致就完成了，结下来就可以在eclipse开发Android应用程序了。&lt;/p&gt;
+
+&lt;p&gt;原文：&lt;a href=&quot;http://blog.chinaunix.net/uid-22985736-id-130137.html&quot;&gt;http://blog.chinaunix.net/uid-22985736-id-130137.html&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Windows XP下uCOS-II开发环境建立</title>
+   <link href="http://blog.hipoplar.me/embedded/ucos-ii-setup.html"/>
+   <updated>2010-06-25T00:00:00+08:00</updated>
+   <id>/embedded/ucos-ii-setup</id>
+   <content type="html">&lt;p&gt;下载所需文件，地址：&lt;a href=&quot;http://pan.baidu.com/s/1i3uXuPB&quot;&gt;http://pan.baidu.com/s/1i3uXuPB&lt;/a&gt;&lt;br&gt;
+1、解压Borland C 4.5完全安装版.rar，然后进入BC45目录，执行INSTALL.EXE安装，选择C盘。&lt;br&gt;
+2、解压tasm.rar中的TASM.EXE，将其COPY到C:\BC45\BIN目录下。&lt;br&gt;
+3、执行uCOS_II.rar中的uCOSV252.exe，选择C盘执行，将在C盘出现SOFTWARE目录。&lt;br&gt;
+4、进入C:\SOFTWARE\uCOS-II，可测试示例程序。&lt;br&gt;
+5、参考示例程序开发自己的应用。&lt;/p&gt;
+
+&lt;p&gt;Windows XP下比较正常，Windows 7下可能不成功。&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>2.6内核驱动编译程序所遇问题解 </title>
+   <link href="http://blog.hipoplar.me/linux/linux-kernel26-faqs.html"/>
+   <updated>2010-05-20T00:00:00+08:00</updated>
+   <id>/linux/linux-kernel26-faqs</id>
+   <content type="html">&lt;h4&gt;一、write ioctl 警告:从不兼容的指针类型初始化&lt;/h4&gt;
+
+&lt;p&gt;原因在于:write中的char *buf应该为const char *buf；ioctl中的long data为unsigned long data&lt;/p&gt;
+
+&lt;h4&gt;二、irqreturn函数中的参数变化&lt;/h4&gt;
+
+&lt;p&gt;2.6中的irqreturn函数中只有两个参数了，原来的irqreturn&lt;em&gt;t int&lt;/em&gt;interrupt(int irq,void * dev&lt;em&gt;id,struct pt&lt;/em&gt;regs *regs)；应该是irqreturn&lt;em&gt;t int&lt;/em&gt;interrupt(int irq,void * dev_id)；&lt;/p&gt;
+
+&lt;h4&gt;三、2.6内核高版本中的frags值发生变化&lt;/h4&gt;
+
+&lt;p&gt;原来头文件里没有SA&lt;em&gt;INTERRUPT了，一般使用IRQF&lt;/em&gt;SHARED了。&lt;br&gt;
+rquest&lt;em&gt;irq(PRINT&lt;/em&gt;IRQ,int&lt;em&gt;interrupt,IRQF&lt;/em&gt;SHARED,INT&lt;em&gt;DEV&lt;/em&gt;NAME,NULL);&lt;/p&gt;
+
+&lt;h4&gt;四、中断所需的头文件不同&lt;/h4&gt;
+
+&lt;p&gt;2.4内核中中断的注册和注销使用的头文件#include &lt;linux/shed.h&gt;&lt;br&gt;
+2.6内核中中断的注册和注销使用的头文件#include &lt;linux/interrupt.h&gt;&lt;/p&gt;
+
+&lt;h4&gt;五、预留主设备号和次设备号&lt;/h4&gt;
+
+&lt;p&gt;1.可用的主设备号范围如下：60~63 120~127 240~254&lt;br&gt;
+2.主设备号10的次设备号中240~255范围也用在测试或特定平台上。&lt;/p&gt;
+
+&lt;h4&gt;六、printk函数输出&lt;/h4&gt;
+
+&lt;p&gt;1输出可标记等级，默认为KERN_WARNNING，等同于下面几句：
+&lt;pre&gt;
+printk(&amp;quot;&lt;4&gt;&amp;quot; &amp;quot;system ok\n&amp;quot;);
+printk(&amp;quot;&lt;4&gt; system ok\n&amp;quot;);
+printk(&amp;quot;system ok\n&amp;quot;);
+&lt;/pre&gt;
+2.必须使用“\n”字符，否则调试过程混乱。当不使用它时，下一条输出会紧接着前一句，而且会输出标记级别。&lt;br&gt;
+如printk(&amp;quot;hello world&amp;quot;);printk(&amp;quot;goodbye\n&amp;quot;);则输出时为hello world&lt;6&gt;goodbye.&lt;/p&gt;
+
+&lt;h4&gt;七、思考？&lt;/h4&gt;
+
+&lt;p&gt;1.为什么普通用户在执行./test的时候，总是提示设备文件打开出错，而用root用户执行./test的时候就成功了呢？&lt;br&gt;
+测试解决了，在root用户下将设备文件访问权限改为666，再就可以了。&lt;br&gt;
+2.一个设备文件，不能同时被两个设备同时使用。先打开的成功，后打开的出错。&lt;/p&gt;
+
+&lt;h4&gt;八、交叉编译&lt;/h4&gt;
+
+&lt;p&gt;1解压好2.6.18内核，并修改内核目录inux-2.6.18下的Makefile，更改ARCH,和CROSS&lt;em&gt;COMPILE值。
+&lt;pre&gt;
+ARCH := arm
+CROSS&lt;/em&gt;COMPILE := /usr/local/arm/3.4.1/bin/arm-linux-
+&lt;/pre&gt;
+如果没有设置好，在编译驱动的时候将会出错。并且先进行make modules之后再编译驱动.&lt;br&gt;
+2编译好驱动代码后写一个Makefie，注意加上COSS&lt;em&gt;ARCH变量，其中包含了两个选项，即ARCH,和CROSS&lt;/em&gt;COMPILE&lt;/p&gt;
+
+&lt;h4&gt;九、驱动Makefile&lt;/h4&gt;
+
+&lt;pre&gt;
+#Makefile for linux 2.6 kernel
+obj-m+=hello.o
+KDIR :=/home/ok/kernel/linux-2.6.18
+PWD:=$(shell pwd)
+#KERNELHEAD := /home/ok/kernel/linux-2.6.18/include，2.6核不用到。
+CROSS_ARCH := ARCH=arm CROSS_COMPILE=arm-linux-
+default:
+   $(MAKE) $(CROSS_ARCH) -C $(KDIR) SUBDIRS=$(PWD) modules
+clean:
+   rm -rf *.cmd *.o *.mod.c *.ko
+&lt;/pre&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Cramfs文件系统的制作</title>
+   <link href="http://blog.hipoplar.me/linux/cramfs-build-step.html"/>
+   <updated>2010-04-15T00:00:00+08:00</updated>
+   <id>/linux/cramfs-build-step</id>
+   <content type="html">&lt;p&gt;当我们用Busybox制作好文件系统后，就可以用Cramfs工具制作自己的文件Cramfs文件系统了。&lt;/p&gt;
+
+&lt;h4&gt;一、主要步骤&lt;/h4&gt;
+
+&lt;p&gt;1.下载Cramfs，去这个地址：http://sourceforge.net/projects/cramfs/，或
+&lt;pre&gt;
+$wget http://downloads.sourceforge.net/project/cramfs/cramfs/1.1/cramfs-1.1.tar.gz
+&lt;/pre&gt;&lt;/p&gt;
+
+&lt;p&gt;2.解压编译
+&lt;pre&gt;
+$tar zxvf cramfs-1.1.tar.gz
+$mv cramfs-1.1 cramfs
+$cd cramfs
+$make
+&lt;/pre&gt;
+到此生成了mkcramfs和cramfsck，分别用于分创建Cramfs文件系统和进行Cramfs文件系统的解释及检查。&lt;/p&gt;
+
+&lt;p&gt;3.制作Cramfs文件系统&lt;br&gt;
+把用Busybox制作好的文件系统目录（rootfs）复制到本目录，然后执行
+&lt;pre&gt;
+$./mkcramfs rootfs Cramfs.img
+&lt;/pre&gt;
+文件系统镜像Cramfs.img就可以烧写到目标板了。&lt;br&gt;
+对于Jffs文件系统则类似的用mkfs.jffs2工具制作，Yaffs文件系统则需从网站：http://www.aleph1.co.uk/cgi-bin/viewcvs.cgi/下载，并配置内核，在fs中入对yaffs2编译选项，添加分区等。&lt;/p&gt;
+
+&lt;h4&gt;二、内核选项&lt;/h4&gt;
+
+&lt;p&gt;1.内核配置的时候要加入对Cramfs的支持。&lt;br&gt;
+Memory Technology Device (MTD) support[Y/m/n/?] Y 内存技术设备支持&lt;br&gt;
+MTD partitioning support [Y/m/n/?] Y 支持MTD分区&lt;br&gt;
+Direct char device access to MTD devices [Y/m/n/?] Y MTD字符设备直接访问&lt;br&gt;
+Caching block device access to MTD device [Y/m/n/?] Y MTD块设备缓冲访问  &lt;/p&gt;
+
+&lt;p&gt;2.File System中配置&lt;br&gt;
+Compressed ROM file support [Y/m/n/?] Y ROM文件系统支持。&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>嵌入式Web服务器boa在ARM平台的移植</title>
+   <link href="http://blog.hipoplar.me/linux/boa-arm-porting.html"/>
+   <updated>2010-04-08T00:00:00+08:00</updated>
+   <id>/linux/boa-arm-porting</id>
+   <content type="html">&lt;h3&gt;1，下载&lt;/h3&gt;
+
+&lt;p&gt;http://www.boa.org/&lt;/p&gt;
+
+&lt;h3&gt;2，解压&lt;/h3&gt;
+
+&lt;p&gt;tar xzf boa-0.94.13.tar.gz&lt;/p&gt;
+
+&lt;h3&gt;3，编译&lt;/h3&gt;
+
+&lt;p&gt;cd boa-0.94.13/src&lt;br/&gt;
+./configure
+生成了makefile文件，一定要在src目录下，在boa-0.94.12下执行./src/configure后再make可能出错。&lt;br/&gt;
+修改makefile文件，把其中的CC=gcc CPP=gcc -E 改为：&lt;br/&gt;
+CC = arm-linux-gcc  CPP = arm-linux-gcc -E&lt;/p&gt;
+
+&lt;h3&gt;4，然后make（在这一步用3.4.1和3.3.2交叉编译器时均出现如下错误：&lt;/h3&gt;
+
+&lt;p&gt;util.c: 100: 1: pasting “t” and “-&amp;gt;” does not give a valid preprocessing token make: [util.o] Error1&lt;br/&gt;
+换成2.95.3交叉编译器后，编译通过。&lt;br/&gt;
+另一种解决办法是把compat.h中的 foo##-&amp;gt;tm_gmtoff的##去掉。）&lt;/p&gt;
+
+&lt;h3&gt;5，arm-linux-strip boa 删除调试信息&lt;/h3&gt;
+
+&lt;p&gt;cp boa /nfs&lt;br/&gt;
+cp ../boa.conf /nfs&lt;br/&gt;
+cd ../../html/ &amp;amp;&amp;amp; cp index.htm test.cgi /nfs&lt;br/&gt;
+在/nfs下修改boa.conf&lt;br/&gt;
+mount -t nfs 192.168.0.60:/nfs /mnt&lt;/p&gt;
+
+&lt;h3&gt;6.目标板下&lt;/h3&gt;
+
+&lt;p&gt;mkdir /etc/boa &amp;amp;&amp;amp; cp /mnt/boa.conf /etc/boa/&lt;br/&gt;
+cp /mnt/boa /bin/&lt;br/&gt;
+mkdir /var/log/boa（你也可以在/etc/rc.local中加入一行mkdir /var/log/boa，这样在系统启动时自动创建，而不用人工创建，如果想要让boa在系统启动时也自动运行，那就在/etc/rc.local中再加一行/bin/boa吧）。&lt;br/&gt;
+mkdir -p /var/www/cgi-bin &amp;amp;&amp;amp; cd /var/www&lt;br/&gt;
+cp /nfs/index.html ./&lt;br/&gt;
+cp /nfs/test.cgi ./&lt;br/&gt;&lt;/p&gt;
+
+&lt;h3&gt;7.运行boa，测试。&lt;/h3&gt;
+
+&lt;p&gt;网页文件要显示中文需加上，&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot; /&gt; 注意用utf-8国际通行的。&lt;br/&gt;
+Debian下编译出错解决办法：&lt;br/&gt;
+http://www.linux521.com/2009/system/200906/5726.html&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>NFS挂载记事</title>
+   <link href="http://blog.hipoplar.me/linux/nfs-mount-fag.html"/>
+   <updated>2010-03-25T00:00:00+08:00</updated>
+   <id>/linux/nfs-mount-fag</id>
+   <content type="html">&lt;p&gt;虚拟机下因为网路不通未能挂上(以前好像可以，现在见鬼了挂不上了)，只好在全LINUX尝试了。当网络可以相互PING通了，进行以下操作：&lt;/p&gt;
+
+&lt;p&gt;1,设置/etc/exports，添加 /dir/ domain(rw,async,no&lt;em&gt;root&lt;/em&gt;squash)。&lt;br/&gt;
+2,然后关掉iptables，再开rpcbind(2.4内核中为portmap)，再开nfs服务。&lt;br/&gt;
+3,注意，rpcbind必须在nfs之前开启，最后再在目标机上挂载吧。&lt;br/&gt;
+4,挂载 mount -t nfs IP:/dir /mnt，将/dir目录挂载到/mnt，然后 cd /mnt 就可以看到/dir目录下的文件了。&lt;/p&gt;
+
+&lt;p&gt;一点感悟：在全Linux下你的技术才会进展得快，Windows下虽然可以用虚拟机来使用Linux，开了Windows多半就用不上几下Linux又回Windows下了，要想翻过院墙，先把帽子扔过去吧，这样才你会全力以赴。&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Widows下PXA270开发板的Linux系统的移植过程</title>
+   <link href="http://blog.hipoplar.me/linux/px270-arm-porting.html"/>
+   <updated>2010-03-20T00:00:00+08:00</updated>
+   <id>/linux/px270-arm-porting</id>
+   <content type="html">&lt;p&gt;详见：&lt;a href=&quot;http://blog.chinaunix.net/uid-22985736-id-130069.html&quot;&gt;http://blog.chinaunix.net/uid-22985736-id-130069.html&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>人生什么更重要？</title>
+   <link href="http://blog.hipoplar.me/reading/which-more-important.html"/>
+   <updated>2010-01-01T00:00:00+08:00</updated>
+   <id>/reading/which-more-important</id>
+   <content type="html">&lt;h3&gt;哪个更重要？&lt;/h3&gt;
+
+&lt;p&gt;方向比努力重要，&lt;br/&gt;
+身体比金钱重要，&lt;br/&gt;
+生活比文凭重要，&lt;br/&gt;
+情商比智商重要，&lt;br/&gt;
+能力比知识重要，&lt;br/&gt;
+行动比（愿望）空想重要。&lt;/p&gt;
+
+&lt;h3&gt;一生最重要的7项资产&lt;/h3&gt;
+
+&lt;p&gt;1，健康：人类的第一资产，&lt;br/&gt;
+2，财富：资产的最重要诠释，&lt;br/&gt;
+3，智慧：改变命运的资本，&lt;br/&gt;
+4，婚姻与家庭：身心的避风港，&lt;br/&gt;
+5，心灵：深查世界的棱镜，&lt;br/&gt;
+6，友谊：一生快乐源泉，&lt;br/&gt;
+7，人生的意义：成长的源动力。&lt;/p&gt;
+
+&lt;h3&gt;人生四句话&lt;/h3&gt;
+
+&lt;p&gt;把自己当成别人（痛苦），&lt;br/&gt;
+把别人当成自己（同情），&lt;br/&gt;
+把别人当成别人（尊重），&lt;br/&gt;
+把自己当成自己（走自己的路）。&lt;br/&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ 
+</feed>

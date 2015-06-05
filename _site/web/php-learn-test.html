@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="PHP学习入门级练习 - Poplar's Blog - Vincent Yang(soda1015@foxmail.com)">
+    <title>
+      PHP学习入门级练习 - Poplar's Blog
+    </title>
+    <!-- Bootstrap Core CSS -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="/css/blog.css" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media
+    queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file://
+    -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js">
+      </script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js">
+      </script>
+    <![endif]-->
+        <!-- jQuery Version 1.11.0 -->
+    <script src="/js/jquery-1.11.0.js"> </script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/js/bootstrap.min.js"></script>
+  </head>
+  
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">
+              Toggle navigation
+            </span>
+            <span class="icon-bar">
+            </span>
+            <span class="icon-bar">
+            </span>
+            <span class="icon-bar">
+            </span>
+          </button>
+          <a class="navbar-brand" href="/index.html">
+            Poplar's Blog
+          </a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+            <li>
+              <a href="/categories.html">
+                分 类
+              </a>
+            </li>
+            <li>
+              <a href="/tags.html">
+                标 签
+              </a>
+            </li>
+            <li>
+              <a href="/archives.html">
+                归 档
+              </a>
+            </li>
+            <li>
+              <a href="/faqs.html">
+                备 忘
+              </a>
+            </li>
+            <li>
+              <a href="/about.html">
+                关 于
+              </a>
+            </li>
+          </ul> 
+        </div>
+        <!-- /.navbar-collapse -->
+      </div>
+      <!-- /.container -->
+    </nav>
+    <!-- Page Content -->
+    <div class="container">
+      <div class="row">
+        <!-- Blog Entries Column -->
+        <div class="col-md-8">
+          <!-- Blog Post -->
+<!-- Title -->
+<h2>
+  PHP学习入门级练习
+  <div class="post-date"><a href="https://github.com/soda1015/soda1015.github.com/edit/master/_posts/2013-06-11-php-learn-test.markdown" target="_blank">纠错</a>&nbsp;&nbsp;
+	<span class="glyphicon glyphicon-time"></span>
+	11 Jun 2013
+  </div>
+</h2>
+<!-- Author -->
+<hr>
+<h4>一、PHP基础操作</h4>
+
+<p>1,基本语法：
+<pre>
+&lt;?php
+    echo &#39;---------------start--------------&#39;;
+    echo <strong>FILE</strong>;//打印预定义常量
+    echo &quot;Hello world&quot;;//一般打印
+    define(&#39;SCHOOL&#39;,&quot;YANTZE UNIVERSITY&quot;);//定义常量
+    echo SCHOOL;//打印常量
+    $name=&quot;savant&quot;;//name
+    $age=28;
+    echo &#39;name=&#39;.$name.&#39;,age=&#39;.$age;//打印变量，字符串连接
+    $array=array(&#39;name&#39;=&gt;&#39;allthelucky&#39;,&#39;age&#39;=&gt;28);//定义数组
+    echo json<em>encode($array);//转成json输出
+    $array=array(array(&quot;id&quot;=&gt;&#39;1&#39;,&quot;name&quot;=&gt;&#39;hello&#39;),array(&quot;id&quot;=&gt;&#39;2&#39;,&quot;name&quot;=&gt;&#39;world&#39;));
+    echo json</em>encode($array);//转成jsonarray输出
+    $array=array(&#39;this&#39;,&#39;is&#39;,&#39;php&#39;,&#39;test&#39;);//定义数组
+    echo($array[0]);//打印第一个元素
+    print<em>r($array);//全打印
+    $have=true;//定义boolean
+    echo($have);
+    function show($result) {//定义函数
+        echo &#39;result is:&#39;.$result;
+    }
+    $result=&#39;number 1&#39;;
+    show($result);//调用函数
+    function mult($a, $b) {//定义带返回值函数
+        return $a*$b;
+    }
+    $a=10;
+    $b=20;
+    echo &#39;result=&#39;.mult($a,$b);//调用函数
+    $c=20;
+    if ($c == 20) {//if else 语句
+        echo &#39;yes&#39;;
+    } else {
+        echo &#39;no&#39;;
+    }
+    $num=1;
+    while($num &lt; 10) {//while循环
+        echo &#39;num=&#39;.$num;
+        $num+=1;
+    }
+    $array=array(&#39;1&#39;=&gt;&#39;hellsf&#39;,&#39;2&#39;=&gt;&#39;sadfadfsd&#39;,&#39;3&#39;=&gt;&#39;asdfasdfasdfsdf&#39;);
+    foreach($array as $key=&gt;$value) {//foreach 语句，输出key,value
+        echo $key.&#39;=&#39;.$value;
+    }
+    foreach($array as $value) {//foreach语句，只输出值 
+        echo $value;
+    }
+    print</em>r($array);
+    $str = &#39; asdf safsd &#39;;
+    echo trim($str);//trim函数
+    echo strlen($str);//strlen函数
+    echo md5($str);//md5加密
+    echo sha1($str);//sha1加密
+</pre></p>
+
+<p>2,使用类：
+<pre>
+&lt;?php
+    class User {
+        public $name=&quot;savant&quot;;
+        public $age =&quot;age&quot;;
+        public function __construct($name, $age) {//构造方法
+        $this-&gt;name=$name;
+        $this-&gt;age=$age;
+        }
+        public function show() {//成员函数
+        echo &#39;name=&#39;.$this-&gt;name.&#39;,age=&#39;.$this-&gt;age;
+        }
+    }
+    $user = new User(&#39;hello world&#39;, 26);
+    $user-&gt;show();
+    echo &#39;---------------end--------------&#39;;
+?&gt;
+</pre></p>
+
+<p>3,表单操作
+<pre>
+&lt;?php
+    echo &#39;---------------start--------------&#39;;
+    echo &#39;name&#39;.$<em>GET[&#39;name&#39;];//get参数
+    echo &#39;age&#39;.$</em>GET[&#39;age&#39;];
+    echo &#39;name=&#39;.$<em>POST[&#39;name&#39;];//post参数
+    echo &#39;password=&#39;.$</em>POST[&#39;password&#39;];
+    echo &#39;desc=&#39;.$<em>POST[&#39;desc&#39;];
+    $path=&#39;./upfiles&#39;.$</em>FILES[&#39;pic&#39;][&#39;name&#39;];
+    move<em>uploaded</em>file($<em>FILES[&#39;pic&#39;][&#39;temp&#39;],$path);
+    echo $</em>POST[&#39;pic&#39;];
+    echo &#39;---------------end--------------&#39;;
+?&gt;
+</pre></p>
+
+<p>FORM代码
+<pre>
+<form name="data" method="post" action="test.php" enctype="multipart/form-data" >
+    name:<input name="name" type="text" value=""></input>
+    <br/>
+    password:<input name="password" type="password" value=""></input>
+    <br/>
+    desc:<textarea name="desc"></textarea>
+    <br/>
+    pic:<input name="pic" type="file" value=""></input>
+    <br/>
+    <input name="submit" type="submit"></input>
+</form>
+</pre></p>
+
+<h4>二、数据库MySql简单操作练习</h4>
+
+<p>1,MySql服务启动和停止
+<pre>
+net start mysql
+net stop mysql
+</pre></p>
+
+<p>2,数据库操作
+<pre>
+create database USER<em>DB;//创建数据库
+show databases;//查看数据库
+use USER</em>DB;//选择数据库
+drop database DBNAME;//删除数据库
+</pre></p>
+
+<p>3,表格操作
+<pre>
+create table if not exists USER(id int auto_increment primary key, user varchar(20) not null, password varchar(40) not null, createtime datetime);//创建表格
+rename table USER to USERS;//改表格名
+drop table if exists USER;//删除表格
+show tables;//表出表格 
+describe USER;//显示表结构
+insert into admin(user,password) values(&quot;pan&quot;,&quot;123456&quot;);//添加记录到表格 
+select * from USER;//查询表格记录
+update USER set passowrd=&quot;111111&quot;;//更新表格记录
+delete from USER where user=&quot;abc&quot;;//删除记录
+</pre></p>
+
+<br/>
+<div style="margin-top:10px;margin-bottom:10px">
+  
+  <span class="next">
+    上篇：
+    <a href="/android/tabhost-switch.html">
+      TabActivity子Activity以代码进行切换
+    </a>
+  </span>
+   
+  
+  <span class="prev">
+    下篇：
+    <a href="/network/common-algorithms-site.html">
+      DES,ASE等常见算法网站
+    </a>
+  </span>
+  
+</div>
+<hr>
+<!-- Blog Comments -->
+<div class="media">
+    <!-- UY BEGIN -->
+  <div id="uyan_frame">
+  </div>
+  <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=1511840">
+  </script>
+  <!-- UY END --> 
+</div>
+
+        </div>
+        <!-- Blog Sidebar Widgets Column -->
+        <div class="col-md-4">
+          <!-- Blog Search Well -->
+          <div class="well">
+            <h4>
+              站内搜索
+            </h4>
+                        <form action="https://google3.azurewebsites.net/search" method="get">
+              <div class="input-group">
+                <input type="text" name="q" class="form-control">
+				<input type="hidden" name="ie" value="UTF-8" />
+				<input type="hidden" name="sitesearch" value="blog.hipoplar.me" />
+                <span class="input-group-btn">
+                  <button class="btn btn-default" type="submit">
+                    <span class="glyphicon glyphicon-search">
+                    </span>
+                  </button>
+                </span>
+              </div>
+            </form> 
+            <!-- /.input-group -->
+          </div>
+          <!-- Blog Categories Well -->
+          <div class="well">
+            <h4>
+              分 类
+            </h4>
+            <div class="row">
+                            <div class="col-lg-6">
+                <ul class="list-unstyled">
+                  <li>
+                    <a href="/categories.html#reading">
+                      阅读摘要
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/categories.html#linux">
+                      Linux
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/categories.html#embedded">
+                      嵌入式
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/categories.html#android">
+                      Android开发
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <!-- /.col-lg-6 -->
+              <div class="col-lg-6">
+                <ul class="list-unstyled">
+                  <li>
+                    <a href="/categories.html#java">
+                      Java开发
+                    </a>
+                  </li>                  
+		  <li>
+                    <a href="/categories.html#cocos2d">
+                      Cocos2d开发
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/categories.html#web">
+                      Web开发
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/categories.html#network">
+                      网络相关
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <!-- /.col-lg-6 -->
+ 
+            </div>
+            <!-- /.row -->
+          </div>
+          <!-- Blog Links Well -->
+          <div class="well">
+            <h4>
+              相关链接
+            </h4>
+                        <ul class="list-unstyled">
+              <li>
+                <a href="http://blog.chinaunix.net/uid/22985736.html">
+                  CuBlog
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/">
+                  GitHub
+                </a>
+              </li>
+              <li>
+                <a href="https://bitbucket.org/">
+                  Bitbucket.org
+                </a>
+              </li> 
+               <li>
+                <a href="https://news.ycombinator.com/">
+                  Hacker News
+                </a>
+              </li>        
+              <li>
+                <a href="http://www.stackoverflow.com/">
+                  Stack Overflow
+                </a>
+              </li>
+              <li>
+                <a href="http://developer.android.com/">
+                  Android Developer
+                </a>
+              </li>
+              <li>
+                <a href="http://blog.jobbole.com/">
+                  Jobbole
+                </a>
+              </li>
+              <li>
+                <a href="http://99u.com/">
+                  99U
+                </a>
+              </li>
+              <li>
+                <a href="http://www.ruanyifeng.com/blog/">
+                  Ruanyifeng's Blog
+                </a>
+              </li>
+              <li>
+                <a href="http://www.panxuewen.com">
+                  Panxw's Blog
+                </a>
+              </li>				  
+            </ul>
+ 
+          </div>
+          <!-- Side Widget Well -->
+          <div class="well">
+                        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+            </script>
+            <!-- ArticleRa -->
+            <ins class="adsbygoogle" style="display:inline-block;width:300px;height:250px"
+            data-ad-client="ca-pub-3557776493079475" data-ad-slot="3861947889">
+            </ins>
+            <script>
+              (adsbygoogle = window.adsbygoogle || []).push({});
+            </script> 
+          </div>
+        </div>
+      </div>
+      <!-- /.row -->
+      <hr>
+      <!-- Footer -->
+      <footer>
+        <div class="row">
+          <div class="col-lg-12">
+                        <p align="center">
+				Copyright &copy; blog.hipoplar.me, hosted on <a href="https://github.com">GitHub</a>, powered by Jekyll, designed by <a href="https://github.com/panxw">panxw</a>. <a href="https://github.com/soda1015/soda1015.github.com">[source]</a>
+				<br/>
+				 <a href="/atom.xml">[Feed]</a>
+            </p>
+ 
+          </div>
+          <!-- /.col-lg-12 -->
+        </div>
+        <!-- /.row -->
+		<div style="display:none;"><script src="http://s22.cnzz.com/stat.php?id=5868355&web_id=5868355" language="JavaScript"></script></div> 
+      </footer>
+    </div>
+    <!-- /.container -->
+  </body>
+
+</html>

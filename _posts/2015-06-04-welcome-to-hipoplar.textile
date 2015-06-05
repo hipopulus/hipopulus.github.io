@@ -1,7 +1,0 @@
----
-layout: post
-title: Welcome to Hipoplar
----
-
-Hi All.
-This is my first blog.
