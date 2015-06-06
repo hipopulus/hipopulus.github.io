@@ -1,48 +1,35 @@
 ---
-layout: default
-title: "首页：Home"
+layout: nil
 ---
-<h1 class="page-header">
-  <small>
-    {{ site.description }}
-  </small>
-</h1>
-<!-- Loop output paged posts -->
-{% for post in paginator.posts %}
-<h2>
-  <a href="{{ post.url }}">
-    {{ post.title }}
-  </a> 
-  <div class="post-date">
-	<span class="glyphicon glyphicon-time"></span>
-	{{ post.date | date_to_string }}
-  </div>
-</h2>
-<hr>
-{{ post.excerpt }}
-	<p> <a href="{{ post.url }}"><span >阅读全文 &raquo; </span></a></p>
-<hr>
-{% endfor %}
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Hipoplar</title>
+   <link rel="stylesheet" href="css/welcome.css">
+   <link rel="stylesheet" href="css/font-awesome-4.3.0/css/font-awesome.min.css">
+</head>
+<body class="">
+    <div id="wrapper">
+        <div id="main">
+            <header id="header">
+                <h1>Hi Poplar</h1>
+                <nav>
+                    <ul>
+                        <li><a href="blog.html" class="fa fa-list"></a></li>
+                        <li><a href="https://github.com/soda1015" class="fa fa-github"></a></li>
+                    </ul>
+                </nav>
+            </header>
+        </div>
+    </div>
+    <footer id="footer">
+        <div>
+            <div>
+                {% include copyright.html %}
+            </div>
+            <!-- /.col-lg-12 -->
+        </div>
+    </footer>
 
-<!-- Pager indicator -->
-<ul class="pager">
-  {% if paginator.previous_page %} {% if paginator.previous_page == 1 %}
-  <li class="previous">
-    <a href="{{ site.url }}/">
-      &larr; Older
-    </a>
-  </li>
-  {% else %}
-  <li class="previous">
-    <a href="{{ site.url }}/page{{ paginator.previous_page }}">
-      &larr; Older
-    </a>
-  </li>
-  {% endif %} {% endif %} {% if paginator.next_page %}
-  <li class="next">
-    <a href="{{ site.url }}/page{{ paginator.next_page }}">
-      Newer &rarr;
-    </a>
-  </li>
-  {% endif %}
-</ul>
+</body></html>
