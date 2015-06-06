@@ -11,8 +11,8 @@ paginate_path: "page:num"
 
 # presonal config
 domain: blog.hipoplar.me
-title: Poplar's Blog
-description: iOS, Ruby, Java Web, Linux, reading...
+title: 主页
+description: iOS, Ruby, Java Web, Linux, PHP, Javascript...
 author: Vincent Yang
 email: soda1015@foxmail.com
 github: soda1015
