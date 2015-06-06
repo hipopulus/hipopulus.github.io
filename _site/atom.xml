@@ -4,12 +4,38 @@
  <title>主页</title>
  <link href="http://blog.hipoplar.me/atom.xml" rel="self"/>
  <link href="http://blog.hipoplar.me"/>
- <updated>2015-06-06T12:28:49+08:00</updated>
+ <updated>2015-06-06T16:58:30+08:00</updated>
  <author>
    <name>Vincent Yang</name>
    <email>soda1015@foxmail.com</email>
  </author>
 
+ 
+ <entry>
+   <title>Template for MD</title>
+   <link href="http://blog.hipoplar.me/%E5%8D%9A%E5%AE%A2%E6%A8%A1%E7%89%88/template-md.html"/>
+   <updated>2015-06-06T00:00:00+08:00</updated>
+   <id>/%E5%8D%9A%E5%AE%A2%E6%A8%A1%E7%89%88/template-md</id>
+   <content type="html">&lt;h4&gt;Topic1&lt;/h4&gt;
+
+&lt;h4&gt;Topic2&lt;/h4&gt;
+
+&lt;h4&gt;Topic3&lt;/h4&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Template for markdown</title>
+   <link href="http://blog.hipoplar.me/%E5%8D%9A%E5%AE%A2%E6%A8%A1%E7%89%88/template-markdown.html"/>
+   <updated>2015-06-06T00:00:00+08:00</updated>
+   <id>/%E5%8D%9A%E5%AE%A2%E6%A8%A1%E7%89%88/template-markdown</id>
+   <content type="html">&lt;h3&gt;Topic1&lt;/h3&gt;
+
+&lt;h3&gt;Topic2&lt;/h3&gt;
+
+&lt;h3&gt;Topic3&lt;/h3&gt;
+</content>
+ </entry>
  
  
 </feed>
