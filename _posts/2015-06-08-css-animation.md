@@ -178,4 +178,4 @@ tags: ["CSS", "Animation"]
 
 [fontawesome]: http://fortawesome.github.io/Font-Awesome/
 [fontawesomecn]:http://www.bootcss.com/p/font-awesome/
-[frontCover]: http://blog.hipoplar.mehttps://cssanimation.rocks/cn/principles/
+[frontCover]: http://blog.hipoplar.me

@@ -4,7 +4,7 @@
  <title>Hipoplar</title>
  <link href="http://blog.hipoplar.me/atom.xml" rel="self"/>
  <link href="http://blog.hipoplar.me"/>
- <updated>2015-06-08T20:23:53+08:00</updated>
+ <updated>2015-06-08T20:34:47+08:00</updated>
  <author>
    <name>Vincent Yang</name>
    <email>soda1015@foxmail.com</email>
@@ -43,7 +43,7 @@
    <link href="http://blog.hipoplar.me/css/css-animation.html"/>
    <updated>2015-06-08T00:00:00+08:00</updated>
    <id>/css/css-animation</id>
-   <content type="html">&lt;h3&gt;这是一个简单的CSS动画，你也可以在&lt;a href=&quot;http://blog.hipoplar.mehttps://cssanimation.rocks/cn/principles/&quot;&gt;封面&lt;/a&gt;看到：&lt;/h3&gt;
+   <content type="html">&lt;h3&gt;这是一个简单的CSS动画，你也可以在&lt;a href=&quot;http://blog.hipoplar.me&quot;&gt;封面&lt;/a&gt;看到：&lt;/h3&gt;
 
 &lt;h1&gt;&lt;/h1&gt;
 
