@@ -1,0 +1,183 @@
+@charset "UTF-8";
+#myGithub, #githubIcon4 {
+    -moz-transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    -moz-animation: icon-animation 1.5s infinite ease-in-out forwards;
+    -webkit-animation: icon-animation 1.5s infinite ease-in-out forwards;
+    -o-animation: icon-animation 1.5s infinite ease-in-out forwards;
+    -ms-animation: icon-animation 1.5s infinite ease-in-out forwards;
+    animation: icon-animation 1.5s infinite ease-in-out forwards;
+    color: inherit;
+    text-decoration: none;
+    border-radius: 100%;
+    border: solid 1px #333;
+    display: block;
+    font-size: 2.0em;
+    height: 2.5em;
+    line-height: 2.5em;
+    position: relative;
+    text-align: center;
+    top: 0;
+    margin: auto;
+    width: 2.5em; }
+
+#myGithub:hover, #githubIcon4:hover {
+    font-size: 4em;
+    animation-play-state: paused;
+    -moz-animation-play-state: paused;
+    -webkit-animation-play-state: paused;
+    -o-animation-play-state: paused;
+    -ms-animation-play-state: paused;
+}
+
+@-moz-keyframes icon-animation {
+    0% {
+        -moz-transform: translate3d(0,1em,0);
+        -webkit-transform: translate3d(0,1em,0);
+        -o-transform: translate3d(0,1em,0);
+        -ms-transform: translate3d(0,1em,0);
+        transform: translate3d(0,1em,0);
+        opacity: 0; }
+    100% {
+        -moz-transform: translate3d(0,0,0);
+        -webkit-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1; } }
+@-webkit-keyframes icon-animation {
+    0% {
+        -moz-transform: translate3d(0,1em,0);
+        -webkit-transform: translate3d(0,1em,0);
+        -o-transform: translate3d(0,1em,0);
+        -ms-transform: translate3d(0,1em,0);
+        transform: translate3d(0,1em,0);
+        opacity: 0; }
+    100% {
+        -moz-transform: translate3d(0,0,0);
+        -webkit-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1; } }
+@-o-keyframes icon-animation {
+    0% {
+        -moz-transform: translate3d(0,1em,0);
+        -webkit-transform: translate3d(0,1em,0);
+        -o-transform: translate3d(0,1em,0);
+        -ms-transform: translate3d(0,1em,0);
+        transform: translate3d(0,1em,0);
+        opacity: 0; }
+    100% {
+        -moz-transform: translate3d(0,0,0);
+        -webkit-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1; } }
+@-ms-keyframes icon-animation {
+    0% {
+        -moz-transform: translate3d(0,1em,0);
+        -webkit-transform: translate3d(0,1em,0);
+        -o-transform: translate3d(0,1em,0);
+        -ms-transform: translate3d(0,1em,0);
+        transform: translate3d(0,1em,0);
+        opacity: 0; }
+    100% {
+        -moz-transform: translate3d(0,0,0);
+        -webkit-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1; } }
+@keyframes icon-animation {
+    0% {
+        -moz-transform: translate3d(0,1em,0);
+        -webkit-transform: translate3d(0,1em,0);
+        -o-transform: translate3d(0,1em,0);
+        -ms-transform: translate3d(0,1em,0);
+        transform: translate3d(0,1em,0);
+        opacity: 0; }
+    100% {
+        -moz-transform: translate3d(0,0,0);
+        -webkit-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1; } }
+
+#githubIcon1 {
+    color: inherit;
+    text-decoration: none;
+    border-radius: 100%;
+    border: solid 1px #333;
+    display: block;
+    font-size: 2.0em;
+    height: 2.5em;
+    line-height: 2.5em;
+    position: relative;
+    text-align: center;
+    top: 0;
+    margin: auto;
+    width: 2.5em; }
+
+#githubIcon2 {
+    color: inherit;
+    text-decoration: none;
+    border-radius: 100%;
+    border: solid 1px #333;
+    display: block;
+    font-size: 2.0em;
+    height: 2.5em;
+    line-height: 2.5em;
+    position: relative;
+    text-align: center;
+    top: 0;
+    margin: auto;
+    width: 2.5em; }
+
+#githubIcon2:hover {
+    font-size: 4em;
+}
+
+#githubIcon3 {
+    color: inherit;
+    text-decoration: none;
+    border-radius: 100%;
+    border: solid 1px #333;
+    display: block;
+    font-size: 2.0em;
+    height: 2.5em;
+    line-height: 2.5em;
+    position: relative;
+    text-align: center;
+    top: 0;
+    margin: auto;
+    width: 2.5em; }
+
+#githubIcon3:hover {
+    font-size: 4em;
+}
+
+#githubIcon3 {
+    -moz-transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    color: inherit;
+    text-decoration: none;
+    border-radius: 100%;
+    border: solid 1px #333;
+    display: block;
+    font-size: 2.0em;
+    height: 2.5em;
+    line-height: 2.5em;
+    position: relative;
+    text-align: center;
+    top: 0;
+    margin: auto;
+    width: 2.5em; }
