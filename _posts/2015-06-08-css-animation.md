@@ -1,6 +1,6 @@
 ---
 layout: post
-category: "CSS"
+category: "动画"
 title: "CSS Animation"
 tags: ["CSS", "Animation"]
 ---
@@ -178,4 +178,4 @@ tags: ["CSS", "Animation"]
 
 [fontawesome]: http://fortawesome.github.io/Font-Awesome/
 [fontawesomecn]:http://www.bootcss.com/p/font-awesome/
-[frontCover]: http://blog.hipoplar.me
+[frontCover]: http://blog.hipoplar.me/
