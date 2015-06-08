@@ -32,7 +32,7 @@ tags: ["CSS", "Animation"]
 
      <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
 
-将`<a>`标签（也可以是其他标签）到`class`属性设置为某个字体样式，如`fa fa-github`:
+将`<a>`标签（也可以是其他标签）的`class`属性设置为某个字体样式，如`fa fa-github`:
 
      <a id="githubIcon" href="https://github.com/soda1015" class="fa fa-github"></a>
 
