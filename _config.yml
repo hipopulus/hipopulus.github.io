@@ -12,7 +12,7 @@ paginate_path: "blog/page:num"
 
 # presonal config
 domain: blog.hipoplar.me
-title: 主页
+title: Hipoplar
 description: iOS, Ruby, Java Web, Linux, PHP, Javascript...
 author: Vincent Yang
 email: soda1015@foxmail.com

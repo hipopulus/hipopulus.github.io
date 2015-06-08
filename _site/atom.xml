@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
  
- <title>主页</title>
+ <title>Hipoplar</title>
  <link href="http://blog.hipoplar.me/atom.xml" rel="self"/>
  <link href="http://blog.hipoplar.me"/>
- <updated>2015-06-06T16:58:30+08:00</updated>
+ <updated>2015-06-08T15:32:49+08:00</updated>
  <author>
    <name>Vincent Yang</name>
    <email>soda1015@foxmail.com</email>
@@ -12,28 +12,29 @@
 
  
  <entry>
-   <title>Template for MD</title>
-   <link href="http://blog.hipoplar.me/%E5%8D%9A%E5%AE%A2%E6%A8%A1%E7%89%88/template-md.html"/>
-   <updated>2015-06-06T00:00:00+08:00</updated>
-   <id>/%E5%8D%9A%E5%AE%A2%E6%A8%A1%E7%89%88/template-md</id>
-   <content type="html">&lt;h4&gt;Topic1&lt;/h4&gt;
+   <title>Markdown</title>
+   <link href="http://blog.hipoplar.me/markdown/markdown-learning-note.html"/>
+   <updated>2015-06-08T00:00:00+08:00</updated>
+   <id>/markdown/markdown-learning-note</id>
+   <content type="html">&lt;p&gt;我们日常生活和工作中会进行很多书写活动，比如写信、写论文、写工作报告。通常书面材料都需要统一的格式，以便于阅读和传播。这些活动同样存在于互联网，html是一种格式，但是它毕竟是一种编码语言，对于工作重心在内容的人来说，编写一个html文件并不容易也没必要。Markdown实现了将一个普通的拥有一定格式的文本文件转换为html文件，进而符合格式的展现在浏览器或其他客户端上。&lt;/p&gt;
 
-&lt;h4&gt;Topic2&lt;/h4&gt;
+&lt;hr&gt;
 
-&lt;h4&gt;Topic3&lt;/h4&gt;
-</content>
- </entry>
- 
- <entry>
-   <title>Template for markdown</title>
-   <link href="http://blog.hipoplar.me/%E5%8D%9A%E5%AE%A2%E6%A8%A1%E7%89%88/template-markdown.html"/>
-   <updated>2015-06-06T00:00:00+08:00</updated>
-   <id>/%E5%8D%9A%E5%AE%A2%E6%A8%A1%E7%89%88/template-markdown</id>
-   <content type="html">&lt;h3&gt;Topic1&lt;/h3&gt;
+&lt;h4&gt;什么是Markdown？&lt;/h4&gt;
 
-&lt;h3&gt;Topic2&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;一个用perl编写的程序&lt;/li&gt;
+&lt;li&gt;用来将文本文件转换为html格式的文件&lt;/li&gt;
+&lt;li&gt;规定了简易的语法，这些语法基于内容和书写习惯&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;h3&gt;Topic3&lt;/h3&gt;
+&lt;h4&gt;在线教程&lt;/h4&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.appinn.com/markdown/#p&quot;&gt;http://www.appinn.com/markdown/#p&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4&gt;程序源码&lt;/h4&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://daringfireball.net/projects/markdown/&quot;&gt;http://daringfireball.net/projects/markdown/&lt;/a&gt;&lt;/p&gt;
 </content>
  </entry>
  
