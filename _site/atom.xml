@@ -4,12 +4,31 @@
  <title>Hipoplar</title>
  <link href="http://blog.hipoplar.me/atom.xml" rel="self"/>
  <link href="http://blog.hipoplar.me"/>
- <updated>2015-06-08T21:02:23+08:00</updated>
+ <updated>2015-06-09T19:15:26+08:00</updated>
  <author>
    <name>Vincent Yang</name>
    <email>soda1015@foxmail.com</email>
  </author>
 
+ 
+ <entry>
+   <title>需要研究的问题</title>
+   <link href="http://blog.hipoplar.me/2015/06/study-list.html"/>
+   <updated>2015-06-09T00:00:00+08:00</updated>
+   <id>/2015/06/study-list</id>
+   <content type="html">&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;HeaderDoc:&lt;a href=&quot;https://developer.apple.com/library/mac/documentation/DeveloperTools/Conceptual/HeaderDoc/intro/intro.html#//apple_ref/doc/uid/TP40001215-CH345-SW1&quot;&gt;1&lt;/a&gt;-&lt;a href=&quot;http://nshipster.com/swift-documentation/&quot;&gt;2&lt;/a&gt;-&lt;a href=&quot;http://nshipster.com/documentation/&quot;&gt;3&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Optional类型&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;var aString:String? = &amp;quot;Hello!&amp;quot;
+var aString:Optional&amp;lt;String&amp;gt; = &amp;quot;Hello&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://nshipster.com/swift-literal-convertible/?utm_source=tuicool&quot;&gt;Swift Literal Convertibles&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Foundation框架是否用Swift重写了？&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Markdown</title>
@@ -148,7 +167,7 @@
 
 &lt;h3&gt;CSS动画（&lt;code&gt;@keyframes&lt;/code&gt;属性、&lt;code&gt;animation&lt;/code&gt;属性）&lt;/h3&gt;
 
-&lt;p&gt;接下来，我们来添加一个动画效果：图标由下至上的移动&lt;/p&gt;
+&lt;p&gt;接下来，我们来添加一个动画效果：图标由下至上的移动，并逐渐显示&lt;/p&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;为元素添加动画需要两步：1.定义动画；2.设置元素动画属性为定义的动画&lt;/p&gt;
