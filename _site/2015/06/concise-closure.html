@@ -5,9 +5,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="分类 - Hipoplar - Vincent Yang(soda1015@foxmail.com)">
+    <meta name="description" content="Swift中closure语法可以更精简 - Hipoplar - Vincent Yang(soda1015@foxmail.com)">
     <title>
-      分类 - Hipoplar
+      Swift中closure语法可以更精简 - Hipoplar
     </title>
     <!-- Bootstrap Core CSS -->
     <link href="/css/bootstrap.min.css" rel="stylesheet">
@@ -87,37 +87,92 @@
       <div class="row">
         <!-- Blog Entries Column -->
         <div class="row">
-          <ul class="list-unstyled">
- 
-     
-   <a name="动画"></a>
-   <h2>动画(1)</h2> 
-      
-    <li><h4><span>08 Jun 2015</span> &raquo; <a href="/2015/06/css-animation.html">CSS Animation</a></h4></li>
-     
-    
- 
-     
-   <a name="markdown"></a>
-   <h2>markdown(1)</h2> 
-      
-    <li><h4><span>08 Jun 2015</span> &raquo; <a href="/2015/06/markdown-learning-note.html">Markdown</a></h4></li>
-     
-    
- 
-     
-   <a name="swift"></a>
-   <h2>swift(3)</h2> 
-      
-    <li><h4><span>09 Jun 2015</span> &raquo; <a href="/2015/06/study-list.html">需要研究的问题</a></h4></li>
-     
-    <li><h4><span>09 Jun 2015</span> &raquo; <a href="/2015/06/repeat-while-section.html">while loop在swift2中的语法</a></h4></li>
-     
-    <li><h4><span>09 Jun 2015</span> &raquo; <a href="/2015/06/concise-closure.html">Swift中closure语法可以更精简</a></h4></li>
-     
-    
- 
-</ul>
+          <!-- Blog Post -->
+<!-- Title -->
+<h2>
+  Swift中closure语法可以更精简
+  <div class="post-date">
+	<span class="glyphicon glyphicon-time"></span>
+	09 Jun 2015
+  </div>
+</h2>
+<!-- Author -->
+<hr>
+<p>在Swift中调用数组的sorted方法进行排序时，需要传递一个函数类型的参数：</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">func sorted(isOrderedBefore: (T, T) -&gt; Bool) -&gt; [T]
+</code></pre></div>
+<p>这个函数就是我们为数组排序定义的规则，以一个整数的数组为例：</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">var numbers = [1, 19, 7, 12, 9, 30, 22]
+</code></pre></div>
+<p>我们定义一个函数，并将其作为参数调用sorted方法：</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">func compare(num1: Int, num2: Int) -&gt; Bool {
+    return num1 &gt; num2
+}
+
+var nums5 = numbers.sorted(compare)
+
+println(nums5)
+</code></pre></div>
+<p>结果为：<code>[30, 22, 19, 12, 9, 7, 1]</code></p>
+
+<p>如果将参数改为闭包：</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">numbers.sorted({(num1: Int, num2: Int) -&gt; Bool in return num1 &gt; num2})
+</code></pre></div>
+<p>由于闭包的参数类型和返回值类型是有sorted方法确定了的，所以可以省略</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">numbers.sorted({ (num1, num2) in return num1 &gt; num2 })
+</code></pre></div>
+<p>参数个数也是确定的，也可以省略，并用$0、$1代替：</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">numbers.sorted({ return $0 &gt; $1 })
+</code></pre></div>
+<p>return也可以省略：</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">numbers.sorted({ $0 &gt; $1 })
+</code></pre></div>
+<p>最精简的结果是：可以用一行并且最少的代码完成排序！</p>
+
+<hr>
+
+<p>自定义的带函数参数的方法，同样适用：</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">func sort(list: [Int], #condition: ((Int, Int) -&gt; Bool)) -&gt; [Int] {
+    var result = [Int]()
+    result.append(list.first!)
+    for i in 1..&lt;list.count {
+        for j in 0..&lt;result.count {
+            if condition(list[i], result[j]) {
+                result.insert(list[i], atIndex: j)
+                break
+            }
+            if j == list.count - 1 {
+                result.append(list[i])
+            }
+        }
+    }
+    return result
+}
+
+sort(numbers) { $0 &gt; $1 }
+</code></pre></div>
+<hr>
+
+<br/>
+<div style="margin-top:10px;margin-bottom:10px">
+  
+  <span class="next">
+    上篇：
+    <a href="/2015/06/markdown-learning-note.html">
+      Markdown
+    </a>
+  </span>
+   
+  
+  <span class="prev">
+    下篇：
+    <a href="/2015/06/repeat-while-section.html">
+      while loop在swift2中的语法
+    </a>
+  </span>
+  
+</div>
+<hr>
 
         </div>
         <!-- Blog Sidebar Widgets Column -->
