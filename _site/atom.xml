@@ -4,7 +4,7 @@
  <title>Hipoplar</title>
  <link href="http://blog.hipoplar.me/atom.xml" rel="self"/>
  <link href="http://blog.hipoplar.me"/>
- <updated>2015-06-09T19:15:26+08:00</updated>
+ <updated>2015-06-09T20:56:03+08:00</updated>
  <author>
    <name>Vincent Yang</name>
    <email>soda1015@foxmail.com</email>
@@ -26,6 +26,31 @@ var aString:Optional&amp;lt;String&amp;gt; = &amp;quot;Hello&amp;quot;
 &lt;li&gt;&lt;p&gt;Foundation框架是否用Swift重写了？&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
+&lt;hr&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>while loop在swift2中的语法</title>
+   <link href="http://blog.hipoplar.me/2015/06/repeat-while-section.html"/>
+   <updated>2015-06-09T00:00:00+08:00</updated>
+   <id>/2015/06/repeat-while-section</id>
+   <content type="html">&lt;p&gt;昨天WWDC大会发布了swift2，其中一个更新是关于while loop的&lt;/p&gt;
+
+&lt;p&gt;原来语法是：&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;var m = 2
+do {
+    m = m * 2
+} while m &amp;lt; 100
+print(m)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;更新后：&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;var m = 2
+repeat {
+    m = m * 2
+} while m &amp;lt; 100
+print(m)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;hr&gt;
 </content>
  </entry>
