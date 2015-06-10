@@ -4,7 +4,7 @@
  <title>Hipoplar</title>
  <link href="http://blog.hipoplar.me/atom.xml" rel="self"/>
  <link href="http://blog.hipoplar.me"/>
- <updated>2015-06-10T18:56:20+08:00</updated>
+ <updated>2015-06-10T20:00:24+08:00</updated>
  <author>
    <name>Vincent Yang</name>
    <email>soda1015@foxmail.com</email>
@@ -17,9 +17,11 @@
    <updated>2015-06-10T00:00:00+08:00</updated>
    <id>/2015/06/points-first-met</id>
    <content type="html">&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;var aString: String! = &amp;quot;Hello, World!&amp;quot;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;var aString: String! = &amp;quot;Hello, World!&amp;quot;&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Error handling&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Assertion&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;===&lt;/code&gt; 和 &lt;code&gt;!==&lt;/code&gt; 用来比较两个&lt;strong&gt;class的实例的引用&lt;/strong&gt;是否相同 &lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;??&lt;/code&gt;用来为Optional实例解包，&lt;code&gt;a ?? b&lt;/code&gt; 等效于 &lt;code&gt;if a != nil ? a! : b&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;hr&gt;
