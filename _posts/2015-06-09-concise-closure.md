@@ -41,13 +41,17 @@ return也可以省略：
 
     numbers.sorted({ $0 > $1 })
 
+继续：
+
+    numbers.sorted(>)
+
 最精简的结果是：可以用一行并且最少的代码完成排序！
 
 *************
 
 自定义的带函数参数的方法，同样适用：
 
-    func sort(list: [Int], #condition: ((Int, Int) -> Bool)) -> [Int] {
+    func sort(list: [Int], condition: ((Int, Int) -> Bool)) -> [Int] {
         var result = [Int]()
         result.append(list.first!)
         for i in 1..<list.count {
@@ -64,7 +68,7 @@ return也可以省略：
         return result
     }
 
-    sort(numbers) { $0 > $1 }
+    sort(numbers, >)
 
 
 *******************************
