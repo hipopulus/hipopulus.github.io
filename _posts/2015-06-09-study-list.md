@@ -20,4 +20,9 @@ tags: ["Swift"]
 
 * Foundation框架是否用Swift重写了？
 
+* enum实现protocol的方法
+
+* enum的raw-value的类型需要遵循literal convertible协议
+
+
 *******************************
