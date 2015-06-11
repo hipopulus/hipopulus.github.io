@@ -4,7 +4,7 @@
  <title>Hipoplar</title>
  <link href="http://blog.hipoplar.me/atom.xml" rel="self"/>
  <link href="http://blog.hipoplar.me"/>
- <updated>2015-06-11T17:50:27+08:00</updated>
+ <updated>2015-06-11T20:56:29+08:00</updated>
  <author>
    <name>Vincent Yang</name>
    <email>soda1015@foxmail.com</email>
@@ -38,7 +38,7 @@ var stringCount = countElements(aString)
 var stringCount = count(aString)
 var stringCount = aString.characters.count        
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;结构体属于值类型，类属于引用类型。值类型的变量或常量传递的是它的copy，引用类型传递的是它的引用。值类型里可以定义引用类型的属性，该引用类型的属性传递的仍然是它的引用：&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;结构体属于值类型，类属于引用类型。值类型的变量或常量传递的是它的copy，引用类型传递的是它的引用。值类型里可以定义引用类型的属性，该引用类型的属性传递的仍然是它的引用，当然这种结构在应用上是不合理的，值类型包含的属性应该同样是值类型：&lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;class SimpleClass {
     var description = &amp;quot;This is a simple class&amp;quot;
 } 
@@ -67,6 +67,25 @@ println(struct2.c.description)
 
 let person = Person(name: &amp;quot;Lisa&amp;quot;)
 person.name = &amp;quot;Jacky&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Objectiv-C只可以在class中定义类方法，而Swift的类、结构体、枚举类型里都可以定义类方法，在func前面添加static关键声明，class类型中也可以用class关键声明，它的子类可以重写class修饰的父类方法&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;struct Point {
+    static func moveBy(x: Int, y: Int) {}
+}
+
+enum SimpleEnum {
+    case One, Two, Three
+    static func doSomething() {}
+}
+
+class SimpleClass {
+    static func test() {}
+    class func doSomething() {}
+}
+
+class SubClass: SimpleClass {
+    override func doSomething() {}
+}
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
 &lt;/ul&gt;
 

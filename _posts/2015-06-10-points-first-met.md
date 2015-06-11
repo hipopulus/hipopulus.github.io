@@ -35,7 +35,7 @@ tags: ["Swift"]
         var stringCount = count(aString)
         var stringCount = aString.characters.count        
 
-* 结构体属于值类型，类属于引用类型。值类型的变量或常量传递的是它的copy，引用类型传递的是它的引用。值类型里可以定义引用类型的属性，该引用类型的属性传递的仍然是它的引用：
+* 结构体属于值类型，类属于引用类型。值类型的变量或常量传递的是它的copy，引用类型传递的是它的引用。值类型里可以定义引用类型的属性，该引用类型的属性传递的仍然是它的引用，当然这种结构在应用上是不合理的，值类型包含的属性应该同样是值类型：
         
         class SimpleClass {
             var description = "This is a simple class"
@@ -67,5 +67,25 @@ tags: ["Swift"]
         let person = Person(name: "Lisa")
         person.name = "Jacky"
 
+* Objectiv-C只可以在class中定义类方法，而Swift的类、结构体、枚举类型里都可以定义类方法，在func前面添加static关键声明，class类型中也可以用class关键声明，它的子类可以重写class修饰的父类方法
+
+        struct Point {
+            static func moveBy(x: Int, y: Int) {}
+        }
+
+        enum SimpleEnum {
+            case One, Two, Three
+            static func doSomething() {}
+        }
+
+        class SimpleClass {
+            static func test() {}
+            class func doSomething() {}
+        }
+
+        class SubClass: SimpleClass {
+            override func doSomething() {}
+        }
+        
 
 *******************************
