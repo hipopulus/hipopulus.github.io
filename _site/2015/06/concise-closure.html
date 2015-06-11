@@ -127,12 +127,15 @@ println(nums5)
 <p>return也可以省略：</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">numbers.sorted({ $0 &gt; $1 })
 </code></pre></div>
+<p>继续：</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">numbers.sorted(&gt;)
+</code></pre></div>
 <p>最精简的结果是：可以用一行并且最少的代码完成排序！</p>
 
 <hr>
 
 <p>自定义的带函数参数的方法，同样适用：</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">func sort(list: [Int], #condition: ((Int, Int) -&gt; Bool)) -&gt; [Int] {
+<div class="highlight"><pre><code class="language-text" data-lang="text">func sort(list: [Int], condition: ((Int, Int) -&gt; Bool)) -&gt; [Int] {
     var result = [Int]()
     result.append(list.first!)
     for i in 1..&lt;list.count {
@@ -149,7 +152,7 @@ println(nums5)
     return result
 }
 
-sort(numbers) { $0 &gt; $1 }
+sort(numbers, &gt;)
 </code></pre></div>
 <hr>
 

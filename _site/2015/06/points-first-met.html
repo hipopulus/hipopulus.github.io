@@ -120,6 +120,36 @@ var stringCount = countElements(aString)
 var stringCount = count(aString)
 var stringCount = aString.characters.count        
 </code></pre></div></li>
+<li><p>结构体属于值类型，类属于引用类型。值类型的变量或常量传递的是它的copy，引用类型传递的是它的引用。值类型里可以定义引用类型的属性，该引用类型的属性传递的仍然是它的引用：</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">class SimpleClass {
+    var description = &quot;This is a simple class&quot;
+} 
+
+struct SimpleStruct {
+    var description = &quot;This is a simple structure&quot;
+    var c = SimpleClass()
+}  
+
+var struct1 = SimpleStruct()
+var struct2 = struct1
+
+struct1.description = &quot;Changed&quot;
+struct1.c.description = &quot;Changed&quot;
+
+println(struct2.description)
+println(struct2.c.description)
+</code></pre></div></li>
+<li><p>let表示声明一个常量，常量在初始化之后，不可以再被修改。如果let声明了一个引用类型的常量，表示它不可以被重新引用一个实例，但是实例所包含的属性变量是可以被修改的：</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">class Person {
+    var name = &quot;&quot;
+    init(name: String) {
+        self.name = name
+    }
+}
+
+let person = Person(name: &quot;Lisa&quot;)
+person.name = &quot;Jacky&quot;
+</code></pre></div></li>
 </ul>
 
 <hr>

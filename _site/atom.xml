@@ -4,7 +4,7 @@
  <title>Hipoplar</title>
  <link href="http://blog.hipoplar.me/atom.xml" rel="self"/>
  <link href="http://blog.hipoplar.me"/>
- <updated>2015-06-10T21:40:47+08:00</updated>
+ <updated>2015-06-11T17:50:27+08:00</updated>
  <author>
    <name>Vincent Yang</name>
    <email>soda1015@foxmail.com</email>
@@ -37,6 +37,36 @@ var aCharacer: Character = &amp;quot;\u{41}&amp;quot;
 var stringCount = countElements(aString)
 var stringCount = count(aString)
 var stringCount = aString.characters.count        
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;结构体属于值类型，类属于引用类型。值类型的变量或常量传递的是它的copy，引用类型传递的是它的引用。值类型里可以定义引用类型的属性，该引用类型的属性传递的仍然是它的引用：&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;class SimpleClass {
+    var description = &amp;quot;This is a simple class&amp;quot;
+} 
+
+struct SimpleStruct {
+    var description = &amp;quot;This is a simple structure&amp;quot;
+    var c = SimpleClass()
+}  
+
+var struct1 = SimpleStruct()
+var struct2 = struct1
+
+struct1.description = &amp;quot;Changed&amp;quot;
+struct1.c.description = &amp;quot;Changed&amp;quot;
+
+println(struct2.description)
+println(struct2.c.description)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;let表示声明一个常量，常量在初始化之后，不可以再被修改。如果let声明了一个引用类型的常量，表示它不可以被重新引用一个实例，但是实例所包含的属性变量是可以被修改的：&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;class Person {
+    var name = &amp;quot;&amp;quot;
+    init(name: String) {
+        self.name = name
+    }
+}
+
+let person = Person(name: &amp;quot;Lisa&amp;quot;)
+person.name = &amp;quot;Jacky&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -124,12 +154,15 @@ println(nums5)
 &lt;p&gt;return也可以省略：&lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;numbers.sorted({ $0 &amp;gt; $1 })
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;继续：&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;numbers.sorted(&amp;gt;)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;最精简的结果是：可以用一行并且最少的代码完成排序！&lt;/p&gt;
 
 &lt;hr&gt;
 
 &lt;p&gt;自定义的带函数参数的方法，同样适用：&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;func sort(list: [Int], #condition: ((Int, Int) -&amp;gt; Bool)) -&amp;gt; [Int] {
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;func sort(list: [Int], condition: ((Int, Int) -&amp;gt; Bool)) -&amp;gt; [Int] {
     var result = [Int]()
     result.append(list.first!)
     for i in 1..&amp;lt;list.count {
@@ -146,7 +179,7 @@ println(nums5)
     return result
 }
 
-sort(numbers) { $0 &amp;gt; $1 }
+sort(numbers, &amp;gt;)
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;hr&gt;
 </content>
