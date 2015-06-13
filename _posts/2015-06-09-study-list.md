@@ -24,5 +24,11 @@ tags: ["Swift"]
 
 * enum的raw-value的类型需要遵循literal convertible协议
 
+* 为什么class的成员方法可以修改成员变量的值，而值类型的成员方法[不可以][5]修改成员变量的值，除非在func前添加`mutating`修饰符？
+[5]: https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/Methods.html
+
+* @objc的意义和用法
+
+* 关于protocol的extension，增加了约束条件（`where`）和默认实现。如果针对统一个方法和属性有多个extension，应该怎么办？
 
 *******************************

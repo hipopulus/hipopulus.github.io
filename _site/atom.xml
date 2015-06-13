@@ -4,7 +4,7 @@
  <title>Hipoplar</title>
  <link href="http://blog.hipoplar.me/atom.xml" rel="self"/>
  <link href="http://blog.hipoplar.me"/>
- <updated>2015-06-11T20:56:29+08:00</updated>
+ <updated>2015-06-13T17:04:09+08:00</updated>
  <author>
    <name>Vincent Yang</name>
    <email>soda1015@foxmail.com</email>
@@ -87,6 +87,63 @@ class SubClass: SimpleClass {
     override func doSomething() {}
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;结构体类型会自动生成初始化器：&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;struct Size {
+    var width: Float
+    var height: Float
+}
+
+var big = Size(width: 5.0, height: 5.0)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;但是如果我们为它添加了自定义的初始化器，我们将失去自动生成的初始化器：&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;struct Size {
+    var width: Float
+    var height: Float
+
+    init(width: Float) {
+        self.width = width
+        self.height = width
+    }
+}
+
+var big = Size(width: 5.0, height: 5.0) // error
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;可以通过extension手动添加原来的初始化器，使它重新有效：&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;extension Size {
+    init(width: Float, height: Float) {
+        self.width = width
+        self.height = height
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;一个class、structure或enumeration的访问域可以和它们所遵守的protocol多访问域不同，但是它们实现的成员方法、变量和常量的访问域不能小于protocol的访问域，否则可能出现问题，例如在protocol级别的访问域内实现了对某class实例的type cast，却可能无法访问protocol对应的某个方法。&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;internal protocol SimpleProtocl {
+    func doSomthing()
+}
+
+private class ClassA: SimpleProtocl {
+    func doSomthing() {}
+}
+
+public class ClassB: SimpleProtocl {
+    func doSomthing() {}
+}
+
+internal class ClassC: SimpleProtocl {
+    private func doSomthing() {} // error
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;子类的访问域级别不能大于父类的访问域级别，但是子类的override成员的访问域级别不能小于对应的父类的成员访问域级别：&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;class Animal {
+    private func sleep() {}
+    func move() {}
+}
+
+class Dog: Animal {
+    override func sleep() {}
+    private override func move() {} // error
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;hr&gt;
@@ -108,6 +165,9 @@ var aString:Optional&amp;lt;String&amp;gt; = &amp;quot;Hello&amp;quot;
 &lt;li&gt;&lt;p&gt;Foundation框架是否用Swift重写了？&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;enum实现protocol的方法&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;enum的raw-value的类型需要遵循literal convertible协议&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;为什么class的成员方法可以修改成员变量的值，而值类型的成员方法&lt;a href=&quot;https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/Methods.html&quot;&gt;不可以&lt;/a&gt;修改成员变量的值，除非在func前添加&lt;code&gt;mutating&lt;/code&gt;修饰符？&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;@objc的意义和用法&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;关于protocol的extension，增加了约束条件（&lt;code&gt;where&lt;/code&gt;）和默认实现。如果针对统一个方法和属性有多个extension，应该怎么办？&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;hr&gt;
