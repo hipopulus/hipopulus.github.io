@@ -226,6 +226,16 @@ class Dog: Animal {
     private override func move() {} // error
 }
 </code></pre></div></li>
+<li><p>带class关键字的protocol只能被class实现：</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">proctocol SimpleProtocol: class {
+    func doSomething()
+}
+</code></pre></div></li>
+<li><p>如果要在protocol声明optional成员，需要用<code>@objc</code>(<strong>作用是什么？</strong>)修饰protocol：</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">@objc protocol SimpleProtocol {
+    optional func doSomething()
+}
+</code></pre></div></li>
 </ul>
 
 <hr>

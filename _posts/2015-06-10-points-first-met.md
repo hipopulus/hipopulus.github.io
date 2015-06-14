@@ -149,4 +149,17 @@ tags: ["Swift"]
             private override func move() {} // error
         }
 
+* 带class关键字的protocol只能被class实现：
+
+        proctocol SimpleProtocol: class {
+            func doSomething()
+        }
+
+* 如果要在protocol声明optional成员，需要用`@objc`(**作用是什么？**)修饰protocol：
+
+        @objc protocol SimpleProtocol {
+            optional func doSomething()
+        }
+
+
 *******************************
