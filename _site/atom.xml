@@ -4,7 +4,7 @@
  <title>Hipoplar</title>
  <link href="http://blog.hipoplar.me/atom.xml" rel="self"/>
  <link href="http://blog.hipoplar.me"/>
- <updated>2015-06-14T10:45:51+08:00</updated>
+ <updated>2015-06-16T08:28:50+08:00</updated>
  <author>
    <name>Vincent Yang</name>
    <email>soda1015@foxmail.com</email>
@@ -12,10 +12,34 @@
 
  
  <entry>
-   <title>首次遇到的知识点</title>
-   <link href="http://blog.hipoplar.me/2015/06/points-first-met.html"/>
+   <title>Objective-C学习备忘－需要研究的问题</title>
+   <link href="http://blog.hipoplar.me/2015/06/oc-study-list.html"/>
+   <updated>2015-06-15T00:00:00+08:00</updated>
+   <id>/2015/06/oc-study-list</id>
+   <content type="html">&lt;ul&gt;
+&lt;li&gt;下面的&lt;code&gt;|&lt;/code&gt;符号是什么意思？
+    static NSStringCompareOptions comparisonOptions = NSCaseInsensitiveSearch | NSNumericSearch |
+NSWidthInsensitiveSearch | NSForcedOrderingSearch;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Objective-C学习备忘</title>
+   <link href="http://blog.hipoplar.me/2015/06/oc-points-first-met.html"/>
+   <updated>2015-06-15T00:00:00+08:00</updated>
+   <id>/2015/06/oc-points-first-met</id>
+   <content type="html">&lt;hr&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Swift学习备忘</title>
+   <link href="http://blog.hipoplar.me/2015/06/swift-points-first-met.html"/>
    <updated>2015-06-10T00:00:00+08:00</updated>
-   <id>/2015/06/points-first-met</id>
+   <id>/2015/06/swift-points-first-met</id>
    <content type="html">&lt;ul&gt;
 &lt;li&gt;&lt;p&gt;&lt;code&gt;var aString: String! = &amp;quot;Hello, World!&amp;quot;&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Error handling&lt;/p&gt;&lt;/li&gt;
@@ -161,10 +185,10 @@ class Dog: Animal {
  </entry>
  
  <entry>
-   <title>需要研究的问题</title>
-   <link href="http://blog.hipoplar.me/2015/06/study-list.html"/>
+   <title>Swift学习备忘－需要研究的问题</title>
+   <link href="http://blog.hipoplar.me/2015/06/swift-study-list.html"/>
    <updated>2015-06-09T00:00:00+08:00</updated>
-   <id>/2015/06/study-list</id>
+   <id>/2015/06/swift-study-list</id>
    <content type="html">&lt;ul&gt;
 &lt;li&gt;&lt;p&gt;HeaderDoc:&lt;a href=&quot;https://developer.apple.com/library/mac/documentation/DeveloperTools/Conceptual/HeaderDoc/intro/intro.html#//apple_ref/doc/uid/TP40001215-CH345-SW1&quot;&gt;1&lt;/a&gt;-&lt;a href=&quot;http://nshipster.com/swift-documentation/&quot;&gt;2&lt;/a&gt;-&lt;a href=&quot;http://nshipster.com/documentation/&quot;&gt;3&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Optional类型&lt;/p&gt;

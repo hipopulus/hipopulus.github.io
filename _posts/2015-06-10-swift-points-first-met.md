@@ -1,7 +1,7 @@
 ---
 layout: post
 category: "Swift"
-title: "首次遇到的知识点"
+title: "Swift学习备忘"
 tags: ["Swift"]
 ---
 
