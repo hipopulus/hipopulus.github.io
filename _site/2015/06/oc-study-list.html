@@ -99,9 +99,52 @@
 <!-- Author -->
 <hr>
 <ul>
-<li>下面的<code>|</code>符号是什么意思？
-    static NSStringCompareOptions comparisonOptions = NSCaseInsensitiveSearch | NSNumericSearch |
-NSWidthInsensitiveSearch | NSForcedOrderingSearch;</li>
+<li><h3>下面的<code>|</code>符号是什么意思？</h3>
+<div class="highlight"><pre><code class="language-text" data-lang="text">static NSStringCompareOptions comparisonOptions = NSCaseInsensitiveSearch | NSNumericSearch | NSWidthInsensitiveSearch | NSForcedOrderingSearch;
+</code></pre></div>
+<blockquote>
+<p>参考：<a href="http://nshipster.com/ns_enum-ns_options/">http://nshipster.com/ns_enum-ns_options/</a></p>
+</blockquote></li>
+<li><h3>CoreFoundation的CFAvailability.h文件中关于<code>CF_ENUM</code>和<code>CF_OPTIONS</code>的宏定义的语法如何理解：</h3>
+<div class="highlight"><pre><code class="language-text" data-lang="text">#if (__cplusplus &amp;&amp; __cplusplus &gt;= 201103L &amp;&amp; (__has_extension(cxx_strong_enums) || __has_feature(objc_fixed_enum))) || (!__cplusplus &amp;&amp; __has_feature(objc_fixed_enum))
+#define CF_ENUM(_type, _name) enum _name : _type _name; enum _name : _type
+#if (__cplusplus)
+#define CF_OPTIONS(_type, _name) _type _name; enum : _type
+#else
+#define CF_OPTIONS(_type, _name) enum _name : _type _name; enum _name : _type
+#endif
+#else
+#define CF_ENUM(_type, _name) _type _name; enum
+#define CF_OPTIONS(_type, _name) _type _name; enum
+#endif
+</code></pre></div>
+<blockquote>
+<p>问题已解决，下面是思考过程：</p>
+
+<hr>
+
+<p>例如，要定义一个包含四个季节的枚举常量，先从标准C的定义开始：</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">  typedef enum Season : NSInteger Season;
+  enum Season : NSInteger { Spring, Summer, Autumn, Winter };
+</code></pre></div>
+<p>测试：</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">  Season a = Autumn;
+  NSLog(@&quot;%ld&quot;, a);
+</code></pre></div>
+<p>打印结果为：2</p>
+
+<hr>
+
+<p>接下来，用宏定义重写：</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">  #define SeasonList(_season, _type) enum _season : _type _season; enum _season : _type
+  typedef SeasonList(Season, NSUInteger) { Spring, Summer, Autumn, Winter };
+</code></pre></div>
+<p>测试：</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">  Season a = Autumn;
+  NSLog(@&quot;%ld&quot;, a);
+</code></pre></div>
+<p>打印结果为：2，和上面的标准定义的结果相同。</p>
+</blockquote></li>
 </ul>
 
 <hr>

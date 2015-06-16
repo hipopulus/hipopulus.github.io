@@ -4,7 +4,7 @@
  <title>Hipoplar</title>
  <link href="http://blog.hipoplar.me/atom.xml" rel="self"/>
  <link href="http://blog.hipoplar.me"/>
- <updated>2015-06-16T08:28:50+08:00</updated>
+ <updated>2015-06-16T22:47:22+08:00</updated>
  <author>
    <name>Vincent Yang</name>
    <email>soda1015@foxmail.com</email>
@@ -17,9 +17,52 @@
    <updated>2015-06-15T00:00:00+08:00</updated>
    <id>/2015/06/oc-study-list</id>
    <content type="html">&lt;ul&gt;
-&lt;li&gt;下面的&lt;code&gt;|&lt;/code&gt;符号是什么意思？
-    static NSStringCompareOptions comparisonOptions = NSCaseInsensitiveSearch | NSNumericSearch |
-NSWidthInsensitiveSearch | NSForcedOrderingSearch;&lt;/li&gt;
+&lt;li&gt;&lt;h3&gt;下面的&lt;code&gt;|&lt;/code&gt;符号是什么意思？&lt;/h3&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;static NSStringCompareOptions comparisonOptions = NSCaseInsensitiveSearch | NSNumericSearch | NSWidthInsensitiveSearch | NSForcedOrderingSearch;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;参考：&lt;a href=&quot;http://nshipster.com/ns_enum-ns_options/&quot;&gt;http://nshipster.com/ns_enum-ns_options/&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
+&lt;li&gt;&lt;h3&gt;CoreFoundation的CFAvailability.h文件中关于&lt;code&gt;CF_ENUM&lt;/code&gt;和&lt;code&gt;CF_OPTIONS&lt;/code&gt;的宏定义的语法如何理解：&lt;/h3&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;#if (__cplusplus &amp;amp;&amp;amp; __cplusplus &amp;gt;= 201103L &amp;amp;&amp;amp; (__has_extension(cxx_strong_enums) || __has_feature(objc_fixed_enum))) || (!__cplusplus &amp;amp;&amp;amp; __has_feature(objc_fixed_enum))
+#define CF_ENUM(_type, _name) enum _name : _type _name; enum _name : _type
+#if (__cplusplus)
+#define CF_OPTIONS(_type, _name) _type _name; enum : _type
+#else
+#define CF_OPTIONS(_type, _name) enum _name : _type _name; enum _name : _type
+#endif
+#else
+#define CF_ENUM(_type, _name) _type _name; enum
+#define CF_OPTIONS(_type, _name) _type _name; enum
+#endif
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;问题已解决，下面是思考过程：&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;例如，要定义一个包含四个季节的枚举常量，先从标准C的定义开始：&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;  typedef enum Season : NSInteger Season;
+  enum Season : NSInteger { Spring, Summer, Autumn, Winter };
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;测试：&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;  Season a = Autumn;
+  NSLog(@&amp;quot;%ld&amp;quot;, a);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;打印结果为：2&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;接下来，用宏定义重写：&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;  #define SeasonList(_season, _type) enum _season : _type _season; enum _season : _type
+  typedef SeasonList(Season, NSUInteger) { Spring, Summer, Autumn, Winter };
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;测试：&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;  Season a = Autumn;
+  NSLog(@&amp;quot;%ld&amp;quot;, a);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;打印结果为：2，和上面的标准定义的结果相同。&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;hr&gt;
