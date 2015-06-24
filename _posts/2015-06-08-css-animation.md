@@ -6,7 +6,7 @@ tags: ["CSS", "Animation"]
 ---
 
 ###这是一个简单的CSS动画，你也可以在[封面][frontCover]看到：###
-============================
+
 * 页面载入时，图标从下至上移动并渐渐显示
 * 鼠标悬停在图标上时，图标放大
 
@@ -15,7 +15,7 @@ tags: ["CSS", "Animation"]
 ****************************
 
 ###实现这个动画需要一下技术：###
-==============================
+
 1. Web Font（[Font Awesome][fontawesome]-[中文][fontawesomecn]为例）
 2. CSS伪元素、伪类
 3. CSS过渡（`transition`属性）、CSS动画（`@keyframes`属性、`animation`属性）
