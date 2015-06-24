@@ -14,7 +14,7 @@ tags: ["CSS", "Animation"]
 
 ****************************
 
-###实现这个动画需要一下技术：###
+###实现这个动画需要以下技术：###
 
 1. Web Font（[Font Awesome][fontawesome]-[中文][fontawesomecn]为例）
 2. CSS伪元素、伪类
