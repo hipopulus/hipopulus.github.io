@@ -36,8 +36,6 @@ tags: ["CSS", "Animation"]
 
      <a id="githubIcon" href="https://github.com/soda1015" class="fa fa-github"></a>
 
-同时为
-
 显示结果如下：
 
 <a id="githubIcon" href="https://github.com/soda1015" class="fa fa-github"></a>
