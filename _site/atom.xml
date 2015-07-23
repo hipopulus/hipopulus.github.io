@@ -4,7 +4,7 @@
  <title>Hipoplar</title>
  <link href="http://blog.hipoplar.me/atom.xml" rel="self"/>
  <link href="http://blog.hipoplar.me"/>
- <updated>2015-06-24T21:53:05+08:00</updated>
+ <updated>2015-07-23T22:48:13+08:00</updated>
  <author>
    <name>Vincent Yang</name>
    <email>soda1015@foxmail.com</email>
@@ -384,7 +384,7 @@ sort(numbers, &amp;gt;)
 
 &lt;hr&gt;
 
-&lt;h3&gt;实现这个动画需要一下技术：&lt;/h3&gt;
+&lt;h3&gt;实现这个动画需要以下技术：&lt;/h3&gt;
 
 &lt;ol&gt;
 &lt;li&gt;Web Font（&lt;a href=&quot;http://fortawesome.github.io/Font-Awesome/&quot;&gt;Font Awesome&lt;/a&gt;-&lt;a href=&quot;http://www.bootcss.com/p/font-awesome/&quot;&gt;中文&lt;/a&gt;为例）&lt;/li&gt;
@@ -408,8 +408,6 @@ sort(numbers, &amp;gt;)
 &lt;p&gt;将&lt;code&gt;&amp;lt;a&amp;gt;&lt;/code&gt;标签（也可以是其他标签）的&lt;code&gt;class&lt;/code&gt;属性设置为某个字体样式，如&lt;code&gt;fa fa-github&lt;/code&gt;:&lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt; &amp;lt;a id=&amp;quot;githubIcon&amp;quot; href=&amp;quot;https://github.com/soda1015&amp;quot; class=&amp;quot;fa fa-github&amp;quot;&amp;gt;&amp;lt;/a&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;同时为&lt;/p&gt;
-
 &lt;p&gt;显示结果如下：&lt;/p&gt;
 
 &lt;p&gt;&lt;a id=&quot;githubIcon&quot; href=&quot;https://github.com/soda1015&quot; class=&quot;fa fa-github&quot;&gt;&lt;/a&gt;&lt;/p&gt;
