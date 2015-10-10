@@ -5,7 +5,7 @@ title: "CSS Animation"
 tags: ["CSS", "Animation"]
 ---
 
-###这是一个简单的CSS动画，你也可以在[封面][frontCover]看到：###
+### 这是一个简单的CSS动画，你也可以在[封面][frontCover]看到：
 
 * 页面载入时，图标从下至上移动并渐渐显示
 * 鼠标悬停在图标上时，图标放大
@@ -14,7 +14,7 @@ tags: ["CSS", "Animation"]
 
 ****************************
 
-###实现这个动画需要以下技术：###
+### 实现这个动画需要以下技术：
 
 1. Web Font（[Font Awesome][fontawesome]-[中文][fontawesomecn]为例）
 2. CSS伪元素、伪类
@@ -22,7 +22,7 @@ tags: ["CSS", "Animation"]
 
 ****************************
 
-###Web Font###
+### Web Font
 
 >   Web Font是通过CSS3的`@font-face`语句引入**在线**的**矢量**图形，它能够支持缩放，减少图片的流量消耗，并且可以重复利用。
 
@@ -61,7 +61,7 @@ tags: ["CSS", "Animation"]
 
 <a id="githubIcon1" href="https://github.com/soda1015" class="fa fa-github"></a>
 
-###CSS伪元素和伪类###
+### CSS伪元素和伪类
 
 >   伪元素和伪类实际上是指两种选择器，选择器通过元素的标签名、类名或属性名获得该元素，如果某选择器没有对应的标签名、类名或属性名，而是通过某些特殊状态来获取元素，则该选择器为伪元素或伪类选择器。伪元素或伪类必须跟在某个选择器之后。
 
@@ -73,7 +73,7 @@ tags: ["CSS", "Animation"]
 
 <a id="githubIcon2" href="https://github.com/soda1015" class="fa fa-github"></a>
 
-###CSS过渡（transition属性）###
+### CSS过渡（transition属性）
 
 刚刚的放大效果有些唐突，我们为图标设置`transition`属性，使之有一个过渡：
 
@@ -99,7 +99,7 @@ tags: ["CSS", "Animation"]
 
 <a id="githubIcon3" href="https://github.com/soda1015" class="fa fa-github"></a>
 
-###CSS动画（`@keyframes`属性、`animation`属性）###
+### CSS动画（`@keyframes`属性、`animation`属性）
 
 接下来，我们来添加一个动画效果：图标由下至上的移动，并逐渐显示
 
@@ -166,7 +166,7 @@ tags: ["CSS", "Animation"]
 
 **********************************
 
-###更多好网站##
+### 更多好网站
 <http://www.w3.org/TR/css3-content/>：content属性与伪元素配合使用来生成内容，CSS3为content增加了更多特性。  
 <https://cssanimation.rocks/cn/principles/>：动画的十二个原则描述了动画能怎样用于让观众相信自己沉浸在现实世界中。  
 <http://www.iconfont.cn>：阿里巴巴UX部门推出的矢量图标管理网站，也是国内首家推广Webfont形式图标的平台  

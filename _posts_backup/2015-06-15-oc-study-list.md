@@ -5,13 +5,13 @@ title: "Objective-C学习备忘－需要研究的问题"
 tags: ["Objective-C"]
 ---
 
-* ###下面的`|`符号是什么意思？
+* ### 下面的`|`符号是什么意思？
 
         static NSStringCompareOptions comparisonOptions = NSCaseInsensitiveSearch | NSNumericSearch | NSWidthInsensitiveSearch | NSForcedOrderingSearch;
 
     >   参考：<http://nshipster.com/ns_enum-ns_options/>
 
-* ###CoreFoundation的CFAvailability.h文件中关于`CF_ENUM`和`CF_OPTIONS`的宏定义的语法如何理解：
+* ### CoreFoundation的CFAvailability.h文件中关于`CF_ENUM`和`CF_OPTIONS`的宏定义的语法如何理解：
 
         #if (__cplusplus && __cplusplus >= 201103L && (__has_extension(cxx_strong_enums) || __has_feature(objc_fixed_enum))) || (!__cplusplus && __has_feature(objc_fixed_enum))
         #define CF_ENUM(_type, _name) enum _name : _type _name; enum _name : _type
