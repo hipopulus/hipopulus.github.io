@@ -34,11 +34,11 @@ tags: ["CSS", "Animation"]
 
 将`<a>`标签（也可以是其他标签）的`class`属性设置为某个字体样式，如`fa fa-github`:
 
-     <a id="githubIcon" href="https://github.com/soda1015" class="fa fa-github"></a>
+     <a id="githubIcon" href="https://github.com/hipupulus" class="fa fa-github"></a>
 
 显示结果如下：
 
-<a id="githubIcon" href="https://github.com/soda1015" class="fa fa-github"></a>
+<a id="githubIcon" href="https://github.com/hipupulus" class="fa fa-github"></a>
 
 为图标设置一下式样：
 
@@ -59,7 +59,7 @@ tags: ["CSS", "Animation"]
 
 结果如下：
 
-<a id="githubIcon1" href="https://github.com/soda1015" class="fa fa-github"></a>
+<a id="githubIcon1" href="https://github.com/hipupulus" class="fa fa-github"></a>
 
 ### CSS伪元素和伪类
 
@@ -71,7 +71,7 @@ tags: ["CSS", "Animation"]
         font-size: 4em;
     }
 
-<a id="githubIcon2" href="https://github.com/soda1015" class="fa fa-github"></a>
+<a id="githubIcon2" href="https://github.com/hipupulus" class="fa fa-github"></a>
 
 ### CSS过渡（transition属性）
 

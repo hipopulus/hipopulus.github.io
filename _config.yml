@@ -11,10 +11,10 @@ paginate_path: "blog/page:num"
 # presonal config
 domain: hipopulus.cn
 title: Hi Populus
-description: iOS, Ruby, Java Web, Linux, PHP, Javascript...
-author: Vincent Yang
+description:
+author: Vince.Y
 email: soda1015@foxmail.com
-github: soda1015
+github: hipopulus
 
 config:
   js_dir:
