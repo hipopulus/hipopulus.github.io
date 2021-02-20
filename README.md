@@ -2,4 +2,4 @@
 ================
 
 #### 博客地址
-http://blog.hipopulus.cn
+https://hipopulus.cn
